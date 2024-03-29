@@ -1,0 +1,520 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jan 11 11:26:37 2024
+# Process ID: 13127
+# Current directory: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado
+# Command line: vivado -mode tcl -source tcls/synthesize.tcl -tempDir ./.work.fpga -log ./.work.fpga/w_icons_top.vivado.syn.log
+# Log file: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/./.work.fpga/w_icons_top.vivado.syn.log
+# Journal file: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/vivado.jou
+# Running On: smaz-brn, OS: Linux, CPU Frequency: 2803.202 MHz, CPU Physical cores: 5, Host memory: 22133 MB
+#-----------------------------------------------------------
+source tcls/synthesize.tcl
+# open_project ./.work.fpga/w_icons_top_fpga.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1335.566 ; gain = 0.023 ; free physical = 15714 ; free virtual = 20403
+# reset_run synth_1
+# launch_runs synth_1
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Jan 11 11:26:46 2024] Launched synth_1...
+Run output will be captured here: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/synth_1/runme.log
+# wait_on_run synth_1
+[Thu Jan 11 11:26:46 2024] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log w_icons_top.vds -m64 -tempDir ./.work.fpga -product Vivado -mode batch -messageDb vivado.pb -notrace -source w_icons_top.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source w_icons_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1325.668 ; gain = 0.023 ; free physical = 15248 ; free virtual = 19938
+Command: synth_design -top w_icons_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13252
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2032.453 ; gain = 403.715 ; free physical = 14243 ; free virtual = 18963
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'w_icons_top' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v:11]
+INFO: [Synth 8-6157] synthesizing module 'common_clkdiv_by_n' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+	Parameter DIV_VAL_N_W bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_clkdiv_by_n' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+INFO: [Synth 8-6157] synthesizing module 'w_icons_core' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_core.v:11]
+INFO: [Synth 8-6157] synthesizing module 'w_icons_mgmt' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v:11]
+	Parameter STIM_CLKDIV_W bound to: 12 - type: integer 
+	Parameter CLKDIV_W_DISCHARGE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'w_icons_sync_rst' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v:11]
+INFO: [Synth 8-6157] synthesizing module 'common_reset_sync' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_reset_sync.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'common_reset_sync' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_reset_sync.v:9]
+INFO: [Synth 8-6157] synthesizing module 'common_sync' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_sync.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'common_sync' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_sync.v:8]
+INFO: [Synth 8-6157] synthesizing module 'common_clkbuf' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkbuf.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'common_clkbuf' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkbuf.v:8]
+INFO: [Synth 8-6157] synthesizing module 'common_clkgate' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkgate.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'common_clkgate' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkgate.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_sync_rst' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v:11]
+INFO: [Synth 8-6157] synthesizing module 'common_clkdiv_by_n__parameterized0' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+	Parameter DIV_VAL_N_W bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_clkdiv_by_n__parameterized0' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_mgmt' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v:11]
+INFO: [Synth 8-6157] synthesizing module 'spi_wrap' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_wrap.v:11]
+	Parameter STIM_CLKDIV_W bound to: 12 - type: integer 
+	Parameter CLKDIV_W_DISCHARGE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'w_icons_rf' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/w_icons_rf.v:11]
+	Parameter STIM_CLKDIV_W bound to: 12 - type: integer 
+	Parameter CLKDIV_W_DISCHARGE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'common_mux' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+	Parameter IN_W bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_mux' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+INFO: [Synth 8-6157] synthesizing module 'common_mux__parameterized0' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+	Parameter IN_W bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_mux__parameterized0' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_rf' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/w_icons_rf.v:11]
+INFO: [Synth 8-6157] synthesizing module 'spi_slave_common' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_slave_common.v:22]
+	Parameter TX_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_slave_common' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_slave_common.v:22]
+INFO: [Synth 8-6157] synthesizing module 'spi_custom_logic' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v:11]
+	Parameter TX_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_custom_logic' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'spi_wrap' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_wrap.v:11]
+INFO: [Synth 8-6157] synthesizing module 'stim_ctrls_wrap' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v:11]
+INFO: [Synth 8-6157] synthesizing module 'stim_ctrl' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'stim_ctrl' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'stim_ctrls_wrap' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v:11]
+INFO: [Synth 8-6157] synthesizing module 'rec_ctrl' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/rec_ctrl.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'rec_ctrl' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/rec_ctrl.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_core' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_core.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_top' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v:11]
+WARNING: [Synth 8-3848] Net adc_res1_s in module/entity w_icons_top does not have driver. [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v:62]
+WARNING: [Synth 8-3848] Net adc_res2_s in module/entity w_icons_top does not have driver. [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v:63]
+WARNING: [Synth 8-7129] Port apb_slverr_i in module spi_custom_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_i[2] in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_i[1] in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_i[0] in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_en_i in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[31] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[30] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[29] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[28] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[27] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[26] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[25] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[24] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[23] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[22] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[21] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[20] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[19] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[18] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[17] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[16] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[15] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[14] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[13] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[12] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[11] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[10] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[9] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[8] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[7] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[6] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[5] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[4] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[3] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[2] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[1] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[0] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[3] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[2] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[1] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[0] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[4] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[3] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[2] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[1] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[0] in module w_icons_mgmt is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2142.391 ; gain = 513.652 ; free physical = 14103 ; free virtual = 18826
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2157.234 ; gain = 528.496 ; free physical = 14103 ; free virtual = 18826
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2157.234 ; gain = 528.496 ; free physical = 14103 ; free virtual = 18826
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2157.234 ; gain = 0.000 ; free physical = 14103 ; free virtual = 18826
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'SPI_CLK_I_IBUF'. [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/synth_1/.work.fpga/.Xil_smaz-brn/Vivado-13231-smaz-brn/w_icons_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/synth_1/.work.fpga/.Xil_smaz-brn/Vivado-13231-smaz-brn/w_icons_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2270.973 ; gain = 0.000 ; free physical = 14073 ; free virtual = 18810
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2271.008 ; gain = 0.000 ; free physical = 14072 ; free virtual = 18809
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14065 ; free virtual = 18803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14065 ; free virtual = 18803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14065 ; free virtual = 18803
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_custom_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'apb_state_reg' in module 'spi_custom_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'stim_discharge_reg' in module 'rec_ctrl'
+WARNING: [Synth 8-327] inferring latch for variable 'CKL_reg' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkgate.v:28]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0001 |                             0000
+               S_CHIP_ID |                             0101 |                             0110
+               S_STIM_ST |                             0110 |                             0111
+                S_CONFIG |                             0111 |                             0101
+           S_CMD_WR_DATA |                             0011 |                             0010
+            S_CMD_WR_ADD |                             0100 |                             0001
+            S_CMD_RD_ADD |                             0000 |                             0011
+           S_CMD_RD_DATA |                             0010 |                             0100
+           S_CRC5_ERROR1 |                             1000 |                             1110
+           S_CRC5_ERROR2 |                             1001 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_custom_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              S_APB_IDLE |                              001 |                              000
+             S_APB_SETUP |                              010 |                              001
+            S_APB_ACCESS |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'apb_state_reg' using encoding 'one-hot' in module 'spi_custom_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE1 |                              010 |                               01
+                 iSTATE0 |                              100 |                               10
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stim_discharge_reg' using encoding 'one-hot' in module 'rec_ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14062 ; free virtual = 18801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 8     
+	   2 Input   14 Bit       Adders := 12    
+	   2 Input   12 Bit       Adders := 12    
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 8     
+	   2 Input    6 Bit       Adders := 4     
+	  33 Input    6 Bit       Adders := 8     
+	  17 Input    5 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 2     
+	   9 Input    4 Bit       Adders := 8     
+	   5 Input    3 Bit       Adders := 8     
+	   2 Input    2 Bit       Adders := 8     
+	   3 Input    2 Bit       Adders := 8     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               41 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 27    
+	               20 Bit    Registers := 2     
+	               16 Bit    Registers := 8     
+	               14 Bit    Registers := 12    
+	               12 Bit    Registers := 11    
+	                8 Bit    Registers := 13    
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 335   
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 36    
+	   2 Input   20 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 8     
+	   2 Input   14 Bit        Muxes := 26    
+	   2 Input   12 Bit        Muxes := 17    
+	   4 Input   12 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 1     
+	   3 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 9     
+	   2 Input    6 Bit        Muxes := 5     
+	   2 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 10    
+	  10 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	  24 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 8     
+	   2 Input    3 Bit        Muxes := 12    
+	   5 Input    3 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 33    
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 85    
+	  38 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port apb_prot_i[2] in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_i[1] in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_i[0] in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port apb_prot_en_i in module w_icons_rf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[31] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[30] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[29] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[28] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[27] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[26] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[25] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[24] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[23] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[22] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[21] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[20] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[19] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[18] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[17] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[16] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[15] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[14] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[13] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[12] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[11] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[10] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[9] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[8] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[7] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[6] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[5] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[4] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[3] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[2] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[1] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_load_i[0] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[3] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[2] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[1] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_cmd_i[0] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[4] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[3] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[2] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[1] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chip_error_crc5_i[0] in module w_icons_mgmt is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_clkgate_adc1/CKL_reg) is unused and will be removed from module w_icons_top.
+WARNING: [Synth 8-3332] Sequential element (i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_clkgate_adc2/CKL_reg) is unused and will be removed from module w_icons_top.
+WARNING: [Synth 8-3332] Sequential element (i_w_icons_core/i_rec_ctrl/FSM_onehot_stim_discharge_reg[0]) is unused and will be removed from module w_icons_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14042 ; free virtual = 18791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Reading ./.work.fpga/.Xil_smaz-brn/Vivado-13231-smaz-brn/realtime/w_icons_top_synth.xdc
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     4|
+|2     |CARRY4 |    28|
+|3     |LUT1   |    35|
+|4     |LUT2   |   189|
+|5     |LUT3   |   283|
+|6     |LUT4   |   202|
+|7     |LUT5   |   389|
+|8     |LUT6   |   686|
+|9     |MUXF7  |   106|
+|10    |MUXF8  |    19|
+|11    |FDCE   |  1568|
+|12    |FDPE   |    20|
+|13    |FDRE   |    65|
+|14    |IBUF   |     6|
+|15    |OBUF   |     6|
+|16    |OBUFT  |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2271.008 ; gain = 528.496 ; free physical = 14034 ; free virtual = 18790
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2271.008 ; gain = 642.270 ; free physical = 14034 ; free virtual = 18790
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2271.008 ; gain = 0.000 ; free physical = 14322 ; free virtual = 19078
+INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.973 ; gain = 0.000 ; free physical = 14322 ; free virtual = 19078
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f8943566
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 99 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:40 . Memory (MB): peak = 2279.008 ; gain = 953.340 ; free physical = 14322 ; free virtual = 19078
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1814.593; main = 1479.561; forked = 362.246
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3253.535; main = 2278.977; forked = 990.562
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2302.984 ; gain = 0.000 ; free physical = 14322 ; free virtual = 19078
+INFO: [Common 17-1381] The checkpoint '/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/synth_1/w_icons_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file w_icons_top_utilization_synth.rpt -pb w_icons_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 11:27:39 2024...
+[Thu Jan 11 11:27:42 2024] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1343.570 ; gain = 0.000 ; free physical = 15629 ; free virtual = 20376
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1641.641 ; gain = 0.000 ; free physical = 15344 ; free virtual = 20091
+INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc]
+Finished Parsing XDC File [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/constraints/Arty-A7-100-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1861.297 ; gain = 0.000 ; free physical = 15236 ; free virtual = 19984
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+# report_timing_summary -file ./report/synth_timing_report.txt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 5 CPUs
+report_timing_summary: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2379.934 ; gain = 518.637 ; free physical = 14777 ; free virtual = 19541
+# set result [get_property STATUS [get_runs synth_1]]
+# set keyword [lindex [split $result  ] end]
+# if { $keyword != "Complete!" } {
+# exit 1
+# }
+# exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 11:27:52 2024...

@@ -1,0 +1,12 @@
+
+0
+-e VLOG-INCDIRS
+    -I/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/global_src/verilog
+-e VLOG-FLAGS
+    -nocopyright
+    -update
+    -cdslib .work.xcelium/cds.lib
+    -hdlvar .work.xcelium/hdl.var
+-e VLOG tb_w_icons_top
+make[2]: xmvlog: No such file or directory
+make[2]: *** [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/env/simulation/Makefile.project.cdssim:157: .work.xcelium/tb_w_icons_top_vlog.log] Error 127

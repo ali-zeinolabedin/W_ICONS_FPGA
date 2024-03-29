@@ -1,0 +1,5 @@
+
+-include Makefile.sources
+
+include ${PRJ_DIR}/env/simulation/Makefile.project.simulation
+include ${PRJ_DIR}/env/coverage/Makefile.project.covered

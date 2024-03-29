@@ -1,0 +1,674 @@
+-e VLOG-INCDIRS
+    -I/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/global_src/verilog
+-e VLOG-FLAGS
+    -Wno-timescale
+    -Wno-implicit-dimensions
+    -Wno-sensitivity-entire-array
+    -Wno-portbind
+    -g2005-sv
+-e VLOG tb_w_icons_top-simulate-netlist
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4877: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4887: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4961: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4971: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5045: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5055: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5127: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5199: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5889: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5899: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5975: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5985: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6061: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6071: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6304: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6314: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6390: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6400: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6476: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6486: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6701: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6711: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6785: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6795: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6869: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6879: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6951: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7023: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7458: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7476: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7574: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7592: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7690: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7708: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7804: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7900: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:9060: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:9588: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:17913: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:17947: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18069: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18103: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18225: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18259: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18379: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18499: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18619: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:19847: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:19881: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20005: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20039: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20163: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20197: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20538: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20572: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20696: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20730: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20854: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20888: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21412: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21446: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21568: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21602: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21724: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21758: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21878: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21998: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22118: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22777: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22843: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23008: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23074: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23239: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23305: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23468: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23631: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23794: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+-e 
+RUN  tb_w_icons_top-simulate-netlist
+
+VCD info: dumping is suppressed.
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 01010164
+===================================Iteration:    0===================================
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+ Passed (ADC2)    : Read Channel data         : [00924], Expected Channel Index   : [00924]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+ Passed (ADC2)    : Read Channel data         : [00926], Expected Channel Index   : [00926]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+ Passed (ADC2)    : Read Channel data         : [00928], Expected Channel Index   : [00928]
+===================================Iteration:    1===================================
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+ Passed (ADC2)    : Read Channel data         : [00924], Expected Channel Index   : [00924]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+ Passed (ADC2)    : Read Channel data         : [00926], Expected Channel Index   : [00926]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+ Passed (ADC2)    : Read Channel data         : [00928], Expected Channel Index   : [00928]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072a], Expected Channel Index   : [0072a]
+ Passed (ADC2)    : Read Channel data         : [0092a], Expected Channel Index   : [0092a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072c], Expected Channel Index   : [0072c]
+ Passed (ADC2)    : Read Channel data         : [0092c], Expected Channel Index   : [0092c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072e], Expected Channel Index   : [0072e]
+ Passed (ADC2)    : Read Channel data         : [0092e], Expected Channel Index   : [0092e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 8] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 8] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00730], Expected Channel Index   : [00730]
+ Passed (ADC2)    : Read Channel data         : [00930], Expected Channel Index   : [00930]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 9] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 9] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00732], Expected Channel Index   : [00732]
+ Passed (ADC2)    : Read Channel data         : [00932], Expected Channel Index   : [00932]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [10] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [10] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00734], Expected Channel Index   : [00734]
+ Passed (ADC2)    : Read Channel data         : [00934], Expected Channel Index   : [00934]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [11] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [11] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00736], Expected Channel Index   : [00736]
+ Passed (ADC2)    : Read Channel data         : [00936], Expected Channel Index   : [00936]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [12] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [12] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00738], Expected Channel Index   : [00738]
+ Passed (ADC2)    : Read Channel data         : [00938], Expected Channel Index   : [00938]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [13] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [13] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073a], Expected Channel Index   : [0073a]
+ Passed (ADC2)    : Read Channel data         : [0093a], Expected Channel Index   : [0093a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [14] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [14] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073c], Expected Channel Index   : [0073c]
+ Passed (ADC2)    : Read Channel data         : [0093c], Expected Channel Index   : [0093c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [15] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [15] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073e], Expected Channel Index   : [0073e]
+ Passed (ADC2)    : Read Channel data         : [0093e], Expected Channel Index   : [0093e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [16] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [16] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00740], Expected Channel Index   : [00740]
+ Passed (ADC2)    : Read Channel data         : [00940], Expected Channel Index   : [00940]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [17] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [17] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00742], Expected Channel Index   : [00742]
+ Passed (ADC2)    : Read Channel data         : [00942], Expected Channel Index   : [00942]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [18] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [18] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00744], Expected Channel Index   : [00744]
+ Passed (ADC2)    : Read Channel data         : [00944], Expected Channel Index   : [00944]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [19] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [19] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00746], Expected Channel Index   : [00746]
+ Passed (ADC2)    : Read Channel data         : [00946], Expected Channel Index   : [00946]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [20] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [20] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00748], Expected Channel Index   : [00748]
+ Passed (ADC2)    : Read Channel data         : [00948], Expected Channel Index   : [00948]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [21] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [21] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074a], Expected Channel Index   : [0074a]
+ Passed (ADC2)    : Read Channel data         : [0094a], Expected Channel Index   : [0094a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [22] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [22] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074c], Expected Channel Index   : [0074c]
+ Passed (ADC2)    : Read Channel data         : [0094c], Expected Channel Index   : [0094c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [23] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [23] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074e], Expected Channel Index   : [0074e]
+ Passed (ADC2)    : Read Channel data         : [0094e], Expected Channel Index   : [0094e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [24] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [24] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00750], Expected Channel Index   : [00750]
+ Passed (ADC2)    : Read Channel data         : [00950], Expected Channel Index   : [00950]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [25] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [25] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00752], Expected Channel Index   : [00752]
+ Passed (ADC2)    : Read Channel data         : [00952], Expected Channel Index   : [00952]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [26] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [26] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00754], Expected Channel Index   : [00754]
+ Passed (ADC2)    : Read Channel data         : [00954], Expected Channel Index   : [00954]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [27] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [27] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00756], Expected Channel Index   : [00756]
+ Passed (ADC2)    : Read Channel data         : [00956], Expected Channel Index   : [00956]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [28] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [28] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00758], Expected Channel Index   : [00758]
+ Passed (ADC2)    : Read Channel data         : [00958], Expected Channel Index   : [00958]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [29] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [29] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0075a], Expected Channel Index   : [0075a]
+ Passed (ADC2)    : Read Channel data         : [0095a], Expected Channel Index   : [0095a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [30] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [30] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0075c], Expected Channel Index   : [0075c]
+ Passed (ADC2)    : Read Channel data         : [0095c], Expected Channel Index   : [0095c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [31] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [31] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0075e], Expected Channel Index   : [0075e]
+ Passed (ADC2)    : Read Channel data         : [0095e], Expected Channel Index   : [0095e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+ Passed (ADC2)    : Read Channel data         : [00924], Expected Channel Index   : [00924]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+ Passed (ADC2)    : Read Channel data         : [00926], Expected Channel Index   : [00926]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+ Passed (ADC2)    : Read Channel data         : [00928], Expected Channel Index   : [00928]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072a], Expected Channel Index   : [0072a]
+ Passed (ADC2)    : Read Channel data         : [0092a], Expected Channel Index   : [0092a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072c], Expected Channel Index   : [0072c]
+ Passed (ADC2)    : Read Channel data         : [0092c], Expected Channel Index   : [0092c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072e], Expected Channel Index   : [0072e]
+ Passed (ADC2)    : Read Channel data         : [0092e], Expected Channel Index   : [0092e]
+===================================Iteration:    2===================================
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+ Passed (ADC2)    : Read Channel data         : [00924], Expected Channel Index   : [00924]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+ Passed (ADC2)    : Read Channel data         : [00926], Expected Channel Index   : [00926]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+ Passed (ADC2)    : Read Channel data         : [00928], Expected Channel Index   : [00928]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072a], Expected Channel Index   : [0072a]
+ Passed (ADC2)    : Read Channel data         : [0092a], Expected Channel Index   : [0092a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072c], Expected Channel Index   : [0072c]
+ Passed (ADC2)    : Read Channel data         : [0092c], Expected Channel Index   : [0092c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072e], Expected Channel Index   : [0072e]
+ Passed (ADC2)    : Read Channel data         : [0092e], Expected Channel Index   : [0092e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 8] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 8] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00730], Expected Channel Index   : [00730]
+ Passed (ADC2)    : Read Channel data         : [00930], Expected Channel Index   : [00930]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 9] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 9] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00732], Expected Channel Index   : [00732]
+ Passed (ADC2)    : Read Channel data         : [00932], Expected Channel Index   : [00932]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [10] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [10] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00734], Expected Channel Index   : [00734]
+ Passed (ADC2)    : Read Channel data         : [00934], Expected Channel Index   : [00934]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [11] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [11] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00736], Expected Channel Index   : [00736]
+ Passed (ADC2)    : Read Channel data         : [00936], Expected Channel Index   : [00936]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [12] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [12] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00738], Expected Channel Index   : [00738]
+ Passed (ADC2)    : Read Channel data         : [00938], Expected Channel Index   : [00938]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [13] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [13] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073a], Expected Channel Index   : [0073a]
+ Passed (ADC2)    : Read Channel data         : [0093a], Expected Channel Index   : [0093a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [14] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [14] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073c], Expected Channel Index   : [0073c]
+ Passed (ADC2)    : Read Channel data         : [0093c], Expected Channel Index   : [0093c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [15] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [15] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073e], Expected Channel Index   : [0073e]
+ Passed (ADC2)    : Read Channel data         : [0093e], Expected Channel Index   : [0093e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [16] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [16] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00740], Expected Channel Index   : [00740]
+ Passed (ADC2)    : Read Channel data         : [00940], Expected Channel Index   : [00940]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [17] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [17] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00742], Expected Channel Index   : [00742]
+ Passed (ADC2)    : Read Channel data         : [00942], Expected Channel Index   : [00942]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [18] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [18] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00744], Expected Channel Index   : [00744]
+ Passed (ADC2)    : Read Channel data         : [00944], Expected Channel Index   : [00944]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [19] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [19] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00746], Expected Channel Index   : [00746]
+ Passed (ADC2)    : Read Channel data         : [00946], Expected Channel Index   : [00946]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [20] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [20] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00748], Expected Channel Index   : [00748]
+ Passed (ADC2)    : Read Channel data         : [00948], Expected Channel Index   : [00948]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [21] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [21] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074a], Expected Channel Index   : [0074a]
+ Passed (ADC2)    : Read Channel data         : [0094a], Expected Channel Index   : [0094a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [22] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [22] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074c], Expected Channel Index   : [0074c]
+ Passed (ADC2)    : Read Channel data         : [0094c], Expected Channel Index   : [0094c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [23] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [23] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074e], Expected Channel Index   : [0074e]
+ Passed (ADC2)    : Read Channel data         : [0094e], Expected Channel Index   : [0094e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [24] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [24] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00750], Expected Channel Index   : [00750]
+ Passed (ADC2)    : Read Channel data         : [00950], Expected Channel Index   : [00950]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [25] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [25] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00752], Expected Channel Index   : [00752]
+ Passed (ADC2)    : Read Channel data         : [00952], Expected Channel Index   : [00952]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [26] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [26] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00754], Expected Channel Index   : [00754]
+ Passed (ADC2)    : Read Channel data         : [00954], Expected Channel Index   : [00954]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [27] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [27] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00756], Expected Channel Index   : [00756]
+ Passed (ADC2)    : Read Channel data         : [00956], Expected Channel Index   : [00956]
+===================================Iteration:    3===================================
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+ Passed (ADC2)    : Read Channel data         : [00924], Expected Channel Index   : [00924]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+ Passed (ADC2)    : Read Channel data         : [00926], Expected Channel Index   : [00926]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+ Passed (ADC2)    : Read Channel data         : [00928], Expected Channel Index   : [00928]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 5] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072a], Expected Channel Index   : [0072a]
+ Passed (ADC2)    : Read Channel data         : [0092a], Expected Channel Index   : [0092a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 6] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072c], Expected Channel Index   : [0072c]
+ Passed (ADC2)    : Read Channel data         : [0092c], Expected Channel Index   : [0092c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 7] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0072e], Expected Channel Index   : [0072e]
+ Passed (ADC2)    : Read Channel data         : [0092e], Expected Channel Index   : [0092e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 8] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 8] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00730], Expected Channel Index   : [00730]
+ Passed (ADC2)    : Read Channel data         : [00930], Expected Channel Index   : [00930]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 9] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 9] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00732], Expected Channel Index   : [00732]
+ Passed (ADC2)    : Read Channel data         : [00932], Expected Channel Index   : [00932]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [10] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [10] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00734], Expected Channel Index   : [00734]
+ Passed (ADC2)    : Read Channel data         : [00934], Expected Channel Index   : [00934]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [11] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [11] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00736], Expected Channel Index   : [00736]
+ Passed (ADC2)    : Read Channel data         : [00936], Expected Channel Index   : [00936]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [12] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [12] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00738], Expected Channel Index   : [00738]
+ Passed (ADC2)    : Read Channel data         : [00938], Expected Channel Index   : [00938]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [13] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [13] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073a], Expected Channel Index   : [0073a]
+ Passed (ADC2)    : Read Channel data         : [0093a], Expected Channel Index   : [0093a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [14] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [14] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073c], Expected Channel Index   : [0073c]
+ Passed (ADC2)    : Read Channel data         : [0093c], Expected Channel Index   : [0093c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [15] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [15] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0073e], Expected Channel Index   : [0073e]
+ Passed (ADC2)    : Read Channel data         : [0093e], Expected Channel Index   : [0093e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [16] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [16] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00740], Expected Channel Index   : [00740]
+ Passed (ADC2)    : Read Channel data         : [00940], Expected Channel Index   : [00940]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [17] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [17] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00742], Expected Channel Index   : [00742]
+ Passed (ADC2)    : Read Channel data         : [00942], Expected Channel Index   : [00942]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [18] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [18] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00744], Expected Channel Index   : [00744]
+ Passed (ADC2)    : Read Channel data         : [00944], Expected Channel Index   : [00944]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [19] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [19] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00746], Expected Channel Index   : [00746]
+ Passed (ADC2)    : Read Channel data         : [00946], Expected Channel Index   : [00946]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [20] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [20] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00748], Expected Channel Index   : [00748]
+ Passed (ADC2)    : Read Channel data         : [00948], Expected Channel Index   : [00948]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [21] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [21] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074a], Expected Channel Index   : [0074a]
+ Passed (ADC2)    : Read Channel data         : [0094a], Expected Channel Index   : [0094a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [22] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [22] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074c], Expected Channel Index   : [0074c]
+ Passed (ADC2)    : Read Channel data         : [0094c], Expected Channel Index   : [0094c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [23] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [23] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0074e], Expected Channel Index   : [0074e]
+ Passed (ADC2)    : Read Channel data         : [0094e], Expected Channel Index   : [0094e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [24] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [24] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00750], Expected Channel Index   : [00750]
+ Passed (ADC2)    : Read Channel data         : [00950], Expected Channel Index   : [00950]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [25] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [25] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00752], Expected Channel Index   : [00752]
+ Passed (ADC2)    : Read Channel data         : [00952], Expected Channel Index   : [00952]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [26] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [26] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00754], Expected Channel Index   : [00754]
+ Passed (ADC2)    : Read Channel data         : [00954], Expected Channel Index   : [00954]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [27] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [27] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00756], Expected Channel Index   : [00756]
+ Passed (ADC2)    : Read Channel data         : [00956], Expected Channel Index   : [00956]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [28] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [28] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00758], Expected Channel Index   : [00758]
+ Passed (ADC2)    : Read Channel data         : [00958], Expected Channel Index   : [00958]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [29] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [29] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0075a], Expected Channel Index   : [0075a]
+ Passed (ADC2)    : Read Channel data         : [0095a], Expected Channel Index   : [0095a]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [30] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [30] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0075c], Expected Channel Index   : [0075c]
+ Passed (ADC2)    : Read Channel data         : [0095c], Expected Channel Index   : [0095c]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [31] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [31] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [0075e], Expected Channel Index   : [0075e]
+ Passed (ADC2)    : Read Channel data         : [0095e], Expected Channel Index   : [0095e]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+ Passed (ADC2)    : Read Channel data         : [00924], Expected Channel Index   : [00924]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+ Passed (ADC2)    : Read Channel data         : [00926], Expected Channel Index   : [00926]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+ Passed (ADC2)    : Read Channel data         : [00928], Expected Channel Index   : [00928]
+===================================Iteration:    4===================================
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+ Passed (ADC2)    : Read Channel data         : [00920], Expected Channel Index   : [00920]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC2)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+ Passed (ADC2)    : Read Channel data         : [00922], Expected Channel Index   : [00922]
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m

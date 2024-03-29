@@ -1,0 +1,201 @@
+ <!---------------------------------------->
+ <!--Module : regression_run.template    -->
+ <!--Author : Ali Zeinolabedin           -->
+ <!--Company: Blackrock Neurotech        -->
+ <!---------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            background-color: #e6f7ff; /* Light Blue */
+            width: 100%;
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            border: 10px solid #FFB6C1; /* Adjust the border size and color as needed */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 5px; /* Adjust the padding as needed */
+            text-align: left;
+        }
+
+        th {
+            text-align: center; /* Center the text in table headers */
+        }
+
+        .passed {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .failed {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .unknown {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .content {
+            padding: 10px; /* Adjust the padding inside the frame */
+        }
+    </style>
+    <title>List of Regression Runs</title>
+</head>
+<body>
+    <h1>List of RTL Regression Runs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Running time</th>
+                <th>Simulator</th>
+                <th>Release</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- RTL List items will be inserted here -->
+    <tr>
+        <td><a href="/home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.20_12.20.36/report.html">2023.12.20</a></td>
+        <td>12.20.36</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 2 min(s), 57 sec(s)</td>
+        <td>xcelium</td>
+        <td>Git:7df27cc76</td>
+    </tr>
+    <tr>
+        <td><a href="/home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.20_12.04.35/report.html">2023.12.20</a></td>
+        <td>12.04.35</td>
+        <td style="background-color: red;">FAILED</td>
+        <td>0 hr(s), 3 min(s), 16 sec(s)</td>
+        <td>xcelium</td>
+        <td>Git:7df27cc76</td>
+    </tr>
+    <tr>
+        <td><a href="/home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.20_11.59.26/report.html">2023.12.20</a></td>
+        <td>11.59.26</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 0 min(s), 4 sec(s)</td>
+        <td>xcelium</td>
+        <td>Git:7df27cc76</td>
+    </tr>
+    <tr>
+        <td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.14_13.49.28/report.html">2023.12.14</a></td>
+        <td>13.49.28</td>
+        <td style="background-color: red;">FAILED</td>
+        <td>1 hr(s), 0 min(s), 37 sec(s)</td>
+        <td>iverilog</td>
+        <td>Git:2d329b385</td>
+    </tr>
+    <tr>
+        <td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.14_12.28.10/report.html">2023.12.14</a></td>
+        <td>12.28.10</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 20 min(s), 37 sec(s)</td>
+        <td>iverilog</td>
+        <td>Git:2d329b385</td>
+    </tr>
+    <tr>
+        <td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.14_12.05.58/report.html">2023.12.14</a></td>
+        <td>12.05.58</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 6 min(s), 50 sec(s)</td>
+        <td>iverilog</td>
+        <td>Git:2d329b385</td>
+    </tr>
+        </tbody>
+    </table>
+</body>
+<body>
+    <h1>List of Netlist Regression Runs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Running time</th>
+                <th>Simulator</th>
+                <th>Netlist</th>
+                <th>Release</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- NETLIST List items will be inserted here -->
+    <tr>
+        <td><a href="/home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.20_13.49.42/report.html">2023.12.20</a></td>
+        <td>13.49.42</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 5 min(s), 50 sec(s)</td>
+        <td>xcelium</td>
+        <td>synthesis: No SDF</td>
+        <td>Ulka:231218</td>
+    </tr>
+    <tr>
+        <td><a href="/home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.20_13.49.42/report.html">2023.12.20</a></td>
+        <td>13.49.42</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 5 min(s), 50 sec(s)</td>
+        <td>xcelium</td>
+        <td>synthesis: No SDF</td>
+        <td>Ulka:231218</td>
+    </tr>
+    <tr>
+        <td><a href="/home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.20_13.48.02/report.html">2023.12.20</a></td>
+        <td>13.48.02</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 0 min(s), 12 sec(s)</td>
+        <td>xcelium</td>
+        <td>synthesis: No SDF</td>
+        <td>Ulka:231218</td>
+    </tr>
+    
+    <tr>
+        <td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.19_08.09.26/report.html">2023.12.19</a></td>
+        <td>08.09.26</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>7 hr(s), 40 min(s), 3 sec(s)</td>
+        <td>iverilog</td>
+        <td>synthesis: No SDF</td>
+        <td>Ulka:231218</td>
+    </tr>
+    <tr>
+        <td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.19_08.08.59/report.html">2023.12.19</a></td>
+        <td>08.08.59</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 0 min(s), 20 sec(s)</td>
+        <td>iverilog</td>
+        <td>synthesis: No SDF</td>
+        <td>Ulka:231218</td>
+    </tr>
+    <tr>
+        <td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.19_08.08.05/report.html">2023.12.19</a></td>
+        <td>08.08.05</td>
+        <td style="background-color: green;">PASSED</td>
+        <td>0 hr(s), 0 min(s), 21 sec(s)</td>
+        <td>iverilog</td>
+        <td>synthesis: No SDF</td>
+        <td>Ulka:231218</td>
+
+    </tr>
+        </tbody>
+    </table>
+</body>
+</html>

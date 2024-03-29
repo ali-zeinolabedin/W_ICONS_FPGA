@@ -1,0 +1,259 @@
+-e VLOG-INCDIRS
+    -I/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/global_src/verilog
+-e VLOG-FLAGS
+    -Wno-timescale
+    -Wno-implicit-dimensions
+    -Wno-sensitivity-entire-array
+    -Wno-portbind
+    -g2005-sv
+-e VLOG tb_w_icons_top-simulate-netlist
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4877: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4887: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4961: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4971: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5045: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5055: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5127: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5199: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5889: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5899: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5975: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5985: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6061: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6071: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6304: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6314: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6390: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6400: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6476: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6486: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6701: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6711: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6785: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6795: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6869: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6879: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6951: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7023: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7458: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7476: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7574: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7592: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7690: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7708: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7804: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7900: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:9060: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:9588: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:17913: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:17947: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18069: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18103: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18225: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18259: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18379: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18499: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18619: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:19847: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:19881: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20005: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20039: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20163: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20197: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20538: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20572: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20696: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20730: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20854: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20888: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21412: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21446: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21568: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21602: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21724: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21758: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21878: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21998: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22118: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22777: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22843: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23008: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23074: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23239: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23305: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23468: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23631: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23794: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+-e 
+RUN  tb_w_icons_top-simulate-netlist
+
+VCD info: dumping is suppressed.
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+----------->Stimulator Status: CMD(4'b0111)
+	Stimulator status:   00
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+---------------------------------------------------
+Write parameters to selected stimulation channels
+Write to stimulator [ 0], address:  064
+	 Interval :  8
+	 Ic       : 47
+	 PulseW   : 67
+	 PulseGap :  7
+	 PulseNum :  1
+	 Pol      :  0
+	 range    :  0
+Write to stimulator [ 1], address:  070
+	 Interval : 17
+	 Ic       :  5
+	 PulseW   : 22
+	 PulseGap :  1
+	 PulseNum :  2
+	 Pol      :  0
+	 range    :  0
+Write to stimulator [ 2], address:  07c
+	 Interval : 18
+	 Ic       : 17
+	 PulseW   :  9
+	 PulseGap :  2
+	 PulseNum :  2
+	 Pol      :  0
+	 range    :  0
+Write to stimulator [ 3], address:  088
+	 Interval :  6
+	 Ic       : 17
+	 PulseW   : 42
+	 PulseGap :  5
+	 PulseNum :  1
+	 Pol      :  0
+	 range    :  0
+Write to stimulator [ 4], address:  094
+	 Interval : 14
+	 Ic       : 29
+	 PulseW   : 66
+	 PulseGap :  0
+	 PulseNum :  2
+	 Pol      :  0
+	 range    :  0
+-------------------------> Iteration [  0]
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 3] -> Cathode Pulse period (Generated by stim ctrl) =   42 , WC       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 3] ->  Gap period          (Generated by stim ctrl) =    5 , GAP      (User-defined) =    5
+[Analog Macro Montoring] - Channel[ 2] ->  Interval period     (Generated by stim ctrl) =   18 , Interval (User-defined) =   18
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 0] -> Cathode Pulse period (Generated by stim ctrl) =   67 , WC       (User-defined) =   67
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] ->  Interval period     (Generated by stim ctrl) =   17 , Interval (User-defined) =   17
+[Analog Macro Montoring] - Channel[ 0] ->  Gap period          (Generated by stim ctrl) =    7 , GAP      (User-defined) =    7
+[Analog Macro Montoring] - Channel[ 3] ->  Anode  Pulse period (Generated by stim ctrl) =   42 , WA       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 0] ->  Anode  Pulse period (Generated by stim ctrl) =   67 , WA       (User-defined) =   67
+-------------------------> Iteration [  1]
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 3] -> Cathode Pulse period (Generated by stim ctrl) =   42 , WC       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 3] ->  Gap period          (Generated by stim ctrl) =    5 , GAP      (User-defined) =    5
+[Analog Macro Montoring] - Channel[ 2] ->  Interval period     (Generated by stim ctrl) =   18 , Interval (User-defined) =   18
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 0] -> Cathode Pulse period (Generated by stim ctrl) =   67 , WC       (User-defined) =   67
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] ->  Interval period     (Generated by stim ctrl) =   17 , Interval (User-defined) =   17
+[Analog Macro Montoring] - Channel[ 0] ->  Gap period          (Generated by stim ctrl) =    7 , GAP      (User-defined) =    7
+[Analog Macro Montoring] - Channel[ 3] ->  Anode  Pulse period (Generated by stim ctrl) =   42 , WA       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 0] ->  Anode  Pulse period (Generated by stim ctrl) =   67 , WA       (User-defined) =   67
+-------------------------> Iteration [  2]
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 3] -> Cathode Pulse period (Generated by stim ctrl) =   42 , WC       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 3] ->  Gap period          (Generated by stim ctrl) =    5 , GAP      (User-defined) =    5
+[Analog Macro Montoring] - Channel[ 2] ->  Interval period     (Generated by stim ctrl) =   18 , Interval (User-defined) =   18
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 0] -> Cathode Pulse period (Generated by stim ctrl) =   67 , WC       (User-defined) =   67
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] ->  Interval period     (Generated by stim ctrl) =   17 , Interval (User-defined) =   17
+[Analog Macro Montoring] - Channel[ 0] ->  Gap period          (Generated by stim ctrl) =    7 , GAP      (User-defined) =    7
+[Analog Macro Montoring] - Channel[ 3] ->  Anode  Pulse period (Generated by stim ctrl) =   42 , WA       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 0] ->  Anode  Pulse period (Generated by stim ctrl) =   67 , WA       (User-defined) =   67
+-------------------------> Iteration [  3]
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 3] -> Cathode Pulse period (Generated by stim ctrl) =   42 , WC       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 3] ->  Gap period          (Generated by stim ctrl) =    5 , GAP      (User-defined) =    5
+[Analog Macro Montoring] - Channel[ 2] ->  Interval period     (Generated by stim ctrl) =   18 , Interval (User-defined) =   18
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 0] -> Cathode Pulse period (Generated by stim ctrl) =   67 , WC       (User-defined) =   67
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] ->  Interval period     (Generated by stim ctrl) =   17 , Interval (User-defined) =   17
+[Analog Macro Montoring] - Channel[ 0] ->  Gap period          (Generated by stim ctrl) =    7 , GAP      (User-defined) =    7
+[Analog Macro Montoring] - Channel[ 3] ->  Anode  Pulse period (Generated by stim ctrl) =   42 , WA       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 0] ->  Anode  Pulse period (Generated by stim ctrl) =   67 , WA       (User-defined) =   67
+-------------------------> Iteration [  4]
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 3] -> Cathode Pulse period (Generated by stim ctrl) =   42 , WC       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 3] ->  Gap period          (Generated by stim ctrl) =    5 , GAP      (User-defined) =    5
+[Analog Macro Montoring] - Channel[ 2] ->  Interval period     (Generated by stim ctrl) =   18 , Interval (User-defined) =   18
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 2] -> Cathode Pulse period (Generated by stim ctrl) =    9 , WC       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 2] ->  Gap period          (Generated by stim ctrl) =    2 , GAP      (User-defined) =    2
+[Analog Macro Montoring] - Channel[ 0] -> Cathode Pulse period (Generated by stim ctrl) =   67 , WC       (User-defined) =   67
+[Analog Macro Montoring] - Channel[ 2] ->  Anode  Pulse period (Generated by stim ctrl) =    9 , WA       (User-defined) =    9
+[Analog Macro Montoring] - Channel[ 1] ->  Interval period     (Generated by stim ctrl) =   17 , Interval (User-defined) =   17
+[Analog Macro Montoring] - Channel[ 0] ->  Gap period          (Generated by stim ctrl) =    7 , GAP      (User-defined) =    7
+[Analog Macro Montoring] - Channel[ 3] ->  Anode  Pulse period (Generated by stim ctrl) =   42 , WA       (User-defined) =   42
+[Analog Macro Montoring] - Channel[ 1] -> Cathode Pulse period (Generated by stim ctrl) =   22 , WC       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 1] ->  Gap period          (Generated by stim ctrl) =    1 , GAP      (User-defined) =    1
+[Analog Macro Montoring] - Channel[ 1] ->  Anode  Pulse period (Generated by stim ctrl) =   22 , WA       (User-defined) =   22
+[Analog Macro Montoring] - Channel[ 0] ->  Anode  Pulse period (Generated by stim ctrl) =   67 , WA       (User-defined) =   67
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m

@@ -1,0 +1,13 @@
+// keep begin sources
+//w_icon_core
+#${PRJ_DIR}/units/w_icons_top/rtl2gds/yosys/results/w_icons_top_netlist.v
+#${PRJ_DIR}/units/w_icons_top/rtl2gds/genus/WORK/synthDb/final.v
+${PRJ_DIR}/export/pnr/netlist/231226/postroute.v.gz
+${PRJ_DIR}/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v
+#${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_pads.v
+#${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_top.v
+${PRJ_DIR}/resources/tcb018gbwp7t.v
+
+
+// keep end
+

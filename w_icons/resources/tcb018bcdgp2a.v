@@ -1,0 +1,1 @@
+/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_vlg/TSMCHOME/digital/Front_End/verilog/tcb018bcdgp2a_110a/tcb018bcdgp2a.v

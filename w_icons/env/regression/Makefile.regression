@@ -1,0 +1,420 @@
+#-------------------------------------
+#  Module : Makefile.regression
+#  Author : Ali Zeinolabedin 
+#  Company: Blackrock Neurotech
+#-------------------------------------
+
+TESTCASES   ?=
+SIMULATOR   ?= xcelium
+NETLIST_VER :=
+RELEASE     :=
+
+# vars
+RUN_DATE     := $(shell date '+%Y.%m.%d_%H.%M.%S')
+REG_TITLE    := $(shell date '+%Y.%m.%d')
+SIMTOOL_DIR  := generic
+OLDAFTERDAYS ?= 10
+
+## directories
+WORK_DIR          := ./runs
+RESULT_DIR        := ${WORK_DIR}/${RUN_DATE}
+CURRENT_DIR        = $(subst $(WORK_DIR)/,,$(RESULT_DIR))
+LATEST_RESULT_DIR := ${WORK_DIR}/latest
+
+# result
+SIMRUN_LOG         := runbatch.log
+REGRESSION_LOG     := regression.log
+REGRESSION_COV_LOG := regression_cov.log
+TBCHECK_LOG        := result.log
+TBCHECK_NET_LOG    := result_net.log
+COV_LOG            := cov_result.log
+MEMCHECK_DUMMY     := memcheck.run
+
+LOG_DIRS           := $(foreach TC, ${TESTCASES}, ${RESULT_DIR}/${TC})
+SUMMARY_LOG        := summary.log
+RESULT_LOG         := ${RESULT_DIR}/${SUMMARY_LOG}
+LATEST_RESULT_LOG  := ${LATEST_RESULT_DIR}/${SUMMARY_LOG}
+TBCHECK_LOGS       := $(foreach TC, ${TESTCASES}, ${RESULT_DIR}/${TC}/${TBCHECK_LOG})
+RUN_CMD            := runbatch_dump 
+MERGE_RPT          := RTL
+OUTPUT_FILE        := summary_runs.html
+COVERAGE_EN        := 0
+COV_REP            := 
+
+ifeq ($(findstring net, $(MAKECMDGOALS)), net)
+    LOG_DIRS          := $(foreach TC, ${TESTCASES_NET}, ${RESULT_DIR}/${TC}.netlist)
+    SUMMARY_LOG       := summary_net.log
+    RESULT_LOG        := ${RESULT_DIR}/${SUMMARY_LOG}
+    LATEST_RESULT_LOG := ${LATEST_RESULT_DIR}/${SUMMARY_LOG}
+    TBCHECK_LOGS      := $(foreach TC, ${TESTCASES_NET}, ${RESULT_DIR}/${TC}.netlist/${TBCHECK_LOG})
+    RUN_CMD           := runnetbatch
+endif
+
+
+
+#for coverage and only using rtl regression
+COV_LOGS         := $(foreach TC, ${TESTCASES}, ${RESULT_DIR}/${TC}/${COV_LOG})
+
+#Crontab job  
+CRONTAB_MIN      := 0
+CRONTAB_HR       := 13
+
+
+MEMCHECK_DUMMIES := $(foreach TC, ${TESTCASES}, ${RESULT_DIR}/${TC}/${MEMCHECK_DUMMY})
+
+# For HTML report
+ITEMS_FILE     := items.txt
+CSV_FILE       := table_content.csv
+# For Final HTML generation
+RUNS_DIR       := ./runs
+SUBDIRECTORIES := $(shell find $(RUNS_DIR) -mindepth 1 -maxdepth 1 -type d -printf "%T@ %p\n" | sort -rn | cut -d' ' -f2)
+
+## dir rules for rtl regression
+${LOG_DIRS}: | ${RESULT_DIR}
+
+${LOG_DIRS} ${RESULT_DIR}:
+	@mkdir -p $@
+
+# enter testcase directorie, clean, run for RTL regression
+#-@echo "running $($@_TCDIR) ..." 
+
+${RESULT_DIR}/%/${TBCHECK_LOG}: | ${RESULT_DIR}/%
+	$(eval $@_TCDIR := "$(shell if [ -n '$(findstring netlist,$*)' ]; then echo $(basename $*); else echo $*; fi | sed -e "s|\(.*\)\.\(.*\)|${PRJ_DIR}/units/\1/simulation/${SIMTOOL_DIR}/\2|")")
+	@echo "running $* ..."
+	-@make -C ${$@_TCDIR} SIMULATOR=$(SIMULATOR) clean > ${RESULT_DIR}/$*/${REGRESSION_LOG} 2>&1 
+	@start_time=$$(date '+%T'); \
+	echo "$$start_time" > ${RESULT_DIR}/$*/start_time.tmp; 
+	-@make -C ${$@_TCDIR} SIMULATOR=$(SIMULATOR) ${RUN_CMD} TEST_NAME=$(subst .,,$(suffix $*)) CDS_SIM_COVERAGE=${COVERAGE_EN} >> ${RESULT_DIR}/$*/${REGRESSION_LOG} 2>&1
+	@end_time=$$(date '+%T'); \
+	echo "$$end_time" > ${RESULT_DIR}/$*/end_time.tmp;
+	-@cp ${$@_TCDIR}/.work.$(SIMULATOR)/*.log ${RESULT_DIR}/$*/
+	@if [ -e ${RESULT_DIR}/$*/${SIMRUN_LOG} ] ; then \
+		res=$$(grep TBCHECK ${RESULT_DIR}/$*/${SIMRUN_LOG}) ; \
+		resc=$$(grep -c TBCHECK ${RESULT_DIR}/$*/${SIMRUN_LOG}) ; \
+		if [ $$resc -eq "1" ] ; then \
+			start_time=$$(cat ${RESULT_DIR}/$*/start_time.tmp); \
+			end_time=$$(cat ${RESULT_DIR}/$*/end_time.tmp); \
+			start_timestamp=$$(date -u -d  "$$start_time" '+%s'); \
+			end_timestamp=$$(date -u -d "$$end_time" '+%s'); \
+			running_time=$$(expr $$end_timestamp - $$start_timestamp); \
+			elapsed_minutes=$$(expr $$running_time / 60); \
+			remaining_seconds=$$(expr $$running_time % 60); \
+			echo $*" $$res " "| Start: $$start_time | End: $$end_time | RUNNING Time: $$running_time -> $$elapsed_minutes min(s) and $$remaining_seconds sec(s)" > ${RESULT_DIR}/$*/${TBCHECK_LOG} ; \
+		else \
+			echo $*" TBCHECK: INTERPRETFAIL" > ${RESULT_DIR}/$*/${TBCHECK_LOG} ; \
+		fi ; \
+	else \
+		echo $*" TBCHECK: SIMFAIL" > ${RESULT_DIR}/$*/${TBCHECK_LOG} ; \
+	fi
+
+# evaluate
+${RESULT_LOG}: ${TBCHECK_LOGS} | ${RESULT_DIR}
+	@cat ${TBCHECK_LOGS} | column -t > $@
+	@sh -c "echo \"---\"; echo \"PASSED: $$(cat $@ | grep -ce 'TBCHECK:\s*PASSED') out of $$(cat $@ | wc -l)\"" >> $@
+	@rm -f ${LATEST_RESULT_DIR}
+	@ln -srf ${RESULT_DIR} ${LATEST_RESULT_DIR}
+	@echo ""
+	@echo "---"
+	@cat $@
+
+${LATEST_RESULT_DIR}: ${RESULT_LOG}
+
+all: ${RESULT_LOG} gen_html
+
+all_net: ${RESULT_LOG} gen_html
+
+reg_all:
+	@echo "Measuring total running time..."
+	@date1=$$(date '+%s'); \
+	make --no-print-directory all; \
+	date2=$$(date '+%s'); \
+	elapsed=$$((date2-date1)); \
+	$(call convert-time,$$elapsed)
+
+reg_all_net:
+	@echo "Measuring total running time..."
+	@date1=$$(date '+%s'); \
+	make --no-print-directory all_net; \
+	date2=$$(date '+%s'); \
+	elapsed=$$((date2-date1)); \
+	$(call convert-time,$$elapsed)
+
+# Function to convert seconds to hours, minutes, and seconds
+define convert-time
+    hours=$$(($1 / 3600)); \
+    minutes=$$((($1 % 3600) / 60)); \
+    seconds=$$((($1 % 3600) % 60)); \
+    echo "$$hours hr(s), $$minutes min(s), $$seconds sec(s)" >> ${RESULT_DIR}/total_run_time.rpt
+endef
+
+show:
+	@if [ -e ${LATEST_RESULT_LOG} ] ; then \
+		cat ${LATEST_RESULT_LOG} ; \
+	else \
+		echo "no results - run make first" ; \
+	fi
+
+# for Covered only for xcelium the noraml regression is used
+#----------------------- Coverage   ------------------------------------------------	
+${RESULT_DIR}/%/${COV_LOG}: | ${RESULT_DIR}/%
+	$(eval $@_TCDIR := "$(shell echo $* | sed -e "s|\(.*\)\.\(.*\)|${PRJ_DIR}/units/\1/simulation/${SIMTOOL_DIR}/\2|")")
+	@echo "running coverage for $* ..."
+	-@make -C ${$@_TCDIR} SIMULATOR=$(SIMULATOR) cov_rp_batch >> ${RESULT_DIR}/$*/${REGRESSION_COV_LOG} 2>&1
+
+cov_all: ${COV_LOGS}
+
+#to be completed
+cov_all_mg: cov_all
+#----------------------- Export File  ----------------------------------------------
+#to export the RTL file and remove comments
+export_file:
+	-@mkdir -p $(DEST_DIR)
+	@echo "Exported file to ${DEST_DIR}"
+	-@cp  ${VLOG_SOURCES_RTL} ${DEST_DIR}
+	@for file in $(wildcard $(DEST_DIR)/*); do \
+		echo "Removing 'icglue' lines from $${file}"; \
+		sed -i '/icglue/d' $${file}; \
+	done
+	@echo "Lines containing 'icglue' removed from all files in $(DEST_DIR)"
+
+
+#----------------------  Interactive Regression report Generate for each run -------
+gen_list: 
+	@grep "TBCHECK:" ${LATEST_RESULT_DIR}/$(SUMMARY_LOG) | awk '{print $$1, $$3, $$6, $$9, $$13, $$15, $$18}' > ${LATEST_RESULT_DIR}/$(ITEMS_FILE)
+
+#-@echo 'CURRENT_DIR ${CURRENT_DIR}'	
+gen_csv: gen_list
+	@awk -F' ' -v OFS=' ' \
+	 '{ status = tolower($$2); \
+	 	print "<tr>  \
+	 		  \n\t<td><a href=\"" "${PRJ_DIR}/regressions/runs/${CURRENT_DIR}/" $$1 "/regression.log\">" $$1 "</a></td> \
+	 		  \n\t<td class=\"" status "\">" $$2 "</td> \
+	 		  \n\t<td>" $$3 "</td> \
+	 		  \n\t<td>" $$4 "</td> \
+	 		  \n\t<td>" $$6 " min(s) and  " $$7 " sec(s)</td> \
+	 		  \n\t<td><div class=\"duration-bar\" style=\"width: " $$5 "px\"></div></td> \
+	 		  \n</tr>"}'           \
+	 		  ${LATEST_RESULT_DIR}/$(ITEMS_FILE) > ${LATEST_RESULT_DIR}/${CSV_FILE}
+	
+gen_html: gen_csv
+	@sed '/<!-- List items will be inserted here -->/r ${LATEST_RESULT_DIR}/$(CSV_FILE)' ${PRJ_DIR}/env/regression/regression_report.template > ${LATEST_RESULT_DIR}/report.html
+	@sed -i "s/<h1>List Items<\/h1>/<h1>Regression Run @ ${REG_TITLE}<\/h1>/" ${LATEST_RESULT_DIR}/report.html 
+
+#----------------------  Interactive Regression report for all runs -------
+#@echo "Checking directory: $(dir)"; \
+echo $${TEMPLATE_FILE}; \
+# use this target to go through folder runs and generate the report; however there is a bug here and it reports the lates simulator for all; use the reg_rep o report only the latest simulator for the latest
+#..>run and don't touch others  ==> this should be fixed later
+#..> once to be run for each regression
+
+reg_rep_all:
+	@rm ${RUNS_DIR}/temp_file_netlist.html -f
+	@rm ${RUNS_DIR}/temp_file_rtl.html -f
+	@$(foreach dir, $(SUBDIRECTORIES), \
+		datep=$(shell basename $(dir) | cut -d '_' -f 1); \
+		timep=$(shell basename $(dir) | cut -d '_' -f 2); \
+		passed_count=$$(grep -c "PASSED" $(dir)/items.txt); \
+		failed_count=$$(grep -c "FAILED" $(dir)/items.txt); \
+		total_count=$$(wc -l < $(dir)/items.txt); \
+		if grep -qF "netlist" $(dir)/items.txt; then \
+			MERGE_RPT="netlist"; \
+		else \
+			MERGE_RPT="rtl"; \
+		fi; \
+		OUTPUT_FILE_TMP=temp_file_$${MERGE_RPT}.html; \
+		TEMPLATE_FILE=${RUNS_DIR}/$${OUTPUT_FILE_TMP}; \
+		if [ "$$passed_count" -eq "$$total_count" ]; then \
+			status="PASSED"; \
+			color="green"; \
+		else \
+			status="FAILED"; \
+			color="red"; \
+		fi; \
+		if [ "$$status" = "PASSED" ]; then color="green"; \
+		elif [ "$$status" = "FAILED" ]; then color="red"; fi; \
+		echo "    <tr>" >> $${TEMPLATE_FILE}; \
+		echo "        <td><a href=\"${PRJ_DIR}/regressions/runs/$$(basename $(dir))/report.html\">$${datep}</a></td>" >> $${TEMPLATE_FILE}; \
+		echo "        <td>$${timep}</td>" >> $${TEMPLATE_FILE}; \
+		echo "        <td style=\"background-color: $${color};\">$${status}</td>" >> $${TEMPLATE_FILE}; \
+		echo "        <td>$$(cat $(dir)/total_run_time.rpt)</td>" >> $${TEMPLATE_FILE}; \
+		echo "        <td>$(SIMULATOR)</td>" >> $${TEMPLATE_FILE}; \
+		if grep -qF "netlist" $(dir)/items.txt; then \
+			echo "        <td>$(NETLIST_VER)</td>" >> $${TEMPLATE_FILE}; \
+		fi; \
+		echo "        <td>$(RELEASE)</td>" >> $${TEMPLATE_FILE}; \	
+		echo "        <td>$(total_count)</td>" >> $${TEMPLATE_FILE}; \
+		if ! grep -qF "netlist" $${dir}/items.txt; then \
+			echo "        <td>$(COV_REP)</td>" >> $${TEMPLATE_FILE}; \
+		fi; \
+		echo "        <td>$${COMMENTS}</td>" >> $${TEMPLATE_FILE}; \
+		echo "    </tr>" >> $${TEMPLATE_FILE}; \
+	)
+	@cp ${PRJ_DIR}/env/regression/regression_run.template ${RUNS_DIR}/$(OUTPUT_FILE)
+	@if [ -f ${RUNS_DIR}/temp_file_netlist.html ]; then \
+		sed -i '/<!-- NETLIST List items will be inserted here -->/r ${RUNS_DIR}/temp_file_netlist.html' ${RUNS_DIR}/$(OUTPUT_FILE); \
+	fi
+	@if [ -f ${RUNS_DIR}/temp_file_rtl.html ]; then \
+		sed -i '/<!-- RTL List items will be inserted here -->/r ${RUNS_DIR}/temp_file_rtl.html' ${RUNS_DIR}/$(OUTPUT_FILE); \
+	fi
+	@rm -f ${RUNS_DIR}/temp_file_netlist.html ${RUNS_DIR}/temp_file_rtl.html
+
+#echo "symlk -> $${total_count}"; \
+# use this target to only add the latest regression run
+# echo "symlk -> $${dir}"; \
+
+#$(info $(NETLIST_VER))
+#$(info $(RELEASE))
+
+reg_rep:
+	@symlk=runs/latest; \
+	dir=$$(readlink -f $$symlk); \
+	datep=$$( basename $${dir} | cut -d '_' -f 1); \
+	timep=$$( basename $${dir} | cut -d '_' -f 2); \
+	passed_count=$$(grep -c "PASSED" $${dir}/items.txt); \
+	failed_count=$$(grep -c "FAILED" $${dir}/items.txt); \
+	total_count=$$(wc -l < $${dir}/items.txt); \
+	if grep -qF "netlist" $${dir}/items.txt; then \
+		MERGE_RPT="netlist"; \
+	else \
+		MERGE_RPT="rtl"; \
+	fi; \
+	OUTPUT_FILE_TMP=temp_file_$${MERGE_RPT}.html; \
+	TEMPLATE_FILE=${RUNS_DIR}/$${OUTPUT_FILE_TMP}; \
+	if [ "$$passed_count" -eq "$$total_count" ]; then \
+		status="PASSED"; \
+		color="green"; \
+	else \
+		status="FAILED"; \
+		color="red"; \
+	fi; \
+	if [ "$$status" = "PASSED" ]; then color="green"; \
+	elif [ "$$status" = "FAILED" ]; then color="red"; fi; \
+	echo "    <tr>" >> $${TEMPLATE_FILE}; \
+	echo "        <td><a href=\"${PRJ_DIR}/regressions/runs/$$(basename $${dir})/report.html\">$${datep}</a></td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$${timep}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td style=\"background-color: $${color};\">$${status}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$$(cat $${dir}/total_run_time.rpt)</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$(SIMULATOR)</td>" >> $${TEMPLATE_FILE}; \
+	if grep -qF "netlist" $${dir}/items.txt; then \
+		echo "        <td>$(NETLIST_VER)</td>" >> $${TEMPLATE_FILE}; \
+	fi; \
+	echo "        <td>$(RELEASE)</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$${total_count}</td>" >> $${TEMPLATE_FILE}; \
+	if ! grep -qF "netlist" $${dir}/items.txt; then \
+		echo "        <td>$(COV_REP)</td>" >> $${TEMPLATE_FILE}; \
+	fi; \
+	echo "        <td>$${COMMENTS}</td>" >> $${TEMPLATE_FILE}; \
+	echo "    </tr>" >> $${TEMPLATE_FILE}
+	@if [ -f ${RUNS_DIR}/temp_file_netlist.html ]; then \
+		sed -i '/<!-- NETLIST List items will be inserted here -->/r ${RUNS_DIR}/temp_file_netlist.html' ${RUNS_DIR}/$(OUTPUT_FILE); \
+	fi
+	@if [ -f ${RUNS_DIR}/temp_file_rtl.html ]; then \
+		sed -i '/<!-- RTL List items will be inserted here -->/r ${RUNS_DIR}/temp_file_rtl.html' ${RUNS_DIR}/$(OUTPUT_FILE); \
+	fi
+	@rm -f ${RUNS_DIR}/temp_file_netlist.html ${RUNS_DIR}/temp_file_rtl.html
+
+#to collect all the necessary info from the netlist simulation 
+
+collect_net_logs:
+	@symlk=runs/latest; \
+	dir=$$(readlink -f $$symlk); \
+	datep=$$( basename $${dir} | cut -d '_' -f 1); \
+	timep=$$( basename $${dir} | cut -d '_' -f 2); \
+	dir=$$(readlink -f $$symlk); \
+	rm runs/collected_warnings_logs_$${datep}_$${timep}.txt  -f; \
+	rm runs/collected_errors_logs_$${datep}_$${timep}.txt -f; \
+	rm runs/collected_elab_logs_$${datep}_$${timep}.txt -f; \
+	rm runs/collected_sdf_stat_logs_$${datep}_$${timep}.txt -f; \
+	for TC in ${TESTCASES_NET}; do \
+		TBCHECK_LOGS_COLLECT="$${dir}/$${TC}.netlist/tb_w_icons_top_sim_net.log"; \
+		TBCHECK_LOGS_ELAB="$${dir}/$${TC}.netlist/tb_w_icons_top_elab_net.log"; \
+		if [ -f "$$TBCHECK_LOGS_COLLECT" ]; then \
+			echo "****************** Processing logs in $${TC}.netlist... " >> "runs/collected_warnings_logs_$${datep}_$${timep}.txt"; \
+			grep -iE -A 5 'Warning!  Timing' "$$TBCHECK_LOGS_COLLECT" | sed -e 's/^/\t/' >> "runs/collected_warnings_logs_$${datep}_$${timep}.txt"; \
+			echo "--------------------------------------------------------------------------------" >> "runs/collected_warnings_logs_$${datep}_$${timep}.txt"; \
+			echo "" >> "runs/collected_warnings_logs_$${datep}_$${timep}.txt"; \
+			echo "****************** Processing logs in $${TC}.netlist... " >> "runs/collected_errors_logs_$${datep}_$${timep}.txt"; \
+			grep -iE -A 5 -e 'Error!' -e 'Failed' "$$TBCHECK_LOGS_COLLECT" | sed -e 's/^/\t/' >> "runs/collected_errors_logs_$${datep}_$${timep}.txt"; \
+			echo "--------------------------------------------------------------------------------" >> "runs/collected_errors_logs_$${datep}_$${timep}.txt"; \
+			echo "" >> "runs/collected_errors_logs_$${datep}_$${timep}.txt"; \
+		else \
+			echo "Warning: Log file $$TBCHECK_LOGS_COLLECT not found."; \
+		fi; \
+		if [ -f "$$TBCHECK_LOGS_ELAB" ]; then \
+			echo "****************** Processing logs in $${TC}.netlist... " >> "runs/collected_elab_logs_$${datep}_$${timep}.txt"; \
+			grep -iE      -e 'xmelab: \*W' "$$TBCHECK_LOGS_ELAB" | sed -e 's/^/\t/' >> "runs/collected_elab_logs_$${datep}_$${timep}.txt"; \
+			echo "--------------------------------------------------------------------------------" >> "runs/collected_elab_logs_$${datep}_$${timep}.txt"; \
+			echo "" >> "runs/collected_elab_logs_$${datep}_$${timep}.txt"; \
+			echo "****************** Processing logs in $${TC}.netlist... " >> "runs/collected_sdf_stat_logs_$${datep}_$${timep}.txt"; \
+			grep -iE -A 5 -e 'SDF statistics' "$$TBCHECK_LOGS_ELAB" | sed -e 's/^/\t/' >> "runs/collected_sdf_stat_logs_$${datep}_$${timep}.txt"; \
+			echo "--------------------------------------------------------------------------------" >> "runs/collected_sdf_stat_logs_$${datep}_$${timep}.txt"; \
+			echo "" >> "runs/collected_sdf_stat_logs_$${datep}_$${timep}.txt"; \
+		else \
+			echo "Warning: Log file $$TBCHECK_LOGS_ELAB not found."; \
+		fi \
+	done; \
+	
+# run this after netlist simulation with SDF, and after collect_net_logs 
+
+collect_rep:collect_net_logs
+	@symlk=runs/latest; \
+	dir=$$(readlink -f $$symlk); \
+	datep=$$( basename $${dir} | cut -d '_' -f 1); \
+	timep=$$( basename $${dir} | cut -d '_' -f 2); \
+	warning_count=$$(grep -c "Warning!" runs/collected_warnings_logs_$${datep}_$${timep}.txt); \
+	failed_count=$$(grep -c "FAILED" runs/collected_errors_logs_$${datep}_$${timep}.txt); \
+	elab_warning=$$(grep -c "xmelab: \*W" runs/collected_elab_logs_$${datep}_$${timep}.txt); \
+	OUTPUT_FILE_TMP=temp_file_collect.html; \
+	TEMPLATE_FILE=${RUNS_DIR}/$${OUTPUT_FILE_TMP}; \
+	echo "    <tr>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$${datep}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$${timep}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td><a href="./collected_elab_logs_$${datep}_$${timep}.txt">report (warning):</a> $${elab_warning}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td><a href="./collected_sdf_stat_logs_$${datep}_$${timep}.txt">report</a></td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td><a href="./collected_warnings_logs_$${datep}_$${timep}.txt">report:</a> $${warning_count}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td><a href="./collected_errors_logs_$${datep}_$${timep}.txt">report:</a> $${failed_count}</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$(NETLIST_VER)</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$(RELEASE)</td>" >> $${TEMPLATE_FILE}; \
+	echo "        <td>$(COMMENTS)</td>" >> $${TEMPLATE_FILE}; \
+	echo "    </tr>" >> $${TEMPLATE_FILE}
+	@sed -i '/<!-- Collected List items will be inserted here -->/r ${RUNS_DIR}/temp_file_collect.html' ${RUNS_DIR}/$(OUTPUT_FILE)
+	@rm -f ${RUNS_DIR}/temp_file_collect.html 
+
+#$(info $(SUBDIRECTORIES))
+#$(info $(TBCHECK_LOGS))
+
+tchecks_file:
+	@grep  'i_common_sync.*data_sync0_reg)' ../export/timinganalysis/231226/FUNC_WC.sdf  > tchecks.tcl
+	@sed -i 's/\//./g' tchecks.tcl 
+	@sed -i 's/(INSTANCE//;s/)//'  tchecks.tcl
+	@sed -i 's/^[[:space:]]*//' tchecks.tcl
+	@sed -i 's/^/tcheck -off tb_w_icons_top.i_w_icons_top./' tchecks.tcl
+	@mv tchecks.tcl ../units/w_icons_top/simulation/generic/common/
+
+
+cov_merge:
+	imc -exec ../env/coverage/merge_coverage.tcl > coverage/xcelium/cov_merge.log
+	imc -load coverage/xcelium/cov_merged  > coverage/xcelium/imc_load.log 
+
+
+
+
+.PHONY: crontab_set
+
+crontab_set: 
+	@echo '${CRONTAB_MIN} ${CRONTAB_HR} * * * /home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/crontab_job.sh > /home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/scripts_crontab.log 2>&1' >  crontab_file
+	@echo "Setting crontab entry..."
+	@crontab crontab_file
+	@crontab -l  # Display the updated crontab for verification
+	@echo "Crontab entry set successfully."
+
+cleanold:
+	@find ${WORK_DIR} -maxdepth 1 -mindepth 1 -type d -not -newermt -${OLDAFTERDAYS}days -exec rm -rf \{\} \+
+
+cleanall:
+	@rm -rf ${WORK_DIR}
+
+.PHONY: all show cleanall cov_all runs_list gen_html gen_csv gen_list export_file cov_all_mg reg_all reg_rep all_net reg_rep_all crontab_set
+
+.DEFAULT_GOAL := all
+

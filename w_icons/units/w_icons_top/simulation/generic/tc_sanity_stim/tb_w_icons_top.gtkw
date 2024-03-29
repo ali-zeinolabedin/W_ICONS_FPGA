@@ -1,0 +1,190 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Thu Nov  9 20:52:08 2023
+[*]
+[dumpfile] "/tmp/smaz-brn-iverilog-tb_w_icons_top-9TFj/tb_w_icons_top.dump"
+[dumpfile_mtime] "Thu Nov  9 20:51:18 2023"
+[dumpfile_size] 1045008
+[savefile] "/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/units/w_icons_top/simulation/generic/tc_sanity_stim/tb_w_icons_top.gtkw"
+[timestart] 0
+[size] 1920 930
+[pos] 66630 10
+*-25.245222 137000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.
+[sst_width] 380
+[signals_width] 395
+[sst_expanded] 1
+[sst_vpaned_height] 426
+@28
+tb_w_icons_top.i_spi_master_emulator.clk_i
+tb_w_icons_top.i_spi_master_emulator.reset_n_i
+@200
+-
+-
+@28
+tb_w_icons_top.spi_cs
+tb_w_icons_top.i_spi_master_emulator.spi_clk_o
+tb_w_icons_top.i_spi_master_emulator.spi_miso_i
+tb_w_icons_top.i_spi_master_emulator.spi_mosi_o
+tb_w_icons_top.i_spi_master_emulator.tx_data_valid_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_rx_word[40:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_done_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd[3:0]
+>-165000
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_address[9:0]
+>0
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_addr_o[9:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_sel_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_enable
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_write_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_ready_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_rdata_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.nxt_state[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.state[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_ready_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_done_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_tx_word_o[31:0]
+@200
+-
+@28
+tb_w_icons_top.SPI_CS_S
+tb_w_icons_top.SPI_CLK_S
+tb_w_icons_top.SPI_MOSI_S
+tb_w_icons_top.tx_data_ready_s
+@200
+-
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.clk_stim_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.reg_rec_stim_control_stim_mask_en[7:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.stim_mask0_g1_o[31:0]
+@200
+-Ch0
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.reset_n_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulsew1[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulsew2[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.interval_i[15:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulse_wa_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulse_wc_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulse_gap_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulse_num_i[11:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pol_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.stim_en_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.cnt_pulsenum[11:0]
+@24
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.cnt_singlepulse[15:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.enable_window
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.enable_window_chk
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.check_zero[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.nxt_state[2:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.state[2:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.cathode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.anode_en_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask0_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask1_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask0_g2_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.monophasic_en_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask0_g1_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask_en0_g_i
+@200
+-Ch1
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.clk_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.pulsew1[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.pulsew2[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.interval_i[15:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.pulse_gap_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.pulse_num_i[11:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.pulse_wa_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.pulse_wc_i[13:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.stim_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.anode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch1.cathode_en_o
+@200
+-Ch16
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.clk_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pulse_gap_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pulse_num_i[11:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pulse_wa_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pulse_wc_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pulsew1[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pulsew2[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.interval_i[15:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.monophasic_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.nxt_state[2:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.state[2:0]
+>481520
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_xen_sync_i
+>0
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.pol_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.stim_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.anode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch16.cathode_en_o
+@22
+tb_w_icons_top.stim_mask_ch_set.stim_ch[5:0]
+tb_w_icons_top.stim_mask_ch_set.address[9:0]
+@200
+-Ch32
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.anode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.cathode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.monophasic_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pol_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.interval_i[15:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pulse_gap_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pulse_num_i[11:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pulse_wa_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pulse_wc_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pulsew1[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.pulsew2[13:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.nxt_state[2:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.state[2:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch32.stim_en_i
+@22
+tb_w_icons_top.stim_mask_ch_set.stim_ch[5:0]
+tb_w_icons_top.stim_mask_ch_set.address[9:0]
+@28
+tb_w_icons_top.stim_mask_ch_set.mask_index[2:0]
+[pattern_trace] 1
+[pattern_trace] 0

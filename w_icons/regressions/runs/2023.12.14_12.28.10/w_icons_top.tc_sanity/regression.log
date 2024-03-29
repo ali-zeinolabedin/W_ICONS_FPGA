@@ -1,0 +1,42 @@
+-e VLOG-INCDIRS
+    -I/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/global_src/verilog
+-e VLOG-FLAGS
+    -Wno-timescale
+    -Wno-implicit-dimensions
+    -Wno-sensitivity-entire-array
+    -Wno-portbind
+    -g2005-sv
+-e VLOG tb_w_icons_top-simulate
+-e 
+RUN  tb_w_icons_top-simulate
+
+VCD info: dumpfile .work.iverilog/tb_w_icons_top.dump opened for output.
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 01010164
+----------->Stimulator Status: CMD(4'b0111)
+	Stimulator status:   00
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Stimulator status: 00000000
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 01010164
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m

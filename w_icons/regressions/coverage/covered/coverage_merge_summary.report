@@ -1,0 +1,145 @@
+                            :::::::::::::::::::::::::::::::::::::::::::::::::::::
+                            ::                                                 ::
+                            ::  Covered -- Verilog Coverage Summarized Report  ::
+                            ::                                                 ::
+                            :::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   GENERAL INFORMATION   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Report generated from CDD file : .work.covered/merged.cdd
+
+* Reported by                    : Module
+
+* Report generated from CDD file that was merged from the following files:
+    Filename                                           Leading Hierarchy
+    -----------------------------------------------------------------------------------------------------------------
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+    ../../../../../../../../../../tmp/azeinolabedin-i  tb_w_icons_top.i_w_icons_top                                  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   LINE COVERAGE RESULTS   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Module/Task/Function      Filename                 Hit/ Miss/Total    Percent hit
+---------------------------------------------------------------------------------------------------------------------
+  $root                   NA                         0/    0/    0      100%
+  w_icons_core            w_icons_core.v             0/    0/    0      100%
+  w_icons_mgmt            w_icons_mgmt.v             0/    0/    0      100%
+  w_icons_sync_rst        w_icons_sync_rst.v        12/    0/   12      100%
+  common_reset_sync       common_reset_sync.v        9/    0/    9      100%
+  common_sync             common_sync.v              7/    0/    7      100%
+  common_clkbuf           common_clkbuf.v            1/    0/    1      100%
+  common_clkgate          common_clkgate.v           5/    0/    5      100%
+  common_clkdiv_by_n      common_clkdiv_by_n.v      35/    0/   35      100%
+  spi_wrap                spi_wrap.v                 0/    0/    0      100%
+  w_icons_rf              w_icons_rf.v            5320/    2/ 5322      100%
+  common_mux              common_mux.v               1/    0/    1      100%
+  spi_slave_common        spi_slave_common.v        47/    0/   47      100%
+  spi_slave_common.crc    spi_slave_common.v         5/    0/    5      100%
+  spi_custom_logic        spi_custom_logic.v       116/    2/  118       98%
+  stim_ctrls_wrap         stim_ctrls_wrap.v        534/    0/  534      100%
+  stim_ctrl               stim_ctrl.v               76/   23/   99       77%
+  rec_ctrl                rec_ctrl.v                93/    1/   94       99%
+---------------------------------------------------------------------------------------------------------------------
+  Accumulated                                     6261/   28/ 6289      100%
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   TOGGLE COVERAGE RESULTS   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                           Toggle 0 -> 1                       Toggle 1 -> 0
+Module/Task/Function      Filename                 Hit/ Miss/Total    Percent hit      Hit/ Miss/Total    Percent hit
+---------------------------------------------------------------------------------------------------------------------
+  $root                   NA                         0/    0/    0      100%             0/    0/    0      100%
+  w_icons_core            w_icons_core.v          6754/  100/ 6854       99%          6749/  105/ 6854       98%
+  w_icons_mgmt            w_icons_mgmt.v           418/    1/  419      100%           412/    7/  419       98%
+  w_icons_sync_rst        w_icons_sync_rst.v       625/    1/  626      100%           619/    7/  626       99%
+  common_reset_sync       common_reset_sync.v        6/    2/    8       75%             1/    7/    8       12%
+  common_sync             common_sync.v              6/    0/    6      100%             5/    1/    6       83%
+  common_clkbuf           common_clkbuf.v            2/    0/    2      100%             2/    0/    2      100%
+  common_clkgate          common_clkgate.v           5/    0/    5      100%             5/    0/    5      100%
+  common_clkdiv_by_n      common_clkdiv_by_n.v      60/    0/   60      100%            54/    6/   60       90%
+  spi_wrap                spi_wrap.v              6525/   47/ 6572       99%          6524/   48/ 6572       99%
+  w_icons_rf              w_icons_rf.v           20680/  691/21371       97%         20678/  693/21371       97%
+  common_mux              common_mux.v              42/    1/   43       98%            42/    1/   43       98%
+  spi_slave_common        spi_slave_common.v       183/   13/  196       93%           183/   13/  196       93%
+  spi_slave_common.crc    spi_slave_common.v        11/    0/   11      100%            11/    0/   11      100%
+  spi_custom_logic        spi_custom_logic.v       224/   55/  279       80%           224/   55/  279       80%
+  stim_ctrls_wrap         stim_ctrls_wrap.v       6070/  376/ 6446       94%          6060/  386/ 6446       94%
+  stim_ctrl               stim_ctrl.v              128/   18/  146       88%           127/   19/  146       87%
+  rec_ctrl                rec_ctrl.v               334/   27/  361       93%           326/   35/  361       90%
+---------------------------------------------------------------------------------------------------------------------
+  Accumulated                                    42073/ 1332/43405       97%         42022/ 1383/43405       97%
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   COMBINATIONAL LOGIC COVERAGE RESULTS   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                            Logic Combinations
+Module/Task/Function                Filename                          Hit/Miss/Total    Percent hit
+---------------------------------------------------------------------------------------------------------------------
+  $root                             NA                                  0/   0/   0      100%
+  w_icons_core                      w_icons_core.v                      0/   0/   0      100%
+  w_icons_mgmt                      w_icons_mgmt.v                      0/   0/   0      100%
+  w_icons_sync_rst                  w_icons_sync_rst.v                 25/   0/  25      100%
+  common_reset_sync                 common_reset_sync.v                11/   3/  14       79%
+  common_sync                       common_sync.v                      10/   0/  10      100%
+  common_clkbuf                     common_clkbuf.v                     2/   0/   2      100%
+  common_clkgate                    common_clkgate.v                   11/   0/  11      100%
+  common_clkdiv_by_n                common_clkdiv_by_n.v               54/   4/  58       93%
+  spi_wrap                          spi_wrap.v                          0/   0/   0      100%
+  w_icons_rf                        w_icons_rf.v                     7692/ 869/8561       90%
+  common_mux                        common_mux.v                        3/   1/   4       75%
+  spi_slave_common                  spi_slave_common.v                 85/   3/  88       97%
+  spi_slave_common.crc5_serial      spi_slave_common.v                 18/   0/  18      100%
+  spi_custom_logic                  spi_custom_logic.v                193/  16/ 209       92%
+  stim_ctrls_wrap                   stim_ctrls_wrap.v                2373/  37/2410       98%
+  stim_ctrl                         stim_ctrl.v                       288/  62/ 350       82%
+  rec_ctrl                          rec_ctrl.v                        147/  16/ 163       90%
+---------------------------------------------------------------------------------------------------------------------
+  Accumulated                                                        10912/1011/11923       92%
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   FINITE STATE MACHINE COVERAGE RESULTS   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                               State                             Arc
+Module/Task/Function      Filename                Hit/Miss/Total    Percent Hit    Hit/Miss/Total    Percent hit
+---------------------------------------------------------------------------------------------------------------------
+  $root                   NA                        0/   0/   0      100%            0/   0/   0      100%
+  w_icons_core            w_icons_core.v            0/   0/   0      100%            0/   0/   0      100%
+  w_icons_mgmt            w_icons_mgmt.v            0/   0/   0      100%            0/   0/   0      100%
+  w_icons_sync_rst        w_icons_sync_rst.v        0/   0/   0      100%            0/   0/   0      100%
+  common_reset_sync       common_reset_sync.v       0/   0/   0      100%            0/   0/   0      100%
+  common_sync             common_sync.v             0/   0/   0      100%            0/   0/   0      100%
+  common_clkbuf           common_clkbuf.v           0/   0/   0      100%            0/   0/   0      100%
+  common_clkgate          common_clkgate.v          0/   0/   0      100%            0/   0/   0      100%
+  common_clkdiv_by_n      common_clkdiv_by_n.v      0/   0/   0      100%            0/   0/   0      100%
+  spi_wrap                spi_wrap.v                0/   0/   0      100%            0/   0/   0      100%
+  w_icons_rf              w_icons_rf.v              0/   0/   0      100%            0/   0/   0      100%
+  common_mux              common_mux.v              0/   0/   0      100%            0/   0/   0      100%
+  spi_slave_common        spi_slave_common.v        0/   0/   0      100%            0/   0/   0      100%
+  spi_slave_common.crc    spi_slave_common.v        0/   0/   0      100%            0/   0/   0      100%
+  spi_custom_logic        spi_custom_logic.v       13/  ? /  ?        ? %           26/  ? /  ?        ? %
+  stim_ctrls_wrap         stim_ctrls_wrap.v         0/   0/   0      100%            0/   0/   0      100%
+  stim_ctrl               stim_ctrl.v               0/   0/   0      100%            0/   0/   0      100%
+  rec_ctrl                rec_ctrl.v                0/   0/   0      100%            0/   0/   0      100%
+---------------------------------------------------------------------------------------------------------------------
+  Accumulated                                      13/  ? /  ?        ? %           26/  ? /  ?        ? %
+
+

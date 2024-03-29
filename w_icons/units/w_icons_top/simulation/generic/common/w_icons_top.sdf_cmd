@@ -1,0 +1,7 @@
+COMPILED_SDF_FILE = "../w_icons_top.sdf.compiled",
+
+SCOPE =w_icons_top,
+
+MTM_CONTROL = "TOOL_CONTROL",
+
+LOG_FILE = "logfiles/sdf.log";

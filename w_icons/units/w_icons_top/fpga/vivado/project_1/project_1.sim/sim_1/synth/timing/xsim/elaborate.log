@@ -1,0 +1,14 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/smaz-brn/tool_extended/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_w_icons_top_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_w_icons_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'data_sync1_reg_1' on this module [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.sim/sim_1/synth/timing/xsim/tb_w_icons_top_time_synth.v:19585]
+ERROR: [VRFC 10-3180] cannot find port 'data_sync1_reg_0' on this module [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.sim/sim_1/synth/timing/xsim/tb_w_icons_top_time_synth.v:19584]
+ERROR: [VRFC 10-3180] cannot find port 'CLK_REF_I_IBUF_BUFG' on this module [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.sim/sim_1/synth/timing/xsim/tb_w_icons_top_time_synth.v:19583]
+ERROR: [VRFC 10-8530] module 'FDCE(IS_C_INVERTED=1'b1)' is ignored due to previous errors [/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/FDCE.v:28]
+ERROR: [VRFC 10-8530] module 'FDPE_default' is ignored due to previous errors [/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/FDPE.v:28]
+ERROR: [VRFC 10-8530] module 'FDRE_default' is ignored due to previous errors [/wrk/ci/prod/2023.2/rdi_builds/continuous/2023_10_13_4029153/data/verilog/src/unisims/FDRE.v:27]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -1,0 +1,121 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Tue Jan  9 20:16:58 2024
+[*]
+[dumpfile] "/tmp/smaz-brn-iverilog-tb_w_icons_top-g9tB/tb_w_icons_top.dump"
+[dumpfile_mtime] "Tue Jan  9 18:48:59 2024"
+[dumpfile_size] 113975879
+[savefile] "/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/simulation/generic/tc_stim_1ch/tb_w_icons_top.gtkw"
+[timestart] 148190000
+[size] 1920 901
+[pos] 64668 158
+*-24.180676 193325000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.
+[sst_width] 380
+[signals_width] 319
+[sst_expanded] 1
+[sst_vpaned_height] 435
+@28
+tb_w_icons_top.i_spi_master_emulator.clk_i
+tb_w_icons_top.i_spi_master_emulator.reset_n_i
+@200
+-
+@28
+tb_w_icons_top.spi_cs
+tb_w_icons_top.i_spi_master_emulator.spi_clk_o
+tb_w_icons_top.i_spi_master_emulator.spi_miso_i
+tb_w_icons_top.i_spi_master_emulator.spi_mosi_o
+tb_w_icons_top.i_spi_master_emulator.tx_data_valid_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_rx_word[40:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_done_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_addr_o[9:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_sel_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_enable
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_write_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_ready_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_rdata_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.nxt_state[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.state[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_ready_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_done_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_tx_word_o[31:0]
+tb_w_icons_top.stim_params_config.address[9:0]
+tb_w_icons_top.stim_params_config.data[31:0]
+tb_w_icons_top.stim_params_config.ia[7:0]
+tb_w_icons_top.stim_params_config.ia[7:0]
+tb_w_icons_top.stim_params_config.ia_tmp[7:0]
+tb_w_icons_top.stim_params_config.ia[7:0]
+tb_w_icons_top.stim_params_config.ic[7:0]
+tb_w_icons_top.stim_params_config.interval[15:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.cnt_pulsenum[11:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.clk_stim_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.anode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.cathode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.stim_en_i
+@29
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.anode_en_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.cathode_en_o
+@23
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulse_wa_i[13:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.i_stim_ctrl_ch0.pulse_wc_i[13:0]
+@200
+-
+@28
+tb_w_icons_top.SPI_CS_S
+tb_w_icons_top.SPI_CLK_S
+tb_w_icons_top.SPI_MOSI_S
+tb_w_icons_top.tx_data_ready_s
+@200
+-
+@28
+tb_w_icons_top.STIM_XEN_S
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask0_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask0_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask1_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask1_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask2_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask2_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask3_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask3_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask4_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask4_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask5_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask5_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask6_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask6_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask7_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_mask7_g2_i[31:0]
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.mask_en_8bit_s[7:0]
+@200
+-
+-
+@28
+tb_w_icons_top.CLK_REF_S
+@24
+[color] 1
+tb_w_icons_top.stim_err
+[pattern_trace] 1
+[pattern_trace] 0

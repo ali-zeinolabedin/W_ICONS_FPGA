@@ -1,0 +1,980 @@
+-e VLOG-INCDIRS
+    -I/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/global_src/verilog
+-e VLOG-FLAGS
+    -Wno-timescale
+    -Wno-implicit-dimensions
+    -Wno-sensitivity-entire-array
+    -Wno-portbind
+    -g2005-sv
+-e VLOG tb_w_icons_top-simulate-netlist
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4877: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4887: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4961: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:4971: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5045: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5055: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5127: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5199: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5889: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5899: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5975: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:5985: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6061: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6071: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6304: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6314: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6390: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6400: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6476: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6486: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6701: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6711: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6785: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6795: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6869: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6879: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:6951: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7023: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7458: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7476: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7574: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7592: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7690: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7708: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7804: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:7900: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:9060: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:9588: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:17913: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:17947: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18069: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18103: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18225: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18259: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18379: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18499: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:18619: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:19847: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:19881: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20005: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20039: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20163: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20197: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20538: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20572: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20696: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20730: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20854: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:20888: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21412: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21446: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21568: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21602: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21724: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21758: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21878: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:21998: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22118: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22777: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:22843: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23008: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23074: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23239: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23305: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23468: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23631: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/resources/tcb018gbwp7t.v:23794: warning: Sorry: ifnone with an edge-sensitive path is not supported.
+-e 
+RUN  tb_w_icons_top-simulate-netlist
+
+VCD info: dumping is suppressed.
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+----------->Stimulator Status: CMD(4'b0111)
+	Stimulator status:   00
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Write to Register [ 0], address:  000
+Write to Register [ 1], address:  004
+Write to Register [ 2], address:  008
+Write to Register [ 3], address:  00c
+Write to Register [ 4], address:  010
+Write to Register [ 5], address:  014
+Write to Register [ 6], address:  018
+Write to Register [ 7], address:  01c
+Write to Register [ 8], address:  020
+Write to Register [ 9], address:  024
+Write to Register [10], address:  028
+Write to Register [11], address:  02c
+Write to Register [12], address:  030
+Write to Register [13], address:  034
+Write to Register [14], address:  038
+Write to Register [15], address:  03c
+Write to Register [16], address:  040
+Write to Register [17], address:  044
+Write to Register [18], address:  048
+Write to Register [19], address:  04c
+Write to Register [20], address:  050
+Write to Register [21], address:  054
+Write to Register [22], address:  058
+Write to Register [23], address:  05c
+Write to Register [24], address:  060
+Write to Register [25], address:  064
+Write to Register [26], address:  068
+Write to Register [27], address:  06c
+Write to Register [28], address:  070
+Write to Register [29], address:  074
+Write to Register [30], address:  078
+Write to Register [31], address:  07c
+Write to Register [32], address:  080
+Write to Register [33], address:  084
+Write to Register [34], address:  088
+Write to Register [35], address:  08c
+Write to Register [36], address:  090
+Write to Register [37], address:  094
+Write to Register [38], address:  098
+Write to Register [39], address:  09c
+Write to Register [40], address:  0a0
+Write to Register [41], address:  0a4
+Write to Register [42], address:  0a8
+Write to Register [43], address:  0ac
+Write to Register [44], address:  0b0
+Write to Register [45], address:  0b4
+Write to Register [46], address:  0b8
+Write to Register [47], address:  0bc
+Write to Register [48], address:  0c0
+Write to Register [49], address:  0c4
+Write to Register [50], address:  0c8
+Write to Register [51], address:  0cc
+Write to Register [52], address:  0d0
+Write to Register [53], address:  0d4
+Write to Register [54], address:  0d8
+Write to Register [55], address:  0dc
+Write to Register [56], address:  0e0
+Write to Register [57], address:  0e4
+Write to Register [58], address:  0e8
+Write to Register [59], address:  0ec
+Write to Register [60], address:  0f0
+Write to Register [61], address:  0f4
+Write to Register [62], address:  0f8
+Write to Register [63], address:  0fc
+Write to Register [64], address:  100
+Write to Register [65], address:  104
+Write to Register [66], address:  108
+Write to Register [67], address:  10c
+Write to Register [68], address:  110
+Write to Register [69], address:  114
+Write to Register [70], address:  118
+Write to Register [71], address:  11c
+Write to Register [72], address:  120
+Write to Register [73], address:  124
+Write to Register [74], address:  128
+Write to Register [75], address:  12c
+Write to Register [76], address:  130
+Write to Register [77], address:  134
+Write to Register [78], address:  138
+Write to Register [79], address:  13c
+Write to Register [80], address:  140
+Write to Register [81], address:  144
+Write to Register [82], address:  148
+Write to Register [83], address:  14c
+Write to Register [84], address:  150
+Write to Register [85], address:  154
+Write to Register [86], address:  158
+Write to Register [87], address:  15c
+Write to Register [88], address:  160
+Write to Register [89], address:  164
+Write to Register [90], address:  168
+Write to Register [91], address:  16c
+Write to Register [92], address:  170
+Write to Register [93], address:  174
+Write to Register [94], address:  178
+Write to Register [95], address:  17c
+Write to Register [96], address:  180
+Write to Register [97], address:  184
+Write to Register [98], address:  188
+Write to Register [99], address:  18c
+Write to Register [100], address:  190
+Write to Register [101], address:  194
+Write to Register [102], address:  198
+Write to Register [103], address:  19c
+Write to Register [104], address:  1a0
+Write to Register [105], address:  1a4
+Write to Register [106], address:  1a8
+Write to Register [107], address:  1ac
+Write to Register [108], address:  1b0
+Write to Register [109], address:  1b4
+Write to Register [110], address:  1b8
+Write to Register [111], address:  1bc
+Write to Register [112], address:  1c0
+Write to Register [113], address:  1c4
+Write to Register [114], address:  1c8
+Write to Register [115], address:  1cc
+Write to Register [116], address:  1d0
+Write to Register [117], address:  1d4
+Write to Register [118], address:  1d8
+Write to Register [119], address:  1dc
+Write to Register [120], address:  1e0
+Write to Register [121], address:  1e4
+Write to Register [122], address:  1e8
+Write to Register [123], address:  1ec
+Write to Register [124], address:  1f0
+Write to Register [125], address:  1f4
+Write to Register [126], address:  1f8
+Write to Register [127], address:  1fc
+Write to Register [128], address:  200
+Write to Register [129], address:  204
+Write to Register [130], address:  208
+Write to Register [131], address:  20c
+Write to Register [132], address:  210
+Write to Register [133], address:  214
+Write to Register [134], address:  218
+Write to Register [135], address:  21c
+Write to Register [136], address:  220
+Write to Register [137], address:  224
+Write to Register [138], address:  228
+Write to Register [139], address:  22c
+Write to Register [140], address:  230
+Write to Register [141], address:  234
+Write to Register [142], address:  238
+Write to Register [143], address:  23c
+Write to Register [144], address:  240
+Write to Register [145], address:  244
+Write to Register [146], address:  248
+Write to Register [147], address:  24c
+Write to Register [148], address:  250
+Write to Register [149], address:  254
+Write to Register [150], address:  258
+Write to Register [151], address:  25c
+Write to Register [152], address:  260
+Write to Register [153], address:  264
+Write to Register [154], address:  268
+Write to Register [155], address:  26c
+Write to Register [156], address:  270
+Write to Register [157], address:  274
+Write to Register [158], address:  278
+Write to Register [159], address:  27c
+Write to Register [160], address:  280
+Write to Register [161], address:  284
+Write to Register [162], address:  288
+Write to Register [163], address:  28c
+Write to Register [164], address:  290
+Write to Register [165], address:  294
+Write to Register [166], address:  298
+Write to Register [167], address:  29c
+Write to Register [168], address:  2a0
+Write to Register [169], address:  2a4
+Write to Register [170], address:  2a8
+Write to Register [171], address:  2ac
+Write to Register [172], address:  2b0
+Write to Register [173], address:  2b4
+Write to Register [174], address:  2b8
+Write to Register [175], address:  2bc
+Write to Register [176], address:  2c0
+Write to Register [177], address:  2c4
+Write to Register [178], address:  2c8
+Write to Register [179], address:  2cc
+Write to Register [180], address:  2d0
+Write to Register [181], address:  2d4
+Write to Register [182], address:  2d8
+Write to Register [183], address:  2dc
+Write to Register [184], address:  2e0
+Write to Register [185], address:  2e4
+Write to Register [186], address:  2e8
+Write to Register [187], address:  2ec
+Write to Register [188], address:  2f0
+Write to Register [189], address:  2f4
+Write to Register [190], address:  2f8
+Write to Register [191], address:  2fc
+Write to Register [192], address:  300
+Write to Register [193], address:  304
+Write to Register [194], address:  308
+Write to Register [195], address:  30c
+Write to Register [196], address:  310
+Write to Register [197], address:  314
+Write to Register [198], address:  318
+Write to Register [199], address:  31c
+Write to Register [200], address:  320
+Write to Register [201], address:  324
+Write to Register [202], address:  328
+Write to Register [203], address:  32c
+Write to Register [204], address:  330
+Write to Register [205], address:  334
+Write to Register [206], address:  338
+Write to Register [207], address:  33c
+Write to Register [208], address:  340
+Write to Register [209], address:  344
+Write to Register [210], address:  348
+Write to Register [211], address:  34c
+Write to Register [212], address:  350
+Write to Register [213], address:  354
+Write to Register [214], address:  358
+Write to Register [215], address:  35c
+Write to Register [216], address:  360
+Write to Register [ 0], address:  000
+Write to Register [ 1], address:  004
+Write to Register [ 2], address:  008
+Write to Register [ 3], address:  00c
+Write to Register [ 4], address:  010
+Write to Register [ 5], address:  014
+Write to Register [ 6], address:  018
+Write to Register [ 7], address:  01c
+Write to Register [ 8], address:  020
+Write to Register [ 9], address:  024
+Write to Register [10], address:  028
+Write to Register [11], address:  02c
+Write to Register [12], address:  030
+Write to Register [13], address:  034
+Write to Register [14], address:  038
+Write to Register [15], address:  03c
+Write to Register [16], address:  040
+Write to Register [17], address:  044
+Write to Register [18], address:  048
+Write to Register [19], address:  04c
+Write to Register [20], address:  050
+Write to Register [21], address:  054
+Write to Register [22], address:  058
+Write to Register [23], address:  05c
+Write to Register [24], address:  060
+Write to Register [25], address:  064
+Write to Register [26], address:  068
+Write to Register [27], address:  06c
+Write to Register [28], address:  070
+Write to Register [29], address:  074
+Write to Register [30], address:  078
+Write to Register [31], address:  07c
+Write to Register [32], address:  080
+Write to Register [33], address:  084
+Write to Register [34], address:  088
+Write to Register [35], address:  08c
+Write to Register [36], address:  090
+Write to Register [37], address:  094
+Write to Register [38], address:  098
+Write to Register [39], address:  09c
+Write to Register [40], address:  0a0
+Write to Register [41], address:  0a4
+Write to Register [42], address:  0a8
+Write to Register [43], address:  0ac
+Write to Register [44], address:  0b0
+Write to Register [45], address:  0b4
+Write to Register [46], address:  0b8
+Write to Register [47], address:  0bc
+Write to Register [48], address:  0c0
+Write to Register [49], address:  0c4
+Write to Register [50], address:  0c8
+Write to Register [51], address:  0cc
+Write to Register [52], address:  0d0
+Write to Register [53], address:  0d4
+Write to Register [54], address:  0d8
+Write to Register [55], address:  0dc
+Write to Register [56], address:  0e0
+Write to Register [57], address:  0e4
+Write to Register [58], address:  0e8
+Write to Register [59], address:  0ec
+Write to Register [60], address:  0f0
+Write to Register [61], address:  0f4
+Write to Register [62], address:  0f8
+Write to Register [63], address:  0fc
+Write to Register [64], address:  100
+Write to Register [65], address:  104
+Write to Register [66], address:  108
+Write to Register [67], address:  10c
+Write to Register [68], address:  110
+Write to Register [69], address:  114
+Write to Register [70], address:  118
+Write to Register [71], address:  11c
+Write to Register [72], address:  120
+Write to Register [73], address:  124
+Write to Register [74], address:  128
+Write to Register [75], address:  12c
+Write to Register [76], address:  130
+Write to Register [77], address:  134
+Write to Register [78], address:  138
+Write to Register [79], address:  13c
+Write to Register [80], address:  140
+Write to Register [81], address:  144
+Write to Register [82], address:  148
+Write to Register [83], address:  14c
+Write to Register [84], address:  150
+Write to Register [85], address:  154
+Write to Register [86], address:  158
+Write to Register [87], address:  15c
+Write to Register [88], address:  160
+Write to Register [89], address:  164
+Write to Register [90], address:  168
+Write to Register [91], address:  16c
+Write to Register [92], address:  170
+Write to Register [93], address:  174
+Write to Register [94], address:  178
+Write to Register [95], address:  17c
+Write to Register [96], address:  180
+Write to Register [97], address:  184
+Write to Register [98], address:  188
+Write to Register [99], address:  18c
+Write to Register [100], address:  190
+Write to Register [101], address:  194
+Write to Register [102], address:  198
+Write to Register [103], address:  19c
+Write to Register [104], address:  1a0
+Write to Register [105], address:  1a4
+Write to Register [106], address:  1a8
+Write to Register [107], address:  1ac
+Write to Register [108], address:  1b0
+Write to Register [109], address:  1b4
+Write to Register [110], address:  1b8
+Write to Register [111], address:  1bc
+Write to Register [112], address:  1c0
+Write to Register [113], address:  1c4
+Write to Register [114], address:  1c8
+Write to Register [115], address:  1cc
+Write to Register [116], address:  1d0
+Write to Register [117], address:  1d4
+Write to Register [118], address:  1d8
+Write to Register [119], address:  1dc
+Write to Register [120], address:  1e0
+Write to Register [121], address:  1e4
+Write to Register [122], address:  1e8
+Write to Register [123], address:  1ec
+Write to Register [124], address:  1f0
+Write to Register [125], address:  1f4
+Write to Register [126], address:  1f8
+Write to Register [127], address:  1fc
+Write to Register [128], address:  200
+Write to Register [129], address:  204
+Write to Register [130], address:  208
+Write to Register [131], address:  20c
+Write to Register [132], address:  210
+Write to Register [133], address:  214
+Write to Register [134], address:  218
+Write to Register [135], address:  21c
+Write to Register [136], address:  220
+Write to Register [137], address:  224
+Write to Register [138], address:  228
+Write to Register [139], address:  22c
+Write to Register [140], address:  230
+Write to Register [141], address:  234
+Write to Register [142], address:  238
+Write to Register [143], address:  23c
+Write to Register [144], address:  240
+Write to Register [145], address:  244
+Write to Register [146], address:  248
+Write to Register [147], address:  24c
+Write to Register [148], address:  250
+Write to Register [149], address:  254
+Write to Register [150], address:  258
+Write to Register [151], address:  25c
+Write to Register [152], address:  260
+Write to Register [153], address:  264
+Write to Register [154], address:  268
+Write to Register [155], address:  26c
+Write to Register [156], address:  270
+Write to Register [157], address:  274
+Write to Register [158], address:  278
+Write to Register [159], address:  27c
+Write to Register [160], address:  280
+Write to Register [161], address:  284
+Write to Register [162], address:  288
+Write to Register [163], address:  28c
+Write to Register [164], address:  290
+Write to Register [165], address:  294
+Write to Register [166], address:  298
+Write to Register [167], address:  29c
+Write to Register [168], address:  2a0
+Write to Register [169], address:  2a4
+Write to Register [170], address:  2a8
+Write to Register [171], address:  2ac
+Write to Register [172], address:  2b0
+Write to Register [173], address:  2b4
+Write to Register [174], address:  2b8
+Write to Register [175], address:  2bc
+Write to Register [176], address:  2c0
+Write to Register [177], address:  2c4
+Write to Register [178], address:  2c8
+Write to Register [179], address:  2cc
+Write to Register [180], address:  2d0
+Write to Register [181], address:  2d4
+Write to Register [182], address:  2d8
+Write to Register [183], address:  2dc
+Write to Register [184], address:  2e0
+Write to Register [185], address:  2e4
+Write to Register [186], address:  2e8
+Write to Register [187], address:  2ec
+Write to Register [188], address:  2f0
+Write to Register [189], address:  2f4
+Write to Register [190], address:  2f8
+Write to Register [191], address:  2fc
+Write to Register [192], address:  300
+Write to Register [193], address:  304
+Write to Register [194], address:  308
+Write to Register [195], address:  30c
+Write to Register [196], address:  310
+Write to Register [197], address:  314
+Write to Register [198], address:  318
+Write to Register [199], address:  31c
+Write to Register [200], address:  320
+Write to Register [201], address:  324
+Write to Register [202], address:  328
+Write to Register [203], address:  32c
+Write to Register [204], address:  330
+Write to Register [205], address:  334
+Write to Register [206], address:  338
+Write to Register [207], address:  33c
+Write to Register [208], address:  340
+Write to Register [209], address:  344
+Write to Register [210], address:  348
+Write to Register [211], address:  34c
+Write to Register [212], address:  350
+Write to Register [213], address:  354
+Write to Register [214], address:  358
+Write to Register [215], address:  35c
+Write to Register [216], address:  360
+Write to Register [ 0], address:  000
+Write to Register [ 1], address:  004
+Write to Register [ 2], address:  008
+Write to Register [ 3], address:  00c
+Write to Register [ 4], address:  010
+Write to Register [ 5], address:  014
+Write to Register [ 6], address:  018
+Write to Register [ 7], address:  01c
+Write to Register [ 8], address:  020
+Write to Register [ 9], address:  024
+Write to Register [10], address:  028
+Write to Register [11], address:  02c
+Write to Register [12], address:  030
+Write to Register [13], address:  034
+Write to Register [14], address:  038
+Write to Register [15], address:  03c
+Write to Register [16], address:  040
+Write to Register [17], address:  044
+Write to Register [18], address:  048
+Write to Register [19], address:  04c
+Write to Register [20], address:  050
+Write to Register [21], address:  054
+Write to Register [22], address:  058
+Write to Register [23], address:  05c
+Write to Register [24], address:  060
+Write to Register [25], address:  064
+Write to Register [26], address:  068
+Write to Register [27], address:  06c
+Write to Register [28], address:  070
+Write to Register [29], address:  074
+Write to Register [30], address:  078
+Write to Register [31], address:  07c
+Write to Register [32], address:  080
+Write to Register [33], address:  084
+Write to Register [34], address:  088
+Write to Register [35], address:  08c
+Write to Register [36], address:  090
+Write to Register [37], address:  094
+Write to Register [38], address:  098
+Write to Register [39], address:  09c
+Write to Register [40], address:  0a0
+Write to Register [41], address:  0a4
+Write to Register [42], address:  0a8
+Write to Register [43], address:  0ac
+Write to Register [44], address:  0b0
+Write to Register [45], address:  0b4
+Write to Register [46], address:  0b8
+Write to Register [47], address:  0bc
+Write to Register [48], address:  0c0
+Write to Register [49], address:  0c4
+Write to Register [50], address:  0c8
+Write to Register [51], address:  0cc
+Write to Register [52], address:  0d0
+Write to Register [53], address:  0d4
+Write to Register [54], address:  0d8
+Write to Register [55], address:  0dc
+Write to Register [56], address:  0e0
+Write to Register [57], address:  0e4
+Write to Register [58], address:  0e8
+Write to Register [59], address:  0ec
+Write to Register [60], address:  0f0
+Write to Register [61], address:  0f4
+Write to Register [62], address:  0f8
+Write to Register [63], address:  0fc
+Write to Register [64], address:  100
+Write to Register [65], address:  104
+Write to Register [66], address:  108
+Write to Register [67], address:  10c
+Write to Register [68], address:  110
+Write to Register [69], address:  114
+Write to Register [70], address:  118
+Write to Register [71], address:  11c
+Write to Register [72], address:  120
+Write to Register [73], address:  124
+Write to Register [74], address:  128
+Write to Register [75], address:  12c
+Write to Register [76], address:  130
+Write to Register [77], address:  134
+Write to Register [78], address:  138
+Write to Register [79], address:  13c
+Write to Register [80], address:  140
+Write to Register [81], address:  144
+Write to Register [82], address:  148
+Write to Register [83], address:  14c
+Write to Register [84], address:  150
+Write to Register [85], address:  154
+Write to Register [86], address:  158
+Write to Register [87], address:  15c
+Write to Register [88], address:  160
+Write to Register [89], address:  164
+Write to Register [90], address:  168
+Write to Register [91], address:  16c
+Write to Register [92], address:  170
+Write to Register [93], address:  174
+Write to Register [94], address:  178
+Write to Register [95], address:  17c
+Write to Register [96], address:  180
+Write to Register [97], address:  184
+Write to Register [98], address:  188
+Write to Register [99], address:  18c
+Write to Register [100], address:  190
+Write to Register [101], address:  194
+Write to Register [102], address:  198
+Write to Register [103], address:  19c
+Write to Register [104], address:  1a0
+Write to Register [105], address:  1a4
+Write to Register [106], address:  1a8
+Write to Register [107], address:  1ac
+Write to Register [108], address:  1b0
+Write to Register [109], address:  1b4
+Write to Register [110], address:  1b8
+Write to Register [111], address:  1bc
+Write to Register [112], address:  1c0
+Write to Register [113], address:  1c4
+Write to Register [114], address:  1c8
+Write to Register [115], address:  1cc
+Write to Register [116], address:  1d0
+Write to Register [117], address:  1d4
+Write to Register [118], address:  1d8
+Write to Register [119], address:  1dc
+Write to Register [120], address:  1e0
+Write to Register [121], address:  1e4
+Write to Register [122], address:  1e8
+Write to Register [123], address:  1ec
+Write to Register [124], address:  1f0
+Write to Register [125], address:  1f4
+Write to Register [126], address:  1f8
+Write to Register [127], address:  1fc
+Write to Register [128], address:  200
+Write to Register [129], address:  204
+Write to Register [130], address:  208
+Write to Register [131], address:  20c
+Write to Register [132], address:  210
+Write to Register [133], address:  214
+Write to Register [134], address:  218
+Write to Register [135], address:  21c
+Write to Register [136], address:  220
+Write to Register [137], address:  224
+Write to Register [138], address:  228
+Write to Register [139], address:  22c
+Write to Register [140], address:  230
+Write to Register [141], address:  234
+Write to Register [142], address:  238
+Write to Register [143], address:  23c
+Write to Register [144], address:  240
+Write to Register [145], address:  244
+Write to Register [146], address:  248
+Write to Register [147], address:  24c
+Write to Register [148], address:  250
+Write to Register [149], address:  254
+Write to Register [150], address:  258
+Write to Register [151], address:  25c
+Write to Register [152], address:  260
+Write to Register [153], address:  264
+Write to Register [154], address:  268
+Write to Register [155], address:  26c
+Write to Register [156], address:  270
+Write to Register [157], address:  274
+Write to Register [158], address:  278
+Write to Register [159], address:  27c
+Write to Register [160], address:  280
+Write to Register [161], address:  284
+Write to Register [162], address:  288
+Write to Register [163], address:  28c
+Write to Register [164], address:  290
+Write to Register [165], address:  294
+Write to Register [166], address:  298
+Write to Register [167], address:  29c
+Write to Register [168], address:  2a0
+Write to Register [169], address:  2a4
+Write to Register [170], address:  2a8
+Write to Register [171], address:  2ac
+Write to Register [172], address:  2b0
+Write to Register [173], address:  2b4
+Write to Register [174], address:  2b8
+Write to Register [175], address:  2bc
+Write to Register [176], address:  2c0
+Write to Register [177], address:  2c4
+Write to Register [178], address:  2c8
+Write to Register [179], address:  2cc
+Write to Register [180], address:  2d0
+Write to Register [181], address:  2d4
+Write to Register [182], address:  2d8
+Write to Register [183], address:  2dc
+Write to Register [184], address:  2e0
+Write to Register [185], address:  2e4
+Write to Register [186], address:  2e8
+Write to Register [187], address:  2ec
+Write to Register [188], address:  2f0
+Write to Register [189], address:  2f4
+Write to Register [190], address:  2f8
+Write to Register [191], address:  2fc
+Write to Register [192], address:  300
+Write to Register [193], address:  304
+Write to Register [194], address:  308
+Write to Register [195], address:  30c
+Write to Register [196], address:  310
+Write to Register [197], address:  314
+Write to Register [198], address:  318
+Write to Register [199], address:  31c
+Write to Register [200], address:  320
+Write to Register [201], address:  324
+Write to Register [202], address:  328
+Write to Register [203], address:  32c
+Write to Register [204], address:  330
+Write to Register [205], address:  334
+Write to Register [206], address:  338
+Write to Register [207], address:  33c
+Write to Register [208], address:  340
+Write to Register [209], address:  344
+Write to Register [210], address:  348
+Write to Register [211], address:  34c
+Write to Register [212], address:  350
+Write to Register [213], address:  354
+Write to Register [214], address:  358
+Write to Register [215], address:  35c
+Write to Register [216], address:  360
+Write to Register [ 0], address:  000
+Write to Register [ 1], address:  004
+Write to Register [ 2], address:  008
+Write to Register [ 3], address:  00c
+Write to Register [ 4], address:  010
+Write to Register [ 5], address:  014
+Write to Register [ 6], address:  018
+Write to Register [ 7], address:  01c
+Write to Register [ 8], address:  020
+Write to Register [ 9], address:  024
+Write to Register [10], address:  028
+Write to Register [11], address:  02c
+Write to Register [12], address:  030
+Write to Register [13], address:  034
+Write to Register [14], address:  038
+Write to Register [15], address:  03c
+Write to Register [16], address:  040
+Write to Register [17], address:  044
+Write to Register [18], address:  048
+Write to Register [19], address:  04c
+Write to Register [20], address:  050
+Write to Register [21], address:  054
+Write to Register [22], address:  058
+Write to Register [23], address:  05c
+Write to Register [24], address:  060
+Write to Register [25], address:  064
+Write to Register [26], address:  068
+Write to Register [27], address:  06c
+Write to Register [28], address:  070
+Write to Register [29], address:  074
+Write to Register [30], address:  078
+Write to Register [31], address:  07c
+Write to Register [32], address:  080
+Write to Register [33], address:  084
+Write to Register [34], address:  088
+Write to Register [35], address:  08c
+Write to Register [36], address:  090
+Write to Register [37], address:  094
+Write to Register [38], address:  098
+Write to Register [39], address:  09c
+Write to Register [40], address:  0a0
+Write to Register [41], address:  0a4
+Write to Register [42], address:  0a8
+Write to Register [43], address:  0ac
+Write to Register [44], address:  0b0
+Write to Register [45], address:  0b4
+Write to Register [46], address:  0b8
+Write to Register [47], address:  0bc
+Write to Register [48], address:  0c0
+Write to Register [49], address:  0c4
+Write to Register [50], address:  0c8
+Write to Register [51], address:  0cc
+Write to Register [52], address:  0d0
+Write to Register [53], address:  0d4
+Write to Register [54], address:  0d8
+Write to Register [55], address:  0dc
+Write to Register [56], address:  0e0
+Write to Register [57], address:  0e4
+Write to Register [58], address:  0e8
+Write to Register [59], address:  0ec
+Write to Register [60], address:  0f0
+Write to Register [61], address:  0f4
+Write to Register [62], address:  0f8
+Write to Register [63], address:  0fc
+Write to Register [64], address:  100
+Write to Register [65], address:  104
+Write to Register [66], address:  108
+Write to Register [67], address:  10c
+Write to Register [68], address:  110
+Write to Register [69], address:  114
+Write to Register [70], address:  118
+Write to Register [71], address:  11c
+Write to Register [72], address:  120
+Write to Register [73], address:  124
+Write to Register [74], address:  128
+Write to Register [75], address:  12c
+Write to Register [76], address:  130
+Write to Register [77], address:  134
+Write to Register [78], address:  138
+Write to Register [79], address:  13c
+Write to Register [80], address:  140
+Write to Register [81], address:  144
+Write to Register [82], address:  148
+Write to Register [83], address:  14c
+Write to Register [84], address:  150
+Write to Register [85], address:  154
+Write to Register [86], address:  158
+Write to Register [87], address:  15c
+Write to Register [88], address:  160
+Write to Register [89], address:  164
+Write to Register [90], address:  168
+Write to Register [91], address:  16c
+Write to Register [92], address:  170
+Write to Register [93], address:  174
+Write to Register [94], address:  178
+Write to Register [95], address:  17c
+Write to Register [96], address:  180
+Write to Register [97], address:  184
+Write to Register [98], address:  188
+Write to Register [99], address:  18c
+Write to Register [100], address:  190
+Write to Register [101], address:  194
+Write to Register [102], address:  198
+Write to Register [103], address:  19c
+Write to Register [104], address:  1a0
+Write to Register [105], address:  1a4
+Write to Register [106], address:  1a8
+Write to Register [107], address:  1ac
+Write to Register [108], address:  1b0
+Write to Register [109], address:  1b4
+Write to Register [110], address:  1b8
+Write to Register [111], address:  1bc
+Write to Register [112], address:  1c0
+Write to Register [113], address:  1c4
+Write to Register [114], address:  1c8
+Write to Register [115], address:  1cc
+Write to Register [116], address:  1d0
+Write to Register [117], address:  1d4
+Write to Register [118], address:  1d8
+Write to Register [119], address:  1dc
+Write to Register [120], address:  1e0
+Write to Register [121], address:  1e4
+Write to Register [122], address:  1e8
+Write to Register [123], address:  1ec
+Write to Register [124], address:  1f0
+Write to Register [125], address:  1f4
+Write to Register [126], address:  1f8
+Write to Register [127], address:  1fc
+Write to Register [128], address:  200
+Write to Register [129], address:  204
+Write to Register [130], address:  208
+Write to Register [131], address:  20c
+Write to Register [132], address:  210
+Write to Register [133], address:  214
+Write to Register [134], address:  218
+Write to Register [135], address:  21c
+Write to Register [136], address:  220
+Write to Register [137], address:  224
+Write to Register [138], address:  228
+Write to Register [139], address:  22c
+Write to Register [140], address:  230
+Write to Register [141], address:  234
+Write to Register [142], address:  238
+Write to Register [143], address:  23c
+Write to Register [144], address:  240
+Write to Register [145], address:  244
+Write to Register [146], address:  248
+Write to Register [147], address:  24c
+Write to Register [148], address:  250
+Write to Register [149], address:  254
+Write to Register [150], address:  258
+Write to Register [151], address:  25c
+Write to Register [152], address:  260
+Write to Register [153], address:  264
+Write to Register [154], address:  268
+Write to Register [155], address:  26c
+Write to Register [156], address:  270
+Write to Register [157], address:  274
+Write to Register [158], address:  278
+Write to Register [159], address:  27c
+Write to Register [160], address:  280
+Write to Register [161], address:  284
+Write to Register [162], address:  288
+Write to Register [163], address:  28c
+Write to Register [164], address:  290
+Write to Register [165], address:  294
+Write to Register [166], address:  298
+Write to Register [167], address:  29c
+Write to Register [168], address:  2a0
+Write to Register [169], address:  2a4
+Write to Register [170], address:  2a8
+Write to Register [171], address:  2ac
+Write to Register [172], address:  2b0
+Write to Register [173], address:  2b4
+Write to Register [174], address:  2b8
+Write to Register [175], address:  2bc
+Write to Register [176], address:  2c0
+Write to Register [177], address:  2c4
+Write to Register [178], address:  2c8
+Write to Register [179], address:  2cc
+Write to Register [180], address:  2d0
+Write to Register [181], address:  2d4
+Write to Register [182], address:  2d8
+Write to Register [183], address:  2dc
+Write to Register [184], address:  2e0
+Write to Register [185], address:  2e4
+Write to Register [186], address:  2e8
+Write to Register [187], address:  2ec
+Write to Register [188], address:  2f0
+Write to Register [189], address:  2f4
+Write to Register [190], address:  2f8
+Write to Register [191], address:  2fc
+Write to Register [192], address:  300
+Write to Register [193], address:  304
+Write to Register [194], address:  308
+Write to Register [195], address:  30c
+Write to Register [196], address:  310
+Write to Register [197], address:  314
+Write to Register [198], address:  318
+Write to Register [199], address:  31c
+Write to Register [200], address:  320
+Write to Register [201], address:  324
+Write to Register [202], address:  328
+Write to Register [203], address:  32c
+Write to Register [204], address:  330
+Write to Register [205], address:  334
+Write to Register [206], address:  338
+Write to Register [207], address:  33c
+Write to Register [208], address:  340
+Write to Register [209], address:  344
+Write to Register [210], address:  348
+Write to Register [211], address:  34c
+Write to Register [212], address:  350
+Write to Register [213], address:  354
+Write to Register [214], address:  358
+Write to Register [215], address:  35c
+Write to Register [216], address:  360
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m

@@ -1,0 +1,214 @@
+ <!---------------------------------------->
+ <!--Module : regression_report.template -->
+ <!--Author : Ali Zeinolabedin           -->
+ <!--Company: Blackrock Neurotech        -->
+ <!---------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            border: 10px solid #FFB6C1; /* Adjust the border size and color as needed */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .passed {
+            background-color: green;
+            color: white;
+        }
+
+        .failed {
+            background-color: red;
+            color: white;
+        }
+
+        .simfail {
+            background-color: red;
+            color: white;
+        }
+
+        .unknown {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .duration-bar {
+            display: inline-block;
+            height: 20px;
+            width: 10px;
+            margin-right: 150px; /* Adjust the margin as needed */
+            background-color: blue; /* Change the bar color */
+        }
+    </style>
+    <title>List to HTML</title>
+</head>
+<body>
+    <h1>List of TestCases:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Running Time</th>
+                <th>Duration</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <!-- List items will be inserted here -->
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_sanity/regression.log">w_icons_top.tc_sanity</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:38:59</td>  		  
+	<td>11:39:00</td>  		  
+	<td>0 min(s) and  1 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 1px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_sanity_stim/regression.log">w_icons_top.tc_sanity_stim</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:39:00</td>  		  
+	<td>11:39:01</td>  		  
+	<td>0 min(s) and  1 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 1px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rec_all_chs/regression.log">w_icons_top.tc_rec_all_chs</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:39:01</td>  		  
+	<td>11:39:04</td>  		  
+	<td>0 min(s) and  3 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 3px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rec_discharge/regression.log">w_icons_top.tc_rec_discharge</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:39:04</td>  		  
+	<td>11:39:15</td>  		  
+	<td>0 min(s) and  11 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 11px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rec_test_mode/regression.log">w_icons_top.tc_rec_test_mode</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:39:15</td>  		  
+	<td>11:39:19</td>  		  
+	<td>0 min(s) and  4 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 4px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_mask_chk_err/regression.log">w_icons_top.tc_stim_mask_chk_err</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:39:19</td>  		  
+	<td>11:40:01</td>  		  
+	<td>0 min(s) and  42 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 42px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_crc5/regression.log">w_icons_top.tc_crc5</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:40:01</td>  		  
+	<td>11:41:34</td>  		  
+	<td>1 min(s) and  33 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 93px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rec_impedance/regression.log">w_icons_top.tc_rec_impedance</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:41:34</td>  		  
+	<td>11:42:01</td>  		  
+	<td>0 min(s) and  27 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 27px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rf_toggle/regression.log">w_icons_top.tc_rf_toggle</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:42:01</td>  		  
+	<td>11:43:34</td>  		  
+	<td>1 min(s) and  33 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 93px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_random_chs/regression.log">w_icons_top.tc_stim_random_chs</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:43:34</td>  		  
+	<td>11:44:15</td>  		  
+	<td>0 min(s) and  41 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 41px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_selected_chs/regression.log">w_icons_top.tc_stim_selected_chs</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:44:15</td>  		  
+	<td>11:44:19</td>  		  
+	<td>0 min(s) and  4 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 4px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_all_mask_chk_err/regression.log">w_icons_top.tc_stim_all_mask_chk_err</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:44:19</td>  		  
+	<td>11:47:48</td>  		  
+	<td>3 min(s) and  29 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 209px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rec_selected_chs/regression.log">w_icons_top.tc_rec_selected_chs</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:47:48</td>  		  
+	<td>11:48:02</td>  		  
+	<td>0 min(s) and  14 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 14px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_1ch/regression.log">w_icons_top.tc_stim_1ch</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:48:02</td>  		  
+	<td>11:48:59</td>  		  
+	<td>0 min(s) and  57 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 57px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_ch_err/regression.log">w_icons_top.tc_stim_ch_err</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:48:59</td>  		  
+	<td>11:50:16</td>  		  
+	<td>1 min(s) and  17 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 77px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_stim_1ch_long/regression.log">w_icons_top.tc_stim_1ch_long</a></td>  		  
+	<td class="failed">FAILED</td>  		  
+	<td>11:50:16</td>  		  
+	<td>11:52:56</td>  		  
+	<td>2 min(s) and  40 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 160px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.59/w_icons_top.tc_rec_impedance_1ch/regression.log">w_icons_top.tc_rec_impedance_1ch</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>11:52:56</td>  		  
+	<td>11:53:36</td>  		  
+	<td>0 min(s) and  40 sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: 40px"></div></td>  		  
+</tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,1 @@
+/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tps018bcdnv5_113a/tps018bcdnv5_130a_vlg/TSMCHOME/digital/Front_End/verilog/tps018bcdnv5_130a/tps018bcdnv5.v

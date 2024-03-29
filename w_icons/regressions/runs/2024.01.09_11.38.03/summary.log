@@ -1,0 +1,19 @@
+w_icons_top.tc_sanity                 TBCHECK:  SIMFAIL
+w_icons_top.tc_sanity_stim            TBCHECK:  SIMFAIL
+w_icons_top.tc_rec_all_chs            TBCHECK:  SIMFAIL
+w_icons_top.tc_rec_discharge          TBCHECK:  SIMFAIL
+w_icons_top.tc_rec_test_mode          TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_mask_chk_err      TBCHECK:  SIMFAIL
+w_icons_top.tc_crc5                   TBCHECK:  SIMFAIL
+w_icons_top.tc_rec_impedance          TBCHECK:  SIMFAIL
+w_icons_top.tc_rf_toggle              TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_random_chs        TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_selected_chs      TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_all_mask_chk_err  TBCHECK:  SIMFAIL
+w_icons_top.tc_rec_selected_chs       TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_1ch               TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_ch_err            TBCHECK:  SIMFAIL
+w_icons_top.tc_stim_1ch_long          TBCHECK:  SIMFAIL
+w_icons_top.tc_rec_impedance_1ch      TBCHECK:  SIMFAIL
+---
+PASSED: 0 out of 17

@@ -1,0 +1,150 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Fri Jan 12 14:40:52 2024
+| Host         : smaz-brn running 64-bit Linux Mint 21.2
+| Command      : report_control_sets -verbose -file w_icons_top_control_sets_placed.rpt
+| Design       : w_icons_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    72 |
+|    Minimum number of control sets                        |    72 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   185 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    72 |
+| >= 0 to < 4        |    10 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    48 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            4 |
+| No           | No                    | Yes                    |             875 |          194 |
+| No           | Yes                   | No                     |             183 |           40 |
+| Yes          | No                    | No                     |              22 |           11 |
+| Yes          | No                    | Yes                    |            1294 |          426 |
+| Yes          | Yes                   | No                     |              44 |           18 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|                            Clock Signal                            |                                          Enable Signal                                          |                                    Set/Reset Signal                                   | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_adc1_gated_s_BUFG                                             | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1                 |                                                                                       |                1 |              1 |         1.00 |
+|  clk_adc1_gated_s_BUFG                                             |                                                                                                 |                                                                                       |                1 |              1 |         1.00 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_rec_ctrl/adc_en_o0                                                             | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                1 |              1 |         1.00 |
+|  clk_adc2_gated_s_BUFG                                             | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1                 |                                                                                       |                1 |              1 |         1.00 |
+|  clk_adc2_gated_s_BUFG                                             |                                                                                                 |                                                                                       |                1 |              1 |         1.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               |                                                                                                 |                                                                                       |                1 |              1 |         1.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/RESET_N_I    |                1 |              2 |         2.00 |
+|  CLK_REF_I_IBUF_BUFG                                               |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/RESET_N_I    |                1 |              2 |         2.00 |
+| ~CLK_REC_O_OBUF_BUFG                                               |                                                                                                 |                                                                                       |                1 |              2 |         2.00 |
+| ~SPI_CLK_I_IBUF_BUFG                                               |                                                                                                 | SPI_MISO_O_TRI                                                                        |                3 |              3 |         1.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_slave_common/crc5[4]_i_1_n_0                                    | SPI_MISO_O_TRI                                                                        |                1 |              5 |         5.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_slave_common/spi_cmd_en                                         | SPI_MISO_O_TRI                                                                        |                1 |              5 |         5.00 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_rec_ctrl/adc_idx                                                               | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                1 |              5 |         5.00 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_rec_ctrl/initial_dly[4]_i_1_n_0                                                | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                2 |              5 |         2.50 |
+| ~SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_slave_common/crc0                                               | SPI_MISO_O_TRI                                                                        |                1 |              5 |         5.00 |
+| ~SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_slave_common/sel                                                | SPI_MISO_O_TRI                                                                        |                2 |              6 |         3.00 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_sync_en_rec_ch27/E[0]                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                2 |              8 |         4.00 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_sync_en_rec_ch59/data_sync1_reg_0[0]  | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                2 |              8 |         4.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5]_0[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                6 |              9 |         1.50 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/apb_wdata                                          |                                                                                       |                4 |              9 |         2.25 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_sync_clk_div_discharge/data_sync1     | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                4 |             10 |         2.50 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o[24]_i_1_n_0                          |                                                                                       |                5 |             11 |         2.20 |
+|  CLK_REC_O_OBUF_BUFG                                               | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_sync_clk_div_stim/data_sync1_reg_0[0] | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                8 |             14 |         1.75 |
+|  CLK_REF_I_IBUF_BUFG                                               |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                4 |             15 |         3.75 |
+|  SPI_CLK_I_IBUF_BUFG                                               |                                                                                                 | SPI_MISO_O_TRI                                                                        |                7 |             16 |         2.29 |
+|  i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n/clkdiv_n_reg_0 |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |                4 |             17 |         4.25 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o[24]_i_1_n_0                          | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o[31]_i_1_n_0                |               12 |             21 |         1.75 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/FSM_sequential_state_reg[2]_1[0]                   | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                5 |             22 |         4.40 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/apb_wdata                                          | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/apb_wdata[31]_i_1_n_0                    |                6 |             23 |         3.83 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_14[0]                          | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             28 |         3.11 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[13][0]                             | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             28 |         3.11 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_1[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               12 |             28 |         2.33 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[9]_2[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               10 |             28 |         2.80 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5]_2[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               11 |             28 |         2.55 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_5[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               12 |             28 |         2.33 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5][0]                              | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             28 |         3.11 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[10]_1[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               13 |             28 |         2.15 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5]_5[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                7 |             29 |         4.14 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[9]_0[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                8 |             32 |         4.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[9][0]                              | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             32 |         3.56 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5]_4[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               11 |             32 |         2.91 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_9[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               10 |             32 |         3.20 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[6][0]                              | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               10 |             32 |         3.20 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_10[0]                          | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                7 |             32 |         4.57 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_2[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                8 |             32 |         4.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_8[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             32 |         3.56 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/E[0]                                               | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               10 |             32 |         3.20 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/FSM_sequential_state_reg[2]_2[0]                   | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               11 |             32 |         2.91 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/FSM_sequential_state_reg[2]_0[0]                   | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                8 |             32 |         4.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[12][0]                             | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                7 |             32 |         4.57 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_0[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               12 |             32 |         2.67 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_11[0]                          | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             32 |         3.56 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_12[0]                          | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               12 |             32 |         2.67 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_13[0]                          | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               11 |             32 |         2.91 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_7[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               11 |             32 |         2.91 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[9]_1[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                9 |             32 |         3.56 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5]_1[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               11 |             32 |         2.91 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_4[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               10 |             32 |         3.20 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[10][0]                             | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                8 |             32 |         4.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[10]_0[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               10 |             32 |         3.20 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_6[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |               20 |             32 |         1.60 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[11]_3[0]                           | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                8 |             32 |         4.00 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_rx_word_reg[5]_3[0]                            | i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2_n_0        |                7 |             32 |         4.57 |
+| ~SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_slave_common/p_3_in                                             | SPI_MISO_O_TRI                                                                        |               12 |             33 |         2.75 |
+|  SPI_CLK_I_IBUF_BUFG                                               | i_w_icons_core/i_spi_wrap/i_spi_slave_common/spi_rx_word[40]_i_1_n_0                            | SPI_MISO_O_TRI                                                                        |                9 |             41 |         4.56 |
+|  clk_discharge_main_s                                              | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_sync_rec_en/data_sync1                | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |               31 |             64 |         2.06 |
+|  clk_adc2_gated_s_BUFG                                             |                                                                                                 | i_w_icons_core/i_rec_ctrl/sample_out_s                                                |               22 |             75 |         3.41 |
+|  clk_discharge_main_s                                              |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |               39 |             86 |         2.21 |
+|  clk_adc1_gated_s_BUFG                                             |                                                                                                 | i_w_icons_core/i_rec_ctrl/sample_out_s                                                |               18 |            108 |         6.00 |
+|  CLK_REC_O_OBUF_BUFG                                               |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |               34 |            160 |         4.71 |
+|  clk_adc2_gated_s_BUFG                                             |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |               50 |            279 |         5.58 |
+|  clk_adc1_gated_s_BUFG                                             |                                                                                                 | i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg_0 |               51 |            295 |         5.78 |
++--------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

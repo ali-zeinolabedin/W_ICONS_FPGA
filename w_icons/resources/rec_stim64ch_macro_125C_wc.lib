@@ -1,0 +1,1484 @@
+/***************************************************************
+* Blackrock Neurotech Library
+* Filename: ana_top_25c_tc.lib
+* Technology: CL018
+* Product Type: Analog top macro
+* Product Name: ana_top
+* Version: 1a
+*********************************************************************/
+library (ana_top_125c_wc) { 
+    /*  library head: ana_top */
+    technology (cmos) ;
+    delay_model : table_lookup ;
+    date                : "WedMon Nov 13 14:10:07 MST 2023 " ;
+    revision    : 1 ;
+    simulation 	: true ;
+    nom_process : 1 ; /* FF DIO */
+    nom_temperature : 0;
+    nom_voltage : 1.62;
+    operating_conditions("TCCOM"){
+        process : 1; /* FF DIO */
+        temperature : 0;
+        voltage : 1.62;
+        tree_type : "balanced_tree";
+    }
+    default_operating_conditions : TCCOM ;
+    capacitive_load_unit (1,pf) ;
+    voltage_unit : "1V" ;
+    current_unit : "1mA" ;
+    time_unit : "1ns" ;
+    pulling_resistance_unit : "1kohm"; 
+    define_cell_area (pad_drivers,pad_driver_sites) ;
+    define_cell_area(bond_pads,pad_slots) ;
+    library_features (report_delay_calculation);
+    default_leakage_power_density : 0.0;
+    default_fanout_load : 1;
+    bus_naming_style : "%s[%d]";
+    type (BUS4) {
+    base_type : array ;
+    bit_from : 3 ;
+    bit_to : 0 ;
+    bit_width : 4 ;
+    data_type : bit ;
+    downto : true ;
+    }
+    type (BUS5) {
+    base_type : array ;
+    bit_from : 4 ;
+    bit_to : 0 ;
+    bit_width : 5 ;
+    data_type : bit ;
+    downto : true ;
+    }
+    type (BUS8) {
+    base_type : array ;
+    bit_from : 7 ;
+    bit_to : 0 ;
+    bit_width : 8 ;
+    data_type : bit ;
+    downto : true ;
+    }
+    type (BUS64) {
+    base_type : array ;
+    bit_from : 63 ;
+    bit_to : 0 ;
+    bit_width : 64 ;
+    data_type : bit ;
+    downto : true ;
+    }
+    input_voltage(cmos) {
+        vil : 0.3 * VDD ;
+        vih : 0.7 * VDD ;
+        vimin : -0.5 ;
+      vimax : VDD + 0.5 ;
+    }
+    input_voltage(cmos_schmitt) {
+         vil : 0.3 * VDD ;
+         vih : 0.7 * VDD ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(schmitt) {
+         vil : 0.3 * VDD ;
+         vih : 0.7 * VDD ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(ttl) {
+         vil : 0.8 ;
+         vih : 2.0 ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(ttl_schmitt) {
+         vil : 0.8 ;
+         vih : 2.0 ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(pci) {
+         vil : 0.8 ;
+         vih : 2.0 ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    output_voltage(cmos) {
+         vol : 0.3 * VDD ;
+         voh : 0.7 * VDD ;
+         vomin : -0.5 ;
+         vomax : VDD + 0.5 ;
+	 }
+  input_voltage(schmitt) {
+         vil : 0.3 * VDD ;
+         vih : 0.7 * VDD ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(ttl) {
+         vil : 0.8 ;
+         vih : 2.0 ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(ttl_schmitt) {
+         vil : 0.8 ;
+         vih : 2.0 ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    input_voltage(pci) {
+         vil : 0.8 ;
+         vih : 2.0 ;
+         vimin : -0.5 ;
+         vimax : VDD + 0.5 ;
+    }
+    output_voltage(cmos) {
+         vol : 0.3 * VDD ;
+         voh : 0.7 * VDD ;
+         vomin : -0.5 ;
+         vomax : VDD + 0.5 ;
+    }
+    output_voltage(cmos_schmitt) {
+         vol : 0.3 * VDD ;
+         voh : 0.7 * VDD ;
+         vomin : -0.5 ;
+         vomax : VDD + 0.5 ;
+    }
+    output_voltage(ttl) {
+         vol : 0.8 ;
+         voh : 2.0 ;
+         vomin : -0.5 ;
+         vomax : VDD + 0.5 ;
+    }
+    output_voltage(ttl_schmitt) {
+         vol : 0.8 ;
+         voh : 2.0 ;
+         vomin : -0.5 ;
+         vomax : VDD + 0.5 ;
+    }
+    output_voltage(pci) {
+         vol : 0.8 ;
+         voh : 2.0 ;
+         vomin : -0.5 ;
+         vomax : VDD + 0.5 ;
+    }
+
+/*****************************************/
+/********************************************************************/
+/*    Support table template from CHEETAH */
+/********************************************************************/
+  lu_table_template (constraint_template_3x3) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("0.0001, 0.0002, 0.0003");
+    index_2 ("0.0001, 0.0002, 0.0003");
+  }
+  lu_table_template (delay_template_7x7_0) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007");
+    index_2 ("0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007");
+  }
+  lu_table_template (delay_template_8x8_0) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007, 0.0008");
+    index_2 ("0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007, 0.0008");
+  }
+  lu_table_template (mpw_constraint_template_3x3) {
+    variable_1 : related_pin_transition;
+    index_1 ("0.0001, 0.0002, 0.0003");
+  }
+  
+cell (rec_stim64ch_macro) {
+  area : 13.1712;
+  cell_footprint : "ckbd1bwp7t";
+  cell_leakage_power : 0.1315;
+  ff (IQ, IQN) {
+    clear : "(!reset_n_i)";
+    clocked_on : "clk_adc1_gated_i";
+    next_state : "!adc_res1_o";
+      }
+  pin(reset_n_i) {
+   direction : input;
+    capacitance : 0.005958;
+    rise_capacitance : 0.005779;
+    fall_capacitance : 0.005958;
+    timing () {
+      related_pin : "clk_adc1_gated_i";
+      timing_type : recovery_rising;
+      rise_constraint (constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        index_2 ("0.0131, 0.2774, 2.392");
+        values ( \
+            "-0.3062, -0.2783, 0.02693", \
+            "-0.374, -0.3473, -0.07449", \
+            "-0.5262, -0.5017, -0.279" \
+        );
+      }
+    }
+    timing () {
+      related_pin : "clk_adc1_gated_i";
+      timing_type : removal_rising;
+      rise_constraint (constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        index_2 ("0.0131, 0.2774, 2.392");
+        values ( \
+            "0.4523, 0.4797, 0.8628", \
+            "0.5122, 0.5388, 0.9198", \
+            "0.6563, 0.6828, 1.054" \
+        );
+      }
+   }
+    timing () {
+      related_pin : "clk_adc2_gated_i";
+      timing_type : recovery_rising;
+      rise_constraint (constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        index_2 ("0.0131, 0.2774, 2.392");
+        values ( \
+            "-0.3062, -0.2783, 0.02693", \
+            "-0.374, -0.3473, -0.07449", \
+            "-0.5262, -0.5017, -0.279" \
+        );
+      }
+    }
+    timing () {
+      related_pin : "clk_adc2_gated_i";
+      timing_type : removal_rising;
+      rise_constraint (constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        index_2 ("0.0131, 0.2774, 2.392");
+        values ( \
+            "0.4523, 0.4797, 0.8628", \
+            "0.5122, 0.5388, 0.9198", \
+            "0.6563, 0.6828, 1.054" \
+        );
+      }
+   }
+    timing () {
+      related_pin : "reset_n_i";
+      timing_type : min_pulse_width;
+      fall_constraint (mpw_constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        values ( \
+          "0.5054, 0.5835, 2.961" \
+        );
+     }
+   }
+  }
+  pin(clk_adc1_gated_i) {
+   clock : true;
+    direction : input;
+    capacitance : 0.002894;
+    rise_capacitance : 0.002894;
+    fall_capacitance : 0.002782;    
+    timing () {
+      related_pin : "clk_adc1_gated_i";
+      timing_type : min_pulse_width;
+      rise_constraint (mpw_constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        values ( \
+          "0.2539, 0.3442, 2.961" \
+        );
+      }
+      fall_constraint (mpw_constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        values ( \
+          "0.2295, 0.3442, 2.961" \
+        );
+      }
+    }
+  }
+  pin(adc_res1_o) {
+    direction : output;
+    function : "IQN";
+    max_capacitance : 0.2977;
+    timing () {
+      related_pin : "clk_adc1_gated_i";
+      timing_sense : non_unate;
+      timing_type : rising_edge;
+      cell_rise (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.4393, 0.4637, 0.5079, 0.5912, 0.7538, 1.077, 1.721", \
+          "0.4484, 0.4729, 0.5171, 0.6003, 0.763, 1.086, 1.73", \
+          "0.4667, 0.4912, 0.5354, 0.6186, 0.7812, 1.104, 1.749", \
+          "0.5002, 0.5247, 0.5688, 0.6521, 0.8148, 1.137, 1.782", \
+          "0.5441, 0.5686, 0.6128, 0.696, 0.8587, 1.181, 1.826", \
+          "0.5923, 0.6167, 0.6609, 0.744, 0.9068, 1.229, 1.874", \
+          "0.6378, 0.6623, 0.7064, 0.7897, 0.9523, 1.275, 1.919" \
+        );
+      }
+      rise_transition (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.08001, 0.1131, 0.1813, 0.3228, 0.613, 1.198, 2.37", \
+          "0.08005, 0.113, 0.1812, 0.3229, 0.6131, 1.198, 2.37", \
+          "0.08007, 0.1129, 0.1812, 0.3229, 0.6131, 1.198, 2.369", \
+          "0.08008, 0.1131, 0.1813, 0.3228, 0.6131, 1.198, 2.369", \
+          "0.07998, 0.1132, 0.1813, 0.3227, 0.6128, 1.197, 2.37", \
+          "0.08008, 0.113, 0.1812, 0.3228, 0.6129, 1.198, 2.37", \
+          "0.0801, 0.1132, 0.1812, 0.3227, 0.6129, 1.197, 2.37" \
+        );
+      }
+      cell_fall (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.3853, 0.4016, 0.4292, 0.4769, 0.5648, 0.737, 1.081", \
+          "0.3942, 0.4105, 0.4382, 0.4858, 0.5737, 0.7461, 1.09", \
+          "0.4128, 0.4292, 0.4568, 0.5044, 0.5924, 0.7647, 1.108", \
+          "0.4471, 0.4634, 0.491, 0.5387, 0.6266, 0.799, 1.143", \
+          "0.4921, 0.5084, 0.536, 0.5837, 0.6716, 0.8439, 1.188", \
+          "0.5415, 0.5577, 0.5854, 0.633, 0.721, 0.8931, 1.237", \
+          "0.5869, 0.6032, 0.6308, 0.6785, 0.7664, 0.9387, 1.282" \
+        );
+      }
+      fall_transition (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.05086, 0.06941, 0.1039, 0.1716, 0.3132, 0.6066, 1.197", \
+          "0.05084, 0.06925, 0.1039, 0.1715, 0.3131, 0.6067, 1.197", \
+          "0.05078, 0.06933, 0.1039, 0.1715, 0.313, 0.6067, 1.197", \
+          "0.05072, 0.06926, 0.1039, 0.1714, 0.3131, 0.6067, 1.197", \
+          "0.05075, 0.06939, 0.1039, 0.1716, 0.3129, 0.6067, 1.197", \
+          "0.05085, 0.06939, 0.1039, 0.1716, 0.3129, 0.6066, 1.197", \
+          "0.05084, 0.06939, 0.1039, 0.1716, 0.3132, 0.6066, 1.197" \
+        );
+      }
+   }
+   timing () {
+      related_pin : "reset_n_i";
+      timing_sense : positive_unate;
+      timing_type : clear;
+     cell_fall (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.2991, 0.3255, 0.3675, 0.432, 0.537, 0.7237, 1.067", \
+          "0.3051, 0.3315, 0.3736, 0.4381, 0.543, 0.7298, 1.073", \
+          "0.3236, 0.35, 0.3921, 0.4566, 0.5615, 0.7483, 1.092", \
+          "0.3674, 0.3938, 0.4358, 0.5004, 0.6055, 0.7918, 1.135", \
+          "0.4613, 0.4876, 0.5295, 0.5944, 0.7004, 0.8839, 1.227", \
+          "0.6367, 0.6651, 0.7097, 0.7772, 0.8834, 1.059, 1.402", \
+          "0.914, 0.947, 0.9986, 1.069, 1.163, 1.334, 1.676" \
+        );
+      }
+      fall_transition (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.09848, 0.1227, 0.1616, 0.2283, 0.3655, 0.6347, 1.197", \
+          "0.09835, 0.1227, 0.1616, 0.2281, 0.3655, 0.6352, 1.197", \
+          "0.09836, 0.1227, 0.1617, 0.2281, 0.3655, 0.6351, 1.197", \
+          "0.09836, 0.1227, 0.1618, 0.2287, 0.3661, 0.6331, 1.197", \
+          "0.0986, 0.1232, 0.1626, 0.2303, 0.3666, 0.6261, 1.196", \
+          "0.1155, 0.1389, 0.1765, 0.241, 0.3578, 0.6132, 1.196", \
+          "0.1465, 0.1735, 0.2095, 0.2382, 0.3304, 0.6074, 1.196" \
+        );
+      }
+    }
+  }
+  ff (IQ2, IQN2) {
+    clear : "(!reset_n_i)";
+    clocked_on : "clk_adc2_gated_i";
+    next_state : "!adc_res2_o";
+  }
+  pin(clk_adc2_gated_i) {
+   clock : true;
+    direction : input;
+    capacitance : 0.002894;
+    rise_capacitance : 0.002894;
+    fall_capacitance : 0.002782;    
+    timing () {
+      related_pin : "clk_adc2_gated_i";
+      timing_type : min_pulse_width;
+      rise_constraint (mpw_constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        values ( \
+          "0.2539, 0.3442, 2.961" \
+        );
+      }
+      fall_constraint (mpw_constraint_template_3x3) {
+        index_1 ("0.0131, 0.2774, 2.392");
+        values ( \
+          "0.2295, 0.3442, 2.961" \
+        );
+      }
+    }
+  }
+  pin(adc_res2_o) {
+    direction : output;
+    function : "IQN2";
+    max_capacitance : 0.2977;
+    timing () {
+      related_pin : "clk_adc2_gated_i";
+      timing_sense : non_unate;
+      timing_type : rising_edge;
+      cell_rise (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.4393, 0.4637, 0.5079, 0.5912, 0.7538, 1.077, 1.721", \
+          "0.4484, 0.4729, 0.5171, 0.6003, 0.763, 1.086, 1.73", \
+          "0.4667, 0.4912, 0.5354, 0.6186, 0.7812, 1.104, 1.749", \
+          "0.5002, 0.5247, 0.5688, 0.6521, 0.8148, 1.137, 1.782", \
+          "0.5441, 0.5686, 0.6128, 0.696, 0.8587, 1.181, 1.826", \
+          "0.5923, 0.6167, 0.6609, 0.744, 0.9068, 1.229, 1.874", \
+          "0.6378, 0.6623, 0.7064, 0.7897, 0.9523, 1.275, 1.919" \
+        );
+      }
+      rise_transition (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.08001, 0.1131, 0.1813, 0.3228, 0.613, 1.198, 2.37", \
+          "0.08005, 0.113, 0.1812, 0.3229, 0.6131, 1.198, 2.37", \
+          "0.08007, 0.1129, 0.1812, 0.3229, 0.6131, 1.198, 2.369", \
+          "0.08008, 0.1131, 0.1813, 0.3228, 0.6131, 1.198, 2.369", \
+          "0.07998, 0.1132, 0.1813, 0.3227, 0.6128, 1.197, 2.37", \
+          "0.08008, 0.113, 0.1812, 0.3228, 0.6129, 1.198, 2.37", \
+          "0.0801, 0.1132, 0.1812, 0.3227, 0.6129, 1.197, 2.37" \
+        );
+      }
+      cell_fall (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.3853, 0.4016, 0.4292, 0.4769, 0.5648, 0.737, 1.081", \
+          "0.3942, 0.4105, 0.4382, 0.4858, 0.5737, 0.7461, 1.09", \
+          "0.4128, 0.4292, 0.4568, 0.5044, 0.5924, 0.7647, 1.108", \
+          "0.4471, 0.4634, 0.491, 0.5387, 0.6266, 0.799, 1.143", \
+          "0.4921, 0.5084, 0.536, 0.5837, 0.6716, 0.8439, 1.188", \
+          "0.5415, 0.5577, 0.5854, 0.633, 0.721, 0.8931, 1.237", \
+          "0.5869, 0.6032, 0.6308, 0.6785, 0.7664, 0.9387, 1.282" \
+        );
+      }
+      fall_transition (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.05086, 0.06941, 0.1039, 0.1716, 0.3132, 0.6066, 1.197", \
+          "0.05084, 0.06925, 0.1039, 0.1715, 0.3131, 0.6067, 1.197", \
+          "0.05078, 0.06933, 0.1039, 0.1715, 0.313, 0.6067, 1.197", \
+          "0.05072, 0.06926, 0.1039, 0.1714, 0.3131, 0.6067, 1.197", \
+          "0.05075, 0.06939, 0.1039, 0.1716, 0.3129, 0.6067, 1.197", \
+          "0.05085, 0.06939, 0.1039, 0.1716, 0.3129, 0.6066, 1.197", \
+          "0.05084, 0.06939, 0.1039, 0.1716, 0.3132, 0.6066, 1.197" \
+        );
+      }
+   }
+   timing () {
+      related_pin : "reset_n_i";
+      timing_sense : positive_unate;
+      timing_type : clear;
+     cell_fall (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.2991, 0.3255, 0.3675, 0.432, 0.537, 0.7237, 1.067", \
+          "0.3051, 0.3315, 0.3736, 0.4381, 0.543, 0.7298, 1.073", \
+          "0.3236, 0.35, 0.3921, 0.4566, 0.5615, 0.7483, 1.092", \
+          "0.3674, 0.3938, 0.4358, 0.5004, 0.6055, 0.7918, 1.135", \
+          "0.4613, 0.4876, 0.5295, 0.5944, 0.7004, 0.8839, 1.227", \
+          "0.6367, 0.6651, 0.7097, 0.7772, 0.8834, 1.059, 1.402", \
+          "0.914, 0.947, 0.9986, 1.069, 1.163, 1.334, 1.676" \
+        );
+      }
+      fall_transition (delay_template_7x7_0) {
+        index_1 ("0.0131, 0.0509, 0.1264, 0.2774, 0.5794, 1.183, 2.392");
+        index_2 ("0.0033, 0.00797, 0.01732, 0.03601, 0.07338, 0.1481, 0.2977");
+        values ( \
+          "0.09848, 0.1227, 0.1616, 0.2283, 0.3655, 0.6347, 1.197", \
+          "0.09835, 0.1227, 0.1616, 0.2281, 0.3655, 0.6352, 1.197", \
+          "0.09836, 0.1227, 0.1617, 0.2281, 0.3655, 0.6351, 1.197", \
+          "0.09836, 0.1227, 0.1618, 0.2287, 0.3661, 0.6331, 1.197", \
+          "0.0986, 0.1232, 0.1626, 0.2303, 0.3666, 0.6261, 1.196", \
+          "0.1155, 0.1389, 0.1765, 0.241, 0.3578, 0.6132, 1.196", \
+          "0.1465, 0.1735, 0.2095, 0.2382, 0.3304, 0.6074, 1.196" \
+        );
+      }
+    }
+  }
+ bus(Bn1) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp1) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn2) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp2) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn3) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp3) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn4) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp4) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn5) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp5) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn6) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp6) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn7) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp7) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn8) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp8) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn9) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp9) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn10) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp10) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn11) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp11) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn12) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp12) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn13) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp13) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn14) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp14) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn15) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp15) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn16) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp16) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn17) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp17) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn18) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp18) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn19) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp19) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn20) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp20) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn21) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp21) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn22) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp22) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn23) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp23) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn24) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp24) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn25) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp25) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn26) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp26) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn27) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp27) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn28) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp28) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn29) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp29) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn30) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp30) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn31) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp31) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn32) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp32) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn33) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp33) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn34) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp34) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn35) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp35) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn36) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp36) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn37) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp37) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn38) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp38) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn39) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp39) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn40) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp40) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn41) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp41) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn42) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp42) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn43) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp43) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn44) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp44) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn45) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp45) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn46) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp46) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn47) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp47) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn48) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp48) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn49) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp49) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn50) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp50) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn51) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp51) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn52) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp52) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn53) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp53) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn54) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp54) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn55) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp55) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn56) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp56) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn57) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp57) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn58) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp58) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn59) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp59) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn60) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp60) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn61) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp61) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn62) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp62) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn63) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp63) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bn64) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Bp64) {
+  bus_type : BUS8 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(mux_ctrl_adc1_i) {
+  bus_type : BUS5 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(mux_ctrl_adc2_i) {
+  bus_type : BUS5 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(StimRange) {
+  bus_type : BUS64 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(Gain) {
+  bus_type : BUS64 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(EnN) {
+  bus_type : BUS64 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(EnP) {
+  bus_type : BUS64 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  pin(FDA) {
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  pin(adc1_smp_ctrl_i) {
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  pin(adc2_smp_ctrl_i) {
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  pin(GDis) {
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(EnPow) {
+  bus_type : BUS64 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+  bus(EnStim) {
+  bus_type : BUS64 ;
+    direction : input;
+    capacitance : 0.004637;
+    rise_capacitance : 0.004637;
+    fall_capacitance : 0.004562;
+  }
+}
+}

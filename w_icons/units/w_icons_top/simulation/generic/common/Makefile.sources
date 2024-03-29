@@ -1,0 +1,65 @@
+#-------------------------------------
+#  Module : Makefile.rtl.sources
+#  Author : Ali Zeinolabedin 
+#  Company: Blackrock Neurotech
+#-------------------------------------
+
+# --> This part should be updates by the user if used in different units
+# begin testbench
+SIM_NAME  = tb_w_icons_top
+TOPLEVEL  = $(SIM_NAME) $(DUMP_MOD_NAME)
+EDITIOR   ?= nedit
+# <--
+
+#===============================================================================
+# The following statements usually need not to be changed
+#===============================================================================
+# design top-level definiton used in coverage
+DESIGN    = w_icons_core
+
+# vsources
+# VLOG_SRC_FILES += $(wildcard sources/*)
+VLOG_SRC_FILES += $(wildcard sources/res.vlog.sources)
+VLOG_SRC_FILES += $(wildcard sources/rtl.vlog.sources)
+VLOG_SRC_FILES += $(wildcard sources/tb.vlog.sources)
+
+
+VLOG_SRC_FILES_NET += $(wildcard sources/res.vlog.sources)
+VLOG_SRC_FILES_NET += $(wildcard sources/net.vlog.sources)
+VLOG_SRC_FILES_NET += $(wildcard sources/tb.vlog.sources)
+
+
+VLOG_INCDIRS += \
+    ${PRJ_DIR}/global_src/verilog \
+
+# reserved for stimc if needed late
+# STIMC_MODULES ?= 
+# STIMC_DIRS     = 
+# STIMC_SOURCES  += $(wildcard $(addsuffix /*.c, $(STIMC_DIRS)) $(addsuffix /*.cpp, $(STIMC_DIRS)))
+# STIMC_INCDIRS  += $(STIMC_DIRS)
+
+COMPILE_DEPS += testcase.vh
+
+
+#CORNER = 
+#ifdef CORNER
+#  w_icons_top_ELAB_OPTS +=  -sdf_cmd_file w_icons_top.sdf_cmd
+#  ifeq ($(CORNER),BEST)
+#    SDF_CORNER      := 
+#    SDF_SOURCES     := ${PRJ_DIR}/export/timinganalysis/w_icons_top.${SDF_CORNER}.sdf.gz
+#    w_icons_top_ELAB_OPTS += -mindelays
+#  else
+#    SDF_CORNER      := 
+#    SDF_SOURCES     := ${PRJ_DIR}/export/timinganalysis/w_icons_top.${SDF_CORNER}.sdf.gz
+#    w_icons_top_ELAB_OPTS += -maxdelays
+#  endif
+#else
+
+SDF_CORNER      := 
+SDF_SOURCES     := ${PRJ_DIR}/export/timinganalysis/231226/FUNC_WC.sdf
+ELAB_OPTS       += -maxdelays -sdf_cmd_file w_icons_top.sdf_cmd
+
+#endif
+
+
+

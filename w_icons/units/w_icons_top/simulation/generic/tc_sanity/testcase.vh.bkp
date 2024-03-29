@@ -1,0 +1,103 @@
+
+
+
+reg [31:0]  data;
+reg [9:0]   address;
+initial begin
+    #1200;
+    spi_config(`ver);
+    #10
+    
+    /* test1
+    write_data(10'h060,32'h12344321,`ver);
+    address = 10'h060;
+    read_data(address,data,`ver);
+    $display("Read data [Add:0x%h]: %4h",address,data);
+    */
+    
+    #100
+    chip_id(data,`ver);
+    $display("Chip ID: %4h",data);
+    #100
+
+
+    #100
+    stim_status(data,`ver);
+    $display("Stimulator status: %4h",data);
+    #100
+
+
+    /*test0
+    wr_data(32'hABCDEF10,`ver,`crc5);
+    #10
+    wr_add(10'h018,`ver,`crc5);
+    #10
+    wr_data(32'hA12345678,`ver,`crc5);
+    #10
+    wr_add(10'h03c,`ver,`crc5);
+    #10
+    address = 10'h018;
+    read_cmd(address,data,`nver);
+    $display("Read data [Add:0x%h]: %4h",address,data);
+    #10
+    address = 10'h03c;
+    read_data(address,data,`nver);
+    $display("Read data [Add:0x%h]: %4h",address,data);
+    //wr_add(10'h014,`ver,`crc5);
+    #1000
+    wr_data(32'hABCDEF10,`ver,`crc5_error);
+    
+    #1000
+   
+    //write the address with wrong crc5
+    address = 10'h018;
+    rd_add(address,`nver,`crc5_error);
+       
+    chip_error_status();
+    */
+
+    /*#10
+    address = 10'h008;
+    read_cmd(address,data,`nver);
+    $display("Read data [Add:0x%h]: %4h",address,data);
+    *?
+    /* the test1
+    wr_data(32'hABCDEF10,`ver);
+    wr_add(10'h004,`ver);
+    wr_data(32'h67891023,`ver);
+    wr_add(10'h008,`ver);
+    wr_add(10'h00c,`ver);
+    wr_data(32'h4567abcd,`ver);
+    wr_add(10'h014,`ver);
+    #10000
+    rd_add(10'h008,`ver);
+    #100
+    rd_data(data,`ver);
+    #100
+    rd_add(10'h004,`ver);
+    #10
+    rd_data(data,`ver);
+    #100
+    rd_add(10'h014,`ver);
+    #10
+    rd_data(data,`ver);
+    */
+
+
+    /*
+    #10
+    write_data(10'h060,32'h12344321,`ver);
+
+    #10
+    write_data(10'h18c,32'ha1b2c1d2,`ver);
+    
+    #10000
+    read_data(10'h060,data,`nver);
+    $display("\tRead data [Add:0x%h]: %4h",10'h060,data);
+    #10
+   
+    */
+    //$display ("ERROR: timeout");
+    //tb_check_failed;
+    tb_final_check;
+end

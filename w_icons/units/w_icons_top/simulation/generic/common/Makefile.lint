@@ -1,0 +1,5 @@
+# vsources
+VLOG_SRC_FILES += $(wildcard sources/rtl.*)
+
+include ${PRJ_DIR}/env/lint/Makefile.project.lint
+include ${PRJ_DIR}/env/lint/Makefile.project.verilator

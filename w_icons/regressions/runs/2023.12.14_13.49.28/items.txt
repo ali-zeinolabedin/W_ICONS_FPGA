@@ -1,0 +1,15 @@
+w_icons_top.tc_sanity PASSED 13:49:28 13:49:29 1 0 1
+w_icons_top.tc_sanity_stim PASSED 13:49:29 13:49:32 3 0 3
+w_icons_top.tc_rec_all_chs PASSED 13:49:32 13:49:39 7 0 7
+w_icons_top.tc_rec_discharge PASSED 13:49:40 13:50:04 24 0 24
+w_icons_top.tc_rec_test_mode PASSED 13:50:04 13:50:12 8 0 8
+w_icons_top.tc_stim_mask_chk_err PASSED 13:50:12 13:51:57 105 1 45
+w_icons_top.tc_crc5 PASSED 13:51:57 13:55:58 241 4 1
+w_icons_top.tc_rec_impedance PASSED 13:55:58 14:05:06 548 9 8
+w_icons_top.tc_rf_toggle PASSED 14:05:06 14:07:50 164 2 44
+w_icons_top.tc_stim_random_chs PASSED 14:07:50 14:09:31 101 1 41
+w_icons_top.tc_stim_selected_chs PASSED 14:09:31 14:09:58 27 0 27
+w_icons_top.tc_stim_all_mask_chk_err PASSED 14:09:58 14:17:54 476 7 56
+w_icons_top.tc_rec_selected_chs PASSED 14:17:54 14:47:40 1786 29 46
+w_icons_top.tc_stim_1ch PASSED 14:47:40 14:50:05 145 2 25
+w_icons_top.tc_stim_ch_err SIMFAIL     

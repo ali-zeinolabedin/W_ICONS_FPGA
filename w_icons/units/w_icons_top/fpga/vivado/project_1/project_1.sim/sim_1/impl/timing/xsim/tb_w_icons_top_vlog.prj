@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../project_1.srcs/sources_1/imports/units/w_icons_top/simulation/generic/tc_sanity" --include "../../../../../project_1.srcs/sim_1/imports/verilog" \
+"tb_w_icons_top_time_impl.v" \
+"../../../../../project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_reset_sync.v" \
+"../../../../../project_1.srcs/sources_1/imports/units/spi_master_emulator/source/rtl/verilog/spi_master_emulator.v" \
+"../../../../../project_1.srcs/sim_1/imports/verilog/tb_w_icons_top.v" \
+
+# Do not sort compile order
+nosort

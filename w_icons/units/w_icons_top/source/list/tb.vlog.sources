@@ -1,0 +1,6 @@
+// keep begin sources
+${PRJ_DIR}/units/w_icons_top/source/tb/verilog/tb_w_icons_top.v
+${PRJ_DIR}/units/spi_master_emulator/source/rtl/verilog/spi_master_emulator.v
+
+// keep end
+

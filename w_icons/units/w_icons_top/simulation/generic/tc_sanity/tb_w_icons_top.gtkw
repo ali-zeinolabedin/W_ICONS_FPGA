@@ -1,0 +1,190 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Fri Jan 12 22:12:52 2024
+[*]
+[dumpfile] "/tmp/smaz-brn-iverilog-tb_w_icons_top-xMcv/tb_w_icons_top.dump"
+[dumpfile_mtime] "Fri Jan 12 22:12:38 2024"
+[dumpfile_size] 2892480
+[savefile] "/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/simulation/generic/tc_sanity/tb_w_icons_top.gtkw"
+[timestart] 40800000
+[size] 1717 902
+[pos] 44122 134
+*-24.886204 154535000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_w_icons_sync_rst.
+[sst_width] 380
+[signals_width] 270
+[sst_expanded] 1
+[sst_vpaned_height] 430
+@28
+tb_w_icons_top.i_spi_master_emulator.reset_n_i
+@200
+-
+-
+@28
+tb_w_icons_top.i_spi_master_emulator.clk_i
+tb_w_icons_top.i_w_icons_top.CLK_REC_O
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.RESET_N_I
+tb_w_icons_top.i_w_icons_top.i_common_clkdiv_by_n_top.reset_n_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.resetn_top_sync_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_w_icons_sync_rst.i_common_reset_sync.clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.resetn_spi_sync_o
+tb_w_icons_top.i_w_icons_top.i_common_clkdiv_by_n_top.clk_i
+tb_w_icons_top.i_w_icons_top.i_common_clkdiv_by_n_top.enable_i
+tb_w_icons_top.clk_ref_spi
+tb_w_icons_top.CLK_REF_SPI_S
+tb_w_icons_top.resetn_tb_sync_s
+tb_w_icons_top.spi_clk_tb_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_clk_i
+tb_w_icons_top.i_w_icons_top.SPI_CS_I
+tb_w_icons_top.spi_cs
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_miso_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cs_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_mosi_i
+tb_w_icons_top.spi_cs
+tb_w_icons_top.i_spi_master_emulator.spi_clk_o
+tb_w_icons_top.i_spi_master_emulator.spi_miso_i
+tb_w_icons_top.i_spi_master_emulator.spi_mosi_o
+tb_w_icons_top.i_spi_master_emulator.tx_data_valid_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+@200
+-
+-
+@28
+tb_w_icons_top.SPI_CS_S
+tb_w_icons_top.tx_data_ready_s
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cs_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_mosi_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_cnt[5:0]
+@24
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_cnt[5:0]
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_rx_word[40:0]
+@28
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_done_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_rx_word_o[35:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.crc5[4:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.crc5[4:0]
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.crc5_chk_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd4b_en_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd4b_i[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_ready_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_tx_word_o[31:0]
+@200
+-
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_cnt[5:0]
+@24
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_cnt[5:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_lock
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_tx_word_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_tx_word_1d[39:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_miso_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_crc5[4:0]
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_clk_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_rx_word_i[35:0]
+@28
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.crc5_chk_i
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.rx_done_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd[3:0]
+>-17000
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.nxt_state[3:0]
+>0
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.state[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_wdata[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_done_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_ready_o
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_sel
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_enable
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_write
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_strb_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_sel_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_enable_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_write_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_address[9:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_addr_o[9:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_wdata_o[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_ready_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_rdata_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.next_apb_state[2:0]
+@200
+-
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_error_load_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_error_cmd_o[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_error_crc5_o[4:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.stim_mask0_g1_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.amp_gain_g1_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.amp_gain_g2_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.val_stim_mask0_p1[31:0]
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.rec_sync_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_common_clkdiv_by_n_discharge.enable_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_common_clkdiv_by_n_discharge.clk_div_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_common_clkdiv_by_n_discharge.clk_div_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.gdischarge_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.pw_discharge_i[19:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.discharge_cnt[19:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.stim_discharge[1:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.stim_discharge[1:0]
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.en_rec_sync_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.en_rec_sync_g2_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.stim_mask_en
+@200
+-
+@29
+tb_w_icons_top.ADC_EN_S
+@28
+tb_w_icons_top.ADC1_OUT_S
+tb_w_icons_top.ADC2_OUT_S
+[pattern_trace] 1
+[pattern_trace] 0

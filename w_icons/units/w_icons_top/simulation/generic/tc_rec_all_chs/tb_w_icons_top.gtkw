@@ -1,0 +1,141 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Jan  8 19:33:51 2024
+[*]
+[dumpfile] "/tmp/smaz-brn-iverilog-tb_w_icons_top-EMv5/tb_w_icons_top.dump"
+[dumpfile_mtime] "Mon Jan  8 19:30:49 2024"
+[dumpfile_size] 2469961
+[savefile] "/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/simulation/generic/tc_rec_all_chs/tb_w_icons_top.gtkw"
+[timestart] 71229000
+[size] 1920 902
+[pos] 85914 3
+*-19.656872 75754000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.
+[sst_width] 380
+[signals_width] 310
+[sst_expanded] 1
+[sst_vpaned_height] 528
+@28
+tb_w_icons_top.i_spi_master_emulator.clk_i
+tb_w_icons_top.i_spi_master_emulator.reset_n_i
+tb_w_icons_top.i_spi_master_emulator.spi_cs_o
+tb_w_icons_top.SPI_CS_S
+@200
+-
+-
+@28
+tb_w_icons_top.spi_cs
+tb_w_icons_top.i_spi_master_emulator.spi_clk_o
+tb_w_icons_top.i_spi_master_emulator.spi_miso_i
+tb_w_icons_top.i_spi_master_emulator.spi_mosi_o
+tb_w_icons_top.i_spi_master_emulator.tx_data_valid_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+@200
+-
+@28
+tb_w_icons_top.SPI_CS_S
+tb_w_icons_top.SPI_CLK_S
+tb_w_icons_top.SPI_MOSI_S
+tb_w_icons_top.tx_data_ready_s
+@200
+-
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.en_rec_sync_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.en_rec_sync_g2_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.imp_en_g1_sync_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.imp_en_g2_sync_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.reset_n_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.rec_sync_en_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.adc_seq[5:0]
+@24
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.adc_seq[5:0]
+@28
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.clk_i
+tb_w_icons_top.start_rec
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.adc_res1
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.cnt_en1
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.clk_i
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.sample_out_o
+@22
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.mux_ctrl_adc1_i[4:0]
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.mux_ctrl_adc2_i[4:0]
+@28
+[color] 1
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.cnt_en2
+[color] 1
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.adc1_smp_ctrl_1d
+@200
+-
+@28
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.sample_out_o
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.adc1_smp_ctrl_i
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.adc2_smp_ctrl_i
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.adc_res1_o
+tb_w_icons_top.i_w_icons_top.i_rec_stim64ch_macro.adc_res2_o
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.clk_i
+[color] 6
+tb_w_icons_top.ADC_EN_S
+[color] 2
+tb_w_icons_top.ADC1_OUT_S
+[color] 2
+tb_w_icons_top.ADC2_OUT_S
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.rec_data2_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.sample_out_adc2_1d
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.imp_en_g1_sync_i[31:0]
+@23
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.imp_en_g2_sync_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.sample_out_adc1_1d
+tb_w_icons_top.chk_rec_v1.fail
+@22
+tb_w_icons_top.chk_rec_v1.adc1_stat[6:0]
+tb_w_icons_top.chk_rec_v1.adc2_stat[6:0]
+@28
+tb_w_icons_top.chk_rec_v1.fail
+@800022
+tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+@28
+(0)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(1)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(2)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(3)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(4)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(5)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(6)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(7)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(8)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(9)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(10)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(11)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(12)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(13)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(14)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(15)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(16)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+(17)tb_w_icons_top.chk_rec_v1.channel_data_adc1[17:0]
+@1001200
+-group_end
+@24
+tb_w_icons_top.chk_rec_v1.idx[8:0]
+@22
+tb_w_icons_top.chk_rec_v1.channel_data_adc2[17:0]
+@200
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0

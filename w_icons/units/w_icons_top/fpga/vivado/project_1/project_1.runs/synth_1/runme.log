@@ -1,0 +1,583 @@
+
+*** Running vivado
+    with args -log w_icons_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source w_icons_top.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source w_icons_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/utils_1/imports/synth_1/w_icons_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/utils_1/imports/synth_1/w_icons_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top w_icons_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 107120
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2038.027 ; gain = 404.629 ; free physical = 8954 ; free virtual = 16284
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'w_icons_top' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_top.v:11]
+INFO: [Synth 8-6157] synthesizing module 'common_clkdiv_by_n' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+	Parameter DIV_VAL_N_W bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_clkdiv_by_n' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+INFO: [Synth 8-6157] synthesizing module 'w_icons_core' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_core.v:11]
+INFO: [Synth 8-6157] synthesizing module 'w_icons_mgmt' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v:11]
+	Parameter STIM_CLKDIV_W bound to: 12 - type: integer 
+	Parameter CLKDIV_W_DISCHARGE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'w_icons_sync_rst' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v:11]
+INFO: [Synth 8-6157] synthesizing module 'common_reset_sync' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_reset_sync.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'common_reset_sync' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_reset_sync.v:9]
+INFO: [Synth 8-6157] synthesizing module 'common_sync' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_sync.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'common_sync' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_sync.v:8]
+INFO: [Synth 8-6157] synthesizing module 'common_clkbuf' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkbuf.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'common_clkbuf' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkbuf.v:8]
+INFO: [Synth 8-6157] synthesizing module 'common_clkgate' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkgate.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'common_clkgate' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkgate.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_sync_rst' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v:11]
+INFO: [Synth 8-6157] synthesizing module 'common_clkdiv_by_n__parameterized0' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+	Parameter DIV_VAL_N_W bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_clkdiv_by_n__parameterized0' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_mgmt' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v:11]
+INFO: [Synth 8-6157] synthesizing module 'spi_wrap' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_wrap.v:11]
+	Parameter STIM_CLKDIV_W bound to: 12 - type: integer 
+	Parameter CLKDIV_W_DISCHARGE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'w_icons_rf' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/w_icons_rf.v:11]
+	Parameter STIM_CLKDIV_W bound to: 12 - type: integer 
+	Parameter CLKDIV_W_DISCHARGE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'common_mux' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+	Parameter IN_W bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_mux' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+INFO: [Synth 8-6157] synthesizing module 'common_mux__parameterized0' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+	Parameter IN_W bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'common_mux__parameterized0' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_mux.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_rf' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/w_icons_rf.v:11]
+INFO: [Synth 8-6157] synthesizing module 'spi_slave_common' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_slave_common.v:22]
+	Parameter TX_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_slave_common' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_slave_common.v:22]
+INFO: [Synth 8-6157] synthesizing module 'spi_custom_logic' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v:11]
+	Parameter TX_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_custom_logic' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'spi_wrap' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_wrap.v:11]
+INFO: [Synth 8-6157] synthesizing module 'stim_ctrls_wrap' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v:11]
+INFO: [Synth 8-6157] synthesizing module 'stim_ctrl' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'stim_ctrl' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'stim_ctrls_wrap' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v:11]
+INFO: [Synth 8-6157] synthesizing module 'rec_ctrl' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/rec_ctrl.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'rec_ctrl' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/rec_ctrl.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_core' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_core.v:11]
+INFO: [Synth 8-6157] synthesizing module 'rec_stim64ch_macro' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'rec_stim64ch_macro' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'w_icons_top' (0#1) [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_top.v:11]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[31] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[30] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[29] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[28] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[27] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[26] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[25] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[24] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[23] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[22] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[21] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[20] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[19] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[18] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[17] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[16] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[15] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[14] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[13] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[12] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[11] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[10] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[9] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[8] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[7] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[6] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[5] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[4] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[3] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[2] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[1] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_out_reg[0] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:92]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[31] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[30] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[29] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[28] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[27] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[26] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[25] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[24] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[23] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[22] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[21] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[20] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[19] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[18] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[17] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[16] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[15] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[14] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[13] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[12] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[11] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[10] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[9] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[8] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[7] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[6] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[5] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[4] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[3] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[2] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[1] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register test_adc1_imp_out_reg[0] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:93]
+WARNING: [Synth 8-7137] Register adc_res1_o_reg in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:109]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[31] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[30] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[29] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[28] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[27] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[26] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[25] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[24] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[23] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[22] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[21] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[20] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[19] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[18] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[17] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[16] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[15] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[14] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[13] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[12] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[11] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[10] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[9] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[8] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[7] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[6] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[5] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[4] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[3] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[2] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[1] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_out_reg[0] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:116]
+WARNING: [Synth 8-7137] Register test_adc2_imp_out_reg[31] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:117]
+WARNING: [Synth 8-7137] Register test_adc2_imp_out_reg[30] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:117]
+WARNING: [Synth 8-7137] Register test_adc2_imp_out_reg[29] in module rec_stim64ch_macro has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:117]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port Bn1[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn1[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp1[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn2[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp2[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn3[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp3[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bn4[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[7] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[6] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[5] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[4] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bp4[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port StimRange[3] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port StimRange[2] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port StimRange[1] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port StimRange[0] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[63] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[62] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[61] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[60] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[59] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[58] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[57] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[56] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[55] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[54] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[53] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[52] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[51] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[50] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[49] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[48] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[47] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[46] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[45] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[44] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[43] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[42] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[41] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[40] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[39] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[38] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[37] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[36] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[35] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[34] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[33] in module rec_stim64ch_macro is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Gain[32] in module rec_stim64ch_macro is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2178.996 ; gain = 545.598 ; free physical = 8787 ; free virtual = 16118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2196.809 ; gain = 563.410 ; free physical = 8787 ; free virtual = 16118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2196.809 ; gain = 563.410 ; free physical = 8787 ; free virtual = 16118
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2196.809 ; gain = 0.000 ; free physical = 8787 ; free virtual = 16118
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/constrs_1/imports/constraints/Arty-A7-100-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'SPI_CLK_I_IBUF'. [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/constrs_1/imports/constraints/Arty-A7-100-Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/constrs_1/imports/constraints/Arty-A7-100-Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/constrs_1/imports/constraints/Arty-A7-100-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/constrs_1/imports/constraints/Arty-A7-100-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/w_icons_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/w_icons_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2292.609 ; gain = 0.000 ; free physical = 8782 ; free virtual = 16113
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2292.645 ; gain = 0.000 ; free physical = 8782 ; free virtual = 16113
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8770 ; free virtual = 16101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8770 ; free virtual = 16101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8770 ; free virtual = 16101
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_custom_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'apb_state_reg' in module 'spi_custom_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'stim_discharge_reg' in module 'rec_ctrl'
+WARNING: [Synth 8-327] inferring latch for variable 'CKL_reg' [/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkgate.v:28]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0001 |                             0000
+               S_CHIP_ID |                             0101 |                             0110
+               S_STIM_ST |                             0110 |                             0111
+                S_CONFIG |                             0111 |                             0101
+           S_CMD_WR_DATA |                             0011 |                             0010
+            S_CMD_WR_ADD |                             0100 |                             0001
+            S_CMD_RD_ADD |                             0000 |                             0011
+           S_CMD_RD_DATA |                             0010 |                             0100
+           S_CRC5_ERROR1 |                             1000 |                             1110
+           S_CRC5_ERROR2 |                             1001 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_custom_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              S_APB_IDLE |                              001 |                              000
+             S_APB_SETUP |                              010 |                              001
+            S_APB_ACCESS |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'apb_state_reg' using encoding 'one-hot' in module 'spi_custom_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE1 |                              010 |                               01
+                 iSTATE0 |                              100 |                               10
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stim_discharge_reg' using encoding 'one-hot' in module 'rec_ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8769 ; free virtual = 16102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 8     
+	   2 Input   14 Bit       Adders := 12    
+	   2 Input   12 Bit       Adders := 12    
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 8     
+	   2 Input    6 Bit       Adders := 4     
+	  33 Input    6 Bit       Adders := 8     
+	  17 Input    5 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 2     
+	   9 Input    4 Bit       Adders := 8     
+	   5 Input    3 Bit       Adders := 8     
+	   2 Input    2 Bit       Adders := 8     
+	   3 Input    2 Bit       Adders := 8     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               41 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 27    
+	               20 Bit    Registers := 2     
+	               18 Bit    Registers := 128   
+	               16 Bit    Registers := 8     
+	               14 Bit    Registers := 12    
+	               12 Bit    Registers := 11    
+	                8 Bit    Registers := 13    
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 337   
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 36    
+	   2 Input   20 Bit        Muxes := 3     
+	   2 Input   18 Bit        Muxes := 384   
+	   2 Input   16 Bit        Muxes := 8     
+	   2 Input   14 Bit        Muxes := 26    
+	   2 Input   12 Bit        Muxes := 17    
+	   4 Input   12 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 1     
+	   3 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 9     
+	   2 Input    6 Bit        Muxes := 5     
+	   2 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 10    
+	  10 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	  24 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 8     
+	   2 Input    3 Bit        Muxes := 12    
+	   5 Input    3 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 33    
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 149   
+	  38 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (i_rec_ctrl/FSM_onehot_stim_discharge_reg[0]) is unused and will be removed from module w_icons_core.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8757 ; free virtual = 16100
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8757 ; free virtual = 16100
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8737 ; free virtual = 16080
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8719 ; free virtual = 16062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8719 ; free virtual = 16062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8719 ; free virtual = 16062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8719 ; free virtual = 16062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8718 ; free virtual = 16061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8718 ; free virtual = 16061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8718 ; free virtual = 16061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     6|
+|2     |CARRY4 |    28|
+|3     |LUT1   |    36|
+|4     |LUT2   |   187|
+|5     |LUT3   |   288|
+|6     |LUT4   |   782|
+|7     |LUT5   |   405|
+|8     |LUT6   |   708|
+|9     |MUXF7  |   111|
+|10    |MUXF8  |    17|
+|11    |FDCE   |  2276|
+|12    |FDPE   |    20|
+|13    |FDRE   |    69|
+|14    |FDSE   |   183|
+|15    |LD     |     2|
+|16    |IBUF   |     6|
+|17    |OBUF   |     6|
+|18    |OBUFT  |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8718 ; free virtual = 16061
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 254 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2292.645 ; gain = 563.410 ; free physical = 8718 ; free virtual = 16061
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2292.645 ; gain = 659.246 ; free physical = 8718 ; free virtual = 16061
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2292.645 ; gain = 0.000 ; free physical = 9005 ; free virtual = 16348
+INFO: [Netlist 29-17] Analyzing 158 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2292.645 ; gain = 0.000 ; free physical = 9003 ; free virtual = 16346
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE (inverted pins: G): 2 instances
+
+Synth Design complete | Checksum: e9700dc0
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 204 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2292.645 ; gain = 1007.160 ; free physical = 9002 ; free virtual = 16345
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1899.379; main = 1570.776; forked = 384.824
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3275.195; main = 2292.613; forked = 990.586
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2316.621 ; gain = 0.000 ; free physical = 9002 ; free virtual = 16346
+INFO: [Common 17-1381] The checkpoint '/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.runs/synth_1/w_icons_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file w_icons_top_utilization_synth.rpt -pb w_icons_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 12 14:20:18 2024...

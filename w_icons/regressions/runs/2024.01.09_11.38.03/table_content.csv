@@ -1,0 +1,136 @@
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_sanity/regression.log">w_icons_top.tc_sanity</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_sanity_stim/regression.log">w_icons_top.tc_sanity_stim</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rec_all_chs/regression.log">w_icons_top.tc_rec_all_chs</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rec_discharge/regression.log">w_icons_top.tc_rec_discharge</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rec_test_mode/regression.log">w_icons_top.tc_rec_test_mode</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_mask_chk_err/regression.log">w_icons_top.tc_stim_mask_chk_err</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_crc5/regression.log">w_icons_top.tc_crc5</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rec_impedance/regression.log">w_icons_top.tc_rec_impedance</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rf_toggle/regression.log">w_icons_top.tc_rf_toggle</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_random_chs/regression.log">w_icons_top.tc_stim_random_chs</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_selected_chs/regression.log">w_icons_top.tc_stim_selected_chs</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_all_mask_chk_err/regression.log">w_icons_top.tc_stim_all_mask_chk_err</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rec_selected_chs/regression.log">w_icons_top.tc_rec_selected_chs</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_1ch/regression.log">w_icons_top.tc_stim_1ch</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_ch_err/regression.log">w_icons_top.tc_stim_ch_err</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_stim_1ch_long/regression.log">w_icons_top.tc_stim_1ch_long</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/regressions/runs/2024.01.09_11.38.03/w_icons_top.tc_rec_impedance_1ch/regression.log">w_icons_top.tc_rec_impedance_1ch</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+</tr>

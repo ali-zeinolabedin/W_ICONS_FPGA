@@ -1,0 +1,17 @@
+w_icons_top.tc_sanity SIMFAIL     
+w_icons_top.tc_sanity_stim SIMFAIL     
+w_icons_top.tc_rec_all_chs SIMFAIL     
+w_icons_top.tc_rec_discharge SIMFAIL     
+w_icons_top.tc_rec_test_mode SIMFAIL     
+w_icons_top.tc_stim_mask_chk_err SIMFAIL     
+w_icons_top.tc_crc5 SIMFAIL     
+w_icons_top.tc_rec_impedance SIMFAIL     
+w_icons_top.tc_rf_toggle SIMFAIL     
+w_icons_top.tc_stim_random_chs SIMFAIL     
+w_icons_top.tc_stim_selected_chs SIMFAIL     
+w_icons_top.tc_stim_all_mask_chk_err SIMFAIL     
+w_icons_top.tc_rec_selected_chs SIMFAIL     
+w_icons_top.tc_stim_1ch SIMFAIL     
+w_icons_top.tc_stim_ch_err SIMFAIL     
+w_icons_top.tc_stim_1ch_long SIMFAIL     
+w_icons_top.tc_rec_impedance_1ch SIMFAIL     

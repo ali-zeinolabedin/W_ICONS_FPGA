@@ -1,0 +1,49 @@
+//-------------------------------------
+//  Module: Makefile.project.iverilog
+//  Author: Ali Zeinolabedin
+//-------------------------------------
+`verilator_config
+
+// Below you find waivers. You have three options:
+//   1. Fix the reason for the linter warning
+//   2. Keep the waiver permanently if you are sure this is okay
+//   3. Keep the waiver temporarily to suppress the output
+
+
+// disable the coverage 
+lint_off  -file "*/tpd018bcdnv5.v"
+lint_off  -file "*/w_icons_pads.v"
+
+
+// specific rule to be checked
+lint_on  -rule MULTIDRIVEN   // Warns that the specified signal comes from multiple always blocks, each with different clocking
+lint_on  -rule ASSIGNDLY 
+lint_on  -rule ASSIGNIN
+lint_on  -rule BLKANDNBLK    //error that a variable is driven by a mix of blocking and non-blocking assignments.
+lint_on  -rule BLKSEQ
+lint_on  -rule BSSPACE
+lint_on  -rule CASEOVERLAP
+lint_on  -rule CASEINCOMPLETE
+lint_on  -rule CASEWITHX
+lint_on  -rule CASEX
+lint_on  -rule COLONPLUS
+lint_on  -rule COMBDLY
+lint_on  -rule CONTASSREG     // only for verilog
+lint_on  -rule ENDLABEL
+lint_on  -rule IGNOREDRETURN
+lint_on  -rule IMPLICIT
+lint_on  -rule INFINITELOOP  // Warns that a while or for statement has a condition that is always true,
+lint_on  -rule INITIALDLY    // Warns that the code has a delayed assignment inside of an initial or final block
+lint_on  -rule PORTSHORT
+lint_on  -rule SELRANGE
+lint_on  -rule STMTDLY       // Warns that the code has a statement with a delayed time in front of it.
+//lint_on  -rule TIMESCALEMOD  // Warns that “`timescale” is used in some but not all modules.
+lint_on  -rule UNDRIVEN      // Warns that the specified signal has no source.
+lint_on  -rule UNOPTFLAT     // Warns that due to some construct, optimization of the specified signal is disabled.
+lint_on  -rule UNSIGNED      // Warns that the code is comparing an unsigned value in a way that implies it is signed
+lint_on  -rule UNUSED        // Disabling/enabling UNUSED is equivalent to disabling/enabling
+lint_on  -rule WIDTH         // Two operands have different widths
+lint_on  -rule WIDTHCONCAT   
+
+
+

@@ -1,0 +1,1148 @@
+#---------------------------------------------------------------------------
+#  Module : ICGlue file
+#  Author : Ali Zeinolabedin
+#  Company: Blackrock Neurotech
+#---------------------------------------------------------------------------
+#==================================================================================
+# DESIGN HIERARCHY
+#==================================================================================
+#VDDCORE:5.0V
+#set dig_iov_pad "PDUW0208CSG"  
+
+#VDDCORE:1.8V
+set dig_iov_pad "PDUW0412CDG"  
+
+
+M -unit w_icons_top -tree {
+    tb_w_icons_top ................................. (tb)
+    +--- common_reset_sync<tb> ...................... (res)    
+    +--- spi_master_emulator ....................... (rtl, unit=spi_master_emulator)
+    |   
+    +--- w_icons_top ............................... (rtl)
+    |    |
+    |    +--- common_clkdiv_by_n<top> ................ (res)
+    |    |
+    |    +--- w_icons_core ........................... (rtl) 
+    |    |    |
+    |    |    +--- w_icons_mgmt ...................... (rtl)
+    |    |    |    |
+    |    |    |    +--- w_icons_sync_rst .................... (rtl)
+    |    |    |    |    +--- common_reset_sync .............. (res)
+    |    |    |    |    +--- common_reset_sync<spi> ......... (res)
+    |    |    |    |    +--- common_sync<adc0..63> .......... (res)
+    |    |    |    |    +--- common_sync<en_rec_ch0..63> .... (res)
+    |    |    |    |    +--- common_sync<clk_div_discharge> . (res)
+    |    |    |    |    +--- common_sync<stim0..7> .......... (res)
+    |    |    |    |    +--- common_sync<clk_div_stim> ...... (res)
+    |    |    |    |    +--- common_sync<rec_en> ............ (res)
+    |    |    |    |    +--- common_sync<stim_xen> .......... (res)
+    |    |    |    |    +--- common_sync<err,err_stim> ...... (res)
+    |    |    |    |    +--- common_clkbuf<adc1,adc2> ....... (res)
+    |    |    |    |    +--- common_clkgate<adc1,adc2> ...... (res)
+    |    |    |    |
+    |    |    |    +--- common_clkdiv_by_n .................. (res)
+    |    |    |    +--- common_clkdiv_by_n<discharge> ....... (res)
+    |    |    |       
+    |    |    +--- spi_wrap .......................... (rtl,unit=spi_wrap)
+    |    |    |    +---w_icons_rf .................... (rf=w_icons_top,rfaddrw=10)
+    |    |    |    |   +---common_mux<stim_w0..3> ... (res)
+    |    |    |    |   +---common_mux<stim_i0..3> ... (res)
+    |    |    |    |
+    |    |    |    +---spi_slave_common............... (rtl)
+    |    |    |    +---spi_custom_logic .............. (rtl)
+    |    |    |   
+    |    |    +--- stim_ctrls_wrap ................... (rtl,unit=stim_ctrls_wrap)
+    |    |    |    +---stim_ctrl<ch0..3> ............ (res)
+    |    |    | 
+    |    |    +--- rec_ctrl .......................... (rtl)
+    |    |       
+    |    +--- rec_stim64ch_macro ..................... (beh,unit=rec_stim64ch_macro)
+    
+}
+
+
+    
+#################################################################################
+#Top-level Interfaces
+#################################################################################
+P "SPI_MODE" = 0                  "spi_master_emulator"
+P "CLKS_PER_HALF_BIT" = 1         "spi_master_emulator" "tb_w_icons_top"
+
+#Clock and reset signals
+# should be updated by to include other clocks
+
+
+# input pad definition and connection
+S "CLK_REF_SPI"                   "tb_w_icons_top"                            --> "spi_master_emulator:clk!" "common_reset_sync_tb:clk!"
+
+S "spi_clk_tb"                    "spi_master_emulator:spi_clk!"              --> "tb_w_icons_top"
+# to avoid inout definition in spi_master_emulator
+C "tb_w_icons_top" -as {assign SPI_CLK_S = spi_clk_tb!;}
+
+
+S "spi_mosi_tb"                   "spi_master_emulator:spi_mosi!"             --> "tb_w_icons_top"
+C "tb_w_icons_top" -as {assign SPI_MOSI_S = spi_mosi_tb!;}
+
+
+S "spi_miso_tb"                   "tb_w_icons_top"                            --> "spi_master_emulator:spi_miso!"             
+# to avoid inout definition in spi_master_emulator
+C "tb_w_icons_top" -as {assign spi_miso_tb! = SPI_MISO_S;}
+
+
+S "resetn_tb_sync"                "common_reset_sync_tb:sync_reset_q_o"       --> "spi_master_emulator:reset_n_i"
+
+
+S "CLK_REF"                       "tb_w_icons_top"                           --> "common_clkdiv_by_n<top>:clk_i \
+                                                                                  common_reset_sync:clk_i"
+
+
+S "clk_adc1"                      "common_clkgate<adc1>:CPEN"                --> "common_clkbuf<adc1>:I"
+S "clk_adc1_gated"                "common_clkbuf<adc1>:Z"                    --> "rec_stim64ch_macro"
+
+S "clk_adc2"                      "common_clkgate<adc2>:CPEN"                --> "common_clkbuf<adc2>:I"
+S "clk_adc2_gated"                "common_clkbuf<adc2>:Z"                    --> "rec_stim64ch_macro"
+
+
+S "RESET_N"                       "tb_w_icons_top"                           -->  "common_reset_sync:reset_q_i \
+                                                                                   common_reset_sync<spi>:reset_q_i \
+                                                                                   common_reset_sync_tb:reset_q_i"
+
+
+S "resetn_top_sync"               "common_reset_sync:sync_reset_q_o"          --> "common_clkdiv_by_n<top>:reset_n_i \
+                                                                                   stim_ctrls_wrap:reset_n_i \
+                                                                                   common_sync<adc0..63>:reset_n_i \
+                                                                                   common_sync<stim0..7>:reset_n_i \
+                                                                                   common_sync<stim_xen>:reset_n_i \
+                                                                                   common_clkdiv_by_n:reset_n_i \
+                                                                                   common_clkdiv_by_n<discharge>:reset_n_i \
+                                                                                   common_sync<clk_div_stim>:reset_n_i \
+                                                                                   common_sync<clk_div_discharge>:reset_n_i \
+                                                                                   common_sync<rec_en>:reset_n_i \
+                                                                                   common_sync<err>:reset_n_i \
+                                                                                   common_sync<err_stim>:reset_n_i \
+                                                                                   rec_ctrl:reset_n_i \
+                                                                                   stim_ctrl<ch0..3>:reset_n_i \
+                                                                                   rec_stim64ch_macro:reset_n_i \ 
+                                                                                   common_sync<en_rec_ch0..63>:reset_n_i
+                                                                                   "
+
+S "resetn_spi_sync"               "common_reset_sync<spi>:sync_reset_q_o"    --> "w_icons_rf:apb_resetn!"
+
+S "STIM_XEN"                     "tb_w_icons_top"                            --> "common_sync<stim_xen>:data!"
+S "stim_xen_sync"                 "common_sync<stim_xen>:data!"              --> "stim_ctrls_wrap" 
+
+S "err_sync"                      "common_sync<err>:data!"                   --> "tb_w_icons_top:ERR_CRC!"
+S "err_stim_sync"                 "common_sync<err_stim>:data!"              --> "tb_w_icons_top:ERR_STIM!"
+
+#SPI signals to top-level 
+S "spi_clk"                       "tb_w_icons_top:SPI_CLK!"                                   -->  "spi_slave_common:spi_clk!"     "spi_custom_logic:spi_clk!"    "w_icons_rf:apb_clk!" "common_reset_sync<spi>:clk_i"
+S "spi_cs"                        "tb_w_icons_top:SPI_CS!"                                    -->  "spi_slave_common:spi_cs!"      "spi_custom_logic:spi_cs!"
+S "spi_mosi"                      "tb_w_icons_top:SPI_MOSI!"                                  -->  "spi_slave_common:spi_mosi!"    
+S "spi_miso"                      "tb_w_icons_top:SPI_MISO!"                                  <--  "spi_slave_common:spi_miso!"    
+
+#SPI emulator signals from testbench
+S "tx_data"        -w 8           "tb_w_icons_top"                            -->  "spi_master_emulator:tx_data!" 
+S "tx_data_valid"                 "tb_w_icons_top"                            -->  "spi_master_emulator:tx_data_valid!" 
+S "tx_data_ready"                 "tb_w_icons_top"                            <--  "spi_master_emulator:tx_data_ready!"
+S "rx_data"        -w 8           "tb_w_icons_top"                            <--  "spi_master_emulator:rx_data!" 
+S "rx_data_valid"                 "tb_w_icons_top"                            <--  "spi_master_emulator:rx_data_valid!" 
+
+S "dft_testmode" -v 1'b0          "w_icons_top"                               -->  "common_reset_sync:scan_mode_i " "common_reset_sync<spi>:scan_mode_i " 
+S "dft_testmode_tb" -v 1'b0       "tb_w_icons_top"                            -->  "common_reset_sync<tb>:scan_mode_i " 
+
+
+#spi ->  apb -> rf
+S "apb_addr"     -w 10            "spi_custom_logic:apb_addr!"                -->  "w_icons_rf:apb_addr!"
+S "apb_sel"                       "spi_custom_logic:apb_sel!"                 -->  "w_icons_rf:apb_sel!"
+S "apb_enable"                    "spi_custom_logic:apb_enable!"              -->  "w_icons_rf:apb_enable!"
+S "apb_wdata"    -w 32            "spi_custom_logic:apb_wdata!"               -->  "w_icons_rf:apb_wdata!"
+S "apb_write"                     "spi_custom_logic:apb_write!"               -->  "w_icons_rf:apb_write!"
+S "apb_strb"     -w 4             "spi_custom_logic:apb_strb!"                -->  "w_icons_rf:apb_strb!"
+S "apb_rdata"    -w 32            "spi_custom_logic:apb_rdata!"               <--  "w_icons_rf:apb_rdata!"
+S "apb_ready"                     "spi_custom_logic:apb_ready!"               <--  "w_icons_rf:apb_ready!"
+S "apb_slverr"                    "spi_custom_logic:apb_slverr!"              <--  "w_icons_rf:apb_slverr!"
+S "apb_prot"     -w 3 -v 3'b000   "spi_custom_logic:apb_prot!"                -->  "w_icons_rf:apb_prot!"
+S "apb_prot_en"  -v 1'b0          "spi_custom_logic:apb_prot_en!"             -->  "w_icons_rf:apb_prot_en!"
+
+
+#to create a read-only register for chip ID
+set "ID"  01010164 
+S "chip_id"           -w 32     -v 32'h${ID} "w_icons_rf"                   <--  "spi_custom_logic"  
+#S "mask_12chs"        -w 8                   "w_icons_rf"                   <--  "w_icons_sync_rst"
+
+S "stim_mask_en"      -w 8                   "w_icons_rf"                   -->  "w_icons_sync_rst" "spi_custom_logic"
+S "amp_gain_g1"       -w 32                  "w_icons_rf"                   -->  "w_icons_sync_rst"
+S "amp_gain_g2"       -w 32                  "w_icons_rf"                   -->  "w_icons_sync_rst"
+S "chip_error_load"   -w 32                  "w_icons_rf"                   -->  "w_icons_mgmt"
+S "chip_error_cmd"    -w 4                   "w_icons_rf"                   -->  "w_icons_mgmt"
+S "chip_error_crc5"   -w 5                   "w_icons_rf"                   -->  "w_icons_mgmt"
+#S "rec_g"             -w 2                   "w_icons_rf"                   -->  "w_icons_sync_rst"
+   
+S "en_rec_ch_g1"      -w 32                  "w_icons_rf"                   -->  "w_icons_sync_rst"
+S "en_rec_ch_g2"      -w 32                  "w_icons_rf"                   -->  "w_icons_sync_rst"
+   
+S "stim_monophasic"   -v 1'b0                "w_icons_rf"                -->  "stim_ctrl<ch0..3>:monophasic_en!"
+# Register file Definition
+R w_icons_rf "chip_status_id" -comment "Chip Status and ID"                           {
+    { "name"              "type"  "entrybits"  "reset"        "signal"     "comment"  }
+    {  chip_id              R      31:0         32'h${ID}      chip_id     "Chip ID: R(01), S(01), Version(01), Ch(64)"  }    
+}
+
+R w_icons_rf "chip_error_status1" -comment "Chip Error Status1"                                                     {
+    { "name"              "type"  "entrybits" "reset"    "signal"          "comment"                                }
+    {  chip_error_load      RW      31:0       32'h0     chip_error_load   "Chip Error: ADD/DATA causing a failure" }
+}
+
+R w_icons_rf "chip_error_status2" -comment "Chip Error Status2"                                                  {
+    { "name"              "type"  "entrybits" "reset"    "signal"          "comment"                             }
+    {  chip_error_cmd       RW      3:0        4'h0       chip_error_cmd    "Chip Error: CMD  causing a failure" }
+    {  chip_error_crc5      RW      8:4        5'h0       chip_error_crc5   "Chip Error: CRC5 causing a failure" }
+    
+}
+#{  mask_12chs           R       16:9       ---        mask_12chs         "return one for the mask with 12 or more chs enabeld"  }
+
+R w_icons_rf "adc_amp1" -comment "ADC Amplifier Gain Selection: ADC0~31"                                           {
+    { "name"          "type"  "entrybits" "reset" "signal"         "comment"                                       }
+    { amp_gain_g1      RW      31:0        32'h0  amp_gain_g1      "Enable ADC AMP Gain for CH31~CH0 / 1-> enable" }
+}
+
+R w_icons_rf "adc_amp2" -comment "ADC Amplifier Gain Selection: ADC32~63"                                           {
+    { "name"          "type"  "entrybits" "reset" "signal"         "comment"                                        }
+    { amp_gain_g2      RW      31:0        32'h0  amp_gain_g2      "Enable ADC AMP Gain for CH63~CH32 / 1-> enable" }
+}
+
+R w_icons_rf "rec_stim_control" -comment "Record and Stimulator Control: Stimulation Clock and Mask enable signal and Record channel and enable signal"                                                                     {
+    { "name"          "type"  "entrybits" "reset" "signal"         "comment"                                                                           }
+    { div_clk_stim     RW       11:0      12'h21  div_clk_stim     "Clock divider value for stimulator: Reference clock is CLK_REF_I on top-level "    }
+    { en_clk_stim      RW       12          1'b0  en_clk_stim      "Enable Clock divider for stimulator"                                               }
+    { stim_mask_en     RW       20:13      8'h00  stim_mask_en     "Stimulation masks enable signals: order ->[maske7 mask6 ...mask0] 0:off 1:on"      }
+    { rec_en           RW       21         1'b0   rec_en           "recording enable 0: recording(on)   1: recording(off)"                             }
+}
+#{ stim_monophasic  RW       29         1'b0  stim_monophasic   "tied to 0 (for future use 0: doesn't allow the monophasic to be run, 1: User must set it to allow monophasic pattern to be run)"}
+
+
+# eight possible masks
+for {set ch_idx 0} {${ch_idx} < 8} {incr ch_idx} {  
+    S stim_mask${ch_idx}_g1   -w 32              "w_icons_rf"                           -->  "stim_ctrls_wrap"
+    S stim_mask${ch_idx}_g2   -w 32              "w_icons_rf"                           -->  "stim_ctrls_wrap"
+ 
+    R w_icons_rf "stim_mask${ch_idx}_p1" -comment "Stimulator Mask ${ch_idx} part1"                                                                {
+        { "name"                   "type"  "entrybits" "reset" "signal"                   "comment"                                                }
+        { stim_mask${ch_idx}_g1      RW      31:0       32'h0  stim_mask${ch_idx}_g1      "Mask${ch_idx} to enable Stimulator Enable for CH31~CH0" }
+    }
+    R w_icons_rf "stim_mask${ch_idx}_p2" -comment "Stimulator Mask ${ch_idx} part2"                                                                 {
+        { "name"                   "type"  "entrybits" "reset" "signal"                   "comment"                                                 }
+        { stim_mask${ch_idx}_g2      RW      31:0       32'h0   stim_mask${ch_idx}_g2     "Mask${ch_idx} to enable Stimulator Enable for CH63~CH32" }
+    }
+}
+
+
+R w_icons_rf "enabled_ch_rec_g1" -comment "Enable the channles to be recorded"                                                         {
+    { "name"         "type"  "entrybits" "reset" "signal"         "comment"                                                            }
+    { en_rec_ch_g1     RW       31:0      32'h0   en_rec_ch_g1    "dedicated enable signal for enabling recording unit for CH31~Ch0"   }
+}
+
+R w_icons_rf "enabled_ch_rec_g2" -comment "Enable the channles to be recorded"                                                          {
+    { "name"         "type"  "entrybits" "reset" "signal"         "comment"                                                             }
+    { en_rec_ch_g2     RW       31:0      32'h0   en_rec_ch_g2    "dedicated enable signal for enabling recording unit for CH63~Ch32"   }
+}
+
+R w_icons_rf "rec_discharge_control" -comment "discharge amplifier "                                                                           {
+    { "name"                "type"  "entrybits" "reset"       "signal"             "comment"                                                   }
+    { div_clk_discharge       RW       7:0       8'h42     div_clk_discharge      "Clock divider value for dischargemain clock divider of  "   }
+    { en_clk_discharge        RW       8          1'b0     en_clk_discharge       "Enable Clock divider for discharge"                         }
+    { pw_discharge            RW       31:12     20'h10    pw_discharge           "Pulse width for clock discharge"                            }
+}
+
+# Script to geenrate the register file automatically
+P "IN_WIDTH_IA"       = 8           common_mux<stim_i0..3>:IN_W
+P "IN_WIDTH_WA"       = 14          "common_mux<stim_w0..3>:IN_W"
+
+set stim_range_vec {}
+for {set ch_idx 0} {${ch_idx} < 4} {incr ch_idx} {  
+    set stim_dacn   Bn[expr $ch_idx + 1]
+    set stim_dacp   Bp[expr $ch_idx + 1]
+    S  stim${ch_idx}_interval      -w 16           "w_icons_rf"                                -->  "stim_ctrl<ch${ch_idx}>:interval!"
+    S  stim${ch_idx}_ia_mux        -w 8            "w_icons_rf"                                -->  "common_mux<stim_i${ch_idx}>:I0"
+    S  stim${ch_idx}_ia            -w 8            "common_mux<stim_i${ch_idx}>:Z"             -->  "rec_stim64ch_macro:$stim_dacn"
+    S  stim${ch_idx}_ic            -w 8            "w_icons_rf"                                -->  "rec_stim64ch_macro:$stim_dacp" "common_mux<stim_i${ch_idx}>:I1"
+    S  stim${ch_idx}_pulse_wc      -w 14           "w_icons_rf"                                -->  "stim_ctrl<ch${ch_idx}>:pulse_wc!" "common_mux<stim_w${ch_idx}>:I1"
+    S  stim${ch_idx}_pulse_gap     -w 14           "w_icons_rf"                                -->  "stim_ctrl<ch${ch_idx}>:pulse_gap!"
+    S  stim${ch_idx}_pulse_wa_mux  -w 14           "w_icons_rf"                                -->  "common_mux<stim_w${ch_idx}>:I0"
+    S  stim${ch_idx}_pulse_wa      -w 14           "common_mux<stim_w${ch_idx}>:Z"             -->  "stim_ctrl<ch${ch_idx}>:pulse_wa!"
+    S  stim${ch_idx}_pulse_num     -w 12           "w_icons_rf"                                -->  "stim_ctrl<ch${ch_idx}>:pulse_num!"
+    S  stim${ch_idx}_pol                           "w_icons_rf"                                -->  "stim_ctrl<ch${ch_idx}>:pol!"
+    S  stim${ch_idx}_mode          -v 1'b1         "w_icons_rf"                                -->  "common_mux<stim_i${ch_idx}>:SEL" "common_mux<stim_w${ch_idx}>:SEL"
+    S  stim${ch_idx}_range                         "w_icons_rf"                                
+    
+    lappend stim_range_vec stim${ch_idx}_range_s
+   
+    R w_icons_rf "stim_ch${ch_idx}_p0" -comment "Stimultor: Interval, Ia, Ic"                                                               {
+        { "name"                   "type"  "entrybits" "reset"                    "signal"            "comment"                                     }
+        { stim${ch_idx}_interval    RW      15:0        16'h0             stim${ch_idx}_interval      "Stimulation CH${ch_idx}: interval parameter" }
+        { stim${ch_idx}_ia_mux      RW      23:16        8'h0             stim${ch_idx}_ia_mux        "Stimulation CH${ch_idx}: Ia parameter"       }
+        { stim${ch_idx}_ic          RW      31:24        8'h0             stim${ch_idx}_ic            "Stimulation CH${ch_idx}: Ic parameter"       }
+    }
+
+    R w_icons_rf "stim_ch${ch_idx}_pulse_p1" -comment "Stimultor: PulseGap, PulseWC"                                                            {
+        { "name"                   "type"  "entrybits" "reset"                    "signal"            "comment"                                 }
+        { stim${ch_idx}_pulse_wc     RW      13:0        14'h0             stim${ch_idx}_pulse_wc      "Stimulation CH${ch_idx}: PulseWC"        }
+        { stim${ch_idx}_pulse_wa_mux RW      29:16       14'h0             stim${ch_idx}_pulse_wa_mux  "Stimulation CH${ch_idx}: PulseWA"       }
+    }
+
+    R w_icons_rf "stim_ch${ch_idx}_pulse_p2" -comment "Stimultor: PulseWA, PulseNum"                                                                          {
+        { "name"                   "type"  "entrybits" "reset"                     "signal"           "comment"                                               }
+        { stim${ch_idx}_pulse_gap   RW      13:0        14'h0             stim${ch_idx}_pulse_gap     "Stimulation CH${ch_idx}: PulseGap"                     }
+        { stim${ch_idx}_pulse_num   RW      27:16       12'h0             stim${ch_idx}_pulse_num     "Stimulation CH${ch_idx}: PulseNum"                     }
+        { stim${ch_idx}_pol         RW      30           1'b0             stim${ch_idx}_pol           "Stimulation CH${ch_idx} polarity: 0->Cathode 1->Anode" }
+        { stim${ch_idx}_range       RW      31           1'b0             stim${ch_idx}_range         "Stimulation CH${ch_idx} range: 0 or 1"                 }
+    }
+    #{ stim${ch_idx}_mode        RW      29           1'h1             stim${ch_idx}_mode          "Stimulation CH${ch_idx}: tied to 1 (for future use: mode: 0 -> separate wc and wa and Ia and Ic, mode1: balanced version=> wa=wc, Ia=Ic)" }
+}
+#puts $stim_range_vec
+
+set stim_range_reverse "{[join [lreverse $stim_range_vec] ", "]}"
+S "stim_range_unsync"  -w 4 "w_icons_rf"    -->    "rec_stim64ch_macro:StimRange"
+C "w_icons_rf"     -as {assign  stim_range_unsync! = $stim_range_reverse;} 
+########################################################################
+# synch_spi_wrap
+########################################################################
+P "TX_WIDTH"       = 36          "spi_slave_common spi_custom_logic"
+
+S "spi_rx_word"   -w TX_WIDTH    "spi_slave_common" --> "spi_custom_logic"
+S "rx_done"                      "spi_slave_common" --> "spi_custom_logic"
+S "spi_tx_word"   -w 32          "spi_slave_common" <-- "spi_custom_logic"
+S "tx_ready"                     "spi_slave_common" <-- "spi_custom_logic"
+S "crc5_chk"                     "spi_slave_common" --> "spi_custom_logic"
+S "tx_done"                      "spi_slave_common" --> "spi_custom_logic"   
+S "crc5_ext"      -w 5           "spi_slave_common" --> "spi_custom_logic"
+S "spi_cmd4b"     -w 4           "spi_slave_common" --> "spi_custom_logic"
+S "spi_cmd4b_en"                 "spi_slave_common" --> "spi_custom_logic"
+
+S "error"                        "spi_custom_logic" --> "common_sync<err>:data!"
+S "err_stim"                   "stim_ctrls_wrap"  --> "common_sync<err_stim>:data!"
+
+########################################################################
+# data synchronizer btw reg. file and ADCs' gain amp
+########################################################################
+# connecting the output of data synchronizer to analog macro 
+set amp_gain_sync_vec {}
+for {set ch_idx 0} {${ch_idx} < 64} {incr ch_idx} {  
+    S "adc_amp_ch${ch_idx}_gain"     "common_sync<adc${ch_idx}>:data!"     
+    lappend amp_gain_sync_vec adc_amp_ch${ch_idx}_gain_s
+}
+set amp_gain "{[join [lreverse $amp_gain_sync_vec] ", "]}"
+#puts $amp_gain
+S "amp_gain_sync"  -w 64 "w_icons_sync_rst"    -->    "rec_stim64ch_macro:Gain"
+C "w_icons_sync_rst"  -as {assign  amp_gain_sync!=$amp_gain;} 
+
+
+
+# connecting the input to data synchronizer
+set amp_gain_list {}
+for {set ch_idx 0} {${ch_idx} < 32} {incr ch_idx} { 
+    S "amp_gain_g1_${ch_idx}"     "w_icons_sync_rst"                         -->    "common_sync<adc${ch_idx}>:data!"
+    lappend amp_gain_list amp_gain_g1_${ch_idx}!
+}
+#S  "amp_gain_g1_vec" -w 32        "w_icons_sync_rst"
+
+set input_amp_gain "{[join [lreverse $amp_gain_list] ", "]}"
+#puts $input_amp_gain
+C "w_icons_sync_rst"  -as {assign  $input_amp_gain=amp_gain_g1!;} 
+
+
+set amp_gain_list {}
+for {set ch_idx 0} {${ch_idx} < 32} {incr ch_idx} { 
+    set  tmp [expr ${ch_idx}+32]
+    S "amp_gain_g2_${ch_idx}"     "w_icons_sync_rst"                         -->    "common_sync<adc${tmp}>:data!"
+    lappend amp_gain_list amp_gain_g2_${ch_idx}!
+}
+S  "amp_gain_g2_vec" -w 32        "w_icons_sync_rst"
+set input_amp_gain "{[join [lreverse $amp_gain_list] ", "]}"
+#puts $input_amp_gain
+C "w_icons_sync_rst"  -as {assign $input_amp_gain=amp_gain_g2!;} 
+
+########################################################################
+# data synchronizer btw reg. file and stimulator controller
+########################################################################
+# connecting the output of data synchronizer to stim wrap 
+for {set ch_idx 0} {${ch_idx} < 8} {incr ch_idx} {  
+    S "stim_mask_en${ch_idx}_sync"     "common_sync<stim${ch_idx}>:data!"     -->     "stim_ctrls_wrap:stim_mask_en${ch_idx}_g!" "rec_ctrl"
+}   
+
+# connecting the input to data synchronizer
+set stim_mask_list {}
+for {set ch_idx 0} {${ch_idx} < 8} {incr ch_idx} { 
+    S "stim_mask_en_${ch_idx}"         "w_icons_sync_rst"                     -->    "common_sync<stim${ch_idx}>:data!"
+    lappend stim_mask_list stim_mask_en_${ch_idx}!
+}
+#S  "stim_mask_en_vec" -w 32        "w_icons_sync_rst"
+
+set input_stim_mask "{[join [lreverse $stim_mask_list] ", "]}"
+#puts $input_amp_gain
+C "w_icons_sync_rst"  -as {assign  $input_stim_mask=stim_mask_en!;} 
+
+
+
+P "TOP_CLKDIV_W" = 12                        "w_icons_top"   "common_clkdiv_by_n<top>:DIV_VAL_N_W" 
+S "clk_top"                                  "common_clkdiv_by_n<top>:clk_div_o"   --> "common_clkdiv_by_n:clk_i \
+                                                                                          common_clkdiv_by_n<discharge>:clk_i \
+                                                                                          common_sync<adc0..63>:clk! \
+                                                                                          common_sync<stim_xen>:clk! \
+                                                                                          common_sync<clk_div_stim>:clk! \
+                                                                                          common_sync<clk_div_discharge>:clk!\
+                                                                                          common_sync<rec_en>:clk! \
+                                                                                          common_sync<err>:clk! \
+                                                                                          common_sync<err_stim>:clk! \
+                                                                                          rec_ctrl:clk! \
+                                                                                          common_sync<en_rec_ch0..63>:clk! \
+                                                                                          common_clkgate<adc1,adc2>:CP \
+                                                                                          tb_w_icons_top:CLK_REC!
+                                                                                  "
+S "div_clk_top"      -w TOP_CLKDIV_W       -v 2'b11               "w_icons_top" -->  "common_clkdiv_by_n<top>:div_val_n_i"
+S "en_clk_top"          -v 1'b1                                    "w_icons_top" -->  "common_clkdiv_by_n<top>:enable_i"
+
+########################################################################
+# connecting the stimulator clock from clock divider to rec_stim
+########################################################################
+P "STIM_CLKDIV_W" = 12                       "common_clkdiv_by_n:DIV_VAL_N_W" "w_icons_rf"
+S "clk_stim"                                 "common_clkdiv_by_n:clk_div_o"     -->  "stim_ctrls_wrap" "stim_ctrl<ch0..3>:clk!"  "common_sync<stim0..7>:clk!"
+S "div_clk_stim"      -w STIM_CLKDIV_W       "w_icons_rf"                       -->  "common_clkdiv_by_n:div_val_n_i"
+S "en_clk_stim"                              "w_icons_rf"                       -->  "common_sync<clk_div_stim>:data!"
+S "en_clk_stim_sync"                         "common_sync<clk_div_stim>:data!"  
+S "en_clk_stim_sync_xen"                     "w_icons_sync_rst"                 -->  "common_clkdiv_by_n:enable_i"
+
+C "w_icons_sync_rst"  -as {
+    assign en_clk_stim_sync_xen! = en_clk_stim_sync! | stim_xen_sync!;
+
+
+}
+
+########################################################################
+# connecting the discharge clock divider to rec_ctrl
+########################################################################
+P "CLKDIV_W_DISCHARGE" = 8                        "common_clkdiv_by_n<discharge>:DIV_VAL_N_W" "w_icons_rf"
+
+S "div_clk_discharge"      -w CLKDIV_W_DISCHARGE    "w_icons_rf"                              -->  "common_clkdiv_by_n<discharge>:div_val_n_i"
+S "en_clk_discharge"                                "w_icons_rf"                              -->  "common_sync<clk_div_discharge>:data!"
+S "en_clk_discharge_sync"                           "common_sync<clk_div_discharge>:data!"    -->  "common_clkdiv_by_n<discharge>:enable_i"
+S "clk_discharge_main"                              "common_clkdiv_by_n<discharge>:clk_div_o" -->  "rec_ctrl"
+S "gdischarge"                                      "rec_ctrl"                                -->  "rec_stim64ch_macro:GDis"
+S "pw_discharge"           -w 20                    "w_icons_rf"                              -->  "rec_ctrl"
+
+########################################################################
+# connecting the rec_ctrl to rec_stim 
+########################################################################
+#S "adc_selection"     -w 6                   "rec_ctrl"                         -->  "rec_stim"
+S "rec_sync_en"                              "common_sync<rec_en>:data!"        -->  "rec_ctrl"
+S "rec_en"                                   "w_icons_rf"                       -->  "common_sync<rec_en>:data!"
+S "adc_en"                                   "rec_ctrl:adc_en!"                         -->  "tb_w_icons_top:ADC_EN!"
+S "sample_out"                               "rec_ctrl"                         -->  "rec_stim64ch_macro:adc2_smp_ctrl!" "rec_stim64ch_macro:adc1_smp_ctrl!" 
+S "adc_res1"                                 "rec_stim64ch_macro"               -->  "rec_ctrl"
+S "adc_res2"                                 "rec_stim64ch_macro"               -->  "rec_ctrl"
+# integrate the ch id/ Rec data or Imp/ adc data
+S "rec_data1"                                 "rec_ctrl:rec_data1!"                         -->  "tb_w_icons_top:ADC1_OUT!"
+S "rec_data2"                                 "rec_ctrl:rec_data2!"                         -->  "tb_w_icons_top:ADC2_OUT!"
+S "adc_idx"           -w 5                    "rec_ctrl"                         -->  "rec_stim64ch_macro:mux_ctrl_adc1!" "rec_stim64ch_macro:mux_ctrl_adc2!"
+
+########################################################################
+#  stim_ctrl general part
+########################################################################
+set stim_en_list {}
+set EnN_list {}
+set EnP_list {}
+
+S  "mask_en_8bit"  -w 8 stim_ctrls_wrap
+C  "stim_ctrls_wrap"           -as {assign mask_en_8bit!= {stim_mask_en7_g_i,stim_mask_en6_g_i,stim_mask_en5_g_i,stim_mask_en4_g_i,stim_mask_en3_g_i,stim_mask_en2_g_i,stim_mask_en1_g_i,stim_mask_en0_g_i};}
+for {set ch_idx 0} {${ch_idx} < 8} {incr ch_idx} { 
+    S  "mask_en_status${ch_idx}"   stim_ctrls_wrap  
+}
+C  "stim_ctrls_wrap"           -as {
+    assign mask_en_status0! = mask_en_8bit![0];
+    assign mask_en_status1! = (~mask_en_8bit![0]) & (mask_en_8bit![1]);
+    assign mask_en_status2! = (~mask_en_8bit![0]) & (~mask_en_8bit![1]) & (mask_en_8bit![2]);
+    assign mask_en_status3! = (~mask_en_8bit![0]) & (~mask_en_8bit![1]) & (~mask_en_8bit![2]) & (mask_en_8bit![3]);
+    assign mask_en_status4! = (~mask_en_8bit![0]) & (~mask_en_8bit![1]) & (~mask_en_8bit![2]) & (~mask_en_8bit![3]) & (mask_en_8bit![4]);
+    assign mask_en_status5! = (~mask_en_8bit![0]) & (~mask_en_8bit![1]) & (~mask_en_8bit![2]) & (~mask_en_8bit![3]) & (~mask_en_8bit![4]) & (mask_en_8bit![5]);
+    assign mask_en_status6! = (~mask_en_8bit![0]) & (~mask_en_8bit![1]) & (~mask_en_8bit![2]) & (~mask_en_8bit![3]) & (~mask_en_8bit![4]) & (~mask_en_8bit![5]) & (mask_en_8bit![6]);
+    assign mask_en_status7! = (~mask_en_8bit![0]) & (~mask_en_8bit![1]) & (~mask_en_8bit![2]) & (~mask_en_8bit![3]) & (~mask_en_8bit![4]) & (~mask_en_8bit![5]) & (~mask_en_8bit![6]) & (mask_en_8bit![7]);
+
+}
+
+for {set ch_idx 0} {${ch_idx} < 4} {incr ch_idx} { 
+    S  "anode_en${ch_idx}"         "stim_ctrl<ch${ch_idx}>:anode_en!"        
+    S  "cathode_en${ch_idx}"       "stim_ctrl<ch${ch_idx}>:cathode_en!"      
+    S  "stim_cntrl_en${ch_idx}"    "stim_ctrls_wrap"                         -->    "stim_ctrl<ch${ch_idx}>:stim_en!" 
+    lappend stim_en_list stim_cntrl_en${ch_idx}!
+    lappend EnP_list  anode_en${ch_idx}!
+    lappend EnN_list  cathode_en${ch_idx}!
+    C  "stim_ctrls_wrap"           -as {assign  stim_cntrl_en${ch_idx}! = (stim_mask0_g1![${ch_idx}] | stim_mask1_g1![${ch_idx}] | stim_mask2_g1![${ch_idx}] | stim_mask3_g1![${ch_idx}] | stim_mask4_g1![${ch_idx}] | stim_mask5_g1![${ch_idx}] | stim_mask6_g1![${ch_idx}] | stim_mask7_g1![${ch_idx}]) & (mask_en_status0! | mask_en_status1! | mask_en_status2! | mask_en_status3! | mask_en_status4! | mask_en_status5! | mask_en_status6! | mask_en_status7!) & stim_xen_sync! & (~err_stim!);}
+}
+
+#for {set ch_idx 0} {${ch_idx} < 32} {incr ch_idx} { 
+#    set idx [expr {${ch_idx} + 32}]
+#    S  "anode_en${idx}"         "stim_ctrl<ch${idx}>:anode_en!"        
+#    S  "cathode_en${idx}"       "stim_ctrl<ch${idx}>:cathode_en!"      
+#    S  "stim_cntrl_en${idx}"    "stim_ctrls_wrap"                      -->    "stim_ctrl<ch${idx}>:stim_en!" 
+#    lappend stim_en_list stim_cntrl_en${idx}!
+#    lappend EnP_list     anode_en${idx}!
+#    lappend EnN_list     cathode_en${idx}!
+#    C  "stim_ctrls_wrap"           -as {assign  stim_cntrl_en${idx}! = (stim_mask0_g2![${ch_idx}] | stim_mask1_g2![${ch_idx}] | stim_mask2_g2![${ch_idx}] | stim_mask3_g2![${ch_idx}] | stim_mask4_g2![${ch_idx}] | stim_mask5_g2![${ch_idx}] | stim_mask6_g2![${ch_idx}] | stim_mask7_g2![${ch_idx}]) & (mask_en_status0! | mask_en_status1! | mask_en_status2! | mask_en_status3! | mask_en_status4! | mask_en_status5! | mask_en_status6! | mask_en_status7!) & stim_xen_sync! & (~err_stim!);} 
+#}
+
+#puts $EnP_list 
+#puts $EnN_list
+set stim_en_reverse "{[join [lreverse $stim_en_list] ", "]}"
+S "stim_en_vec"       -w  64       "stim_ctrls_wrap"    -->    "rec_stim64ch_macro:EnStim"
+C "stim_ctrls_wrap"   -as {assign  stim_en_vec!=$stim_en_reverse;} 
+
+set EnN_reverse "{[join [lreverse $EnN_list] ", "]}"
+S "EnN_vec"       -w  4       "stim_ctrls_wrap"    -->    "rec_stim64ch_macro:EnN"
+C "stim_ctrls_wrap"   -as {assign  EnN_vec!=$EnN_reverse;} 
+
+set EnP_reverse "{[join [lreverse $EnP_list] ", "]}"
+S "EnP_vec"       -w  4       "stim_ctrls_wrap"    -->    "rec_stim64ch_macro:EnP"
+C "stim_ctrls_wrap"   -as {assign  EnP_vec!=$EnP_reverse;} 
+
+
+
+S "imp_en_g1_sync"  -w 32  "stim_ctrls_wrap"                       -->     "rec_ctrl"
+
+C  "stim_ctrls_wrap"           -as {assign  imp_en_g1_sync!={stim_cntrl_en3!,stim_cntrl_en2!,stim_cntrl_en1!,stim_cntrl_en0!};}
+
+S "imp_en_g2_sync"  -w 32  "stim_ctrls_wrap"                       -->     "rec_ctrl"
+
+C  "stim_ctrls_wrap"           -as {assign  imp_en_g2_sync!={32'b0};}
+
+
+# generate a code to check th enumber of selected chs per mask
+for {set idx 0} {${idx} < 8} {incr idx} { 
+    C "stim_ctrls_wrap"   -as   {
+       
+    assign mask${idx}_cat = {stim_mask${idx}_g2_i,stim_mask${idx}_g1_i};
+    always @(mask${idx}_cat) begin
+           mask${idx}_ones = 0;  
+           mask${idx}_cmp  = 0;
+           mask${idx}_err  = 0;
+           for (i${idx}=0;i${idx}<=63;i${idx}=i${idx}+1) begin
+               if (mask${idx}_cat[i${idx}] == 1'b1) begin
+                   mask${idx}_ones = mask${idx}_ones + 1;    
+               end
+           end
+           if ((mask${idx}_ones>7'd7) && (mask${idx}_ones<7'd12) )begin
+               mask${idx}_cmp = 1;
+           end else if (mask${idx}_ones >= 7'd12) begin
+               mask${idx}_err = 1;
+               mask${idx}_cmp = 0;
+           end else begin
+               mask${idx}_cmp  = 0;
+           end
+       end
+    } 
+}
+
+for {set idx 0} {${idx} < 4} {incr idx} { 
+    C "stim_ctrls_wrap"   -as  {
+       
+    always @(*) begin
+           stim_width_chk[${idx}] = 0;  
+           if ((stim${idx}_pulse_wc_i>14'd200) || (stim${idx}_pulse_wa_i>14'd200)) begin
+               stim_width_chk[${idx}] = 1;
+           end else  begin
+               stim_width_chk[${idx}] = 0;
+           end
+       end
+    } 
+}
+
+S "limiting_current"     "stim_ctrls_wrap"               -->  "rec_stim64ch_macro:FDA"
+
+########################################################################
+# data synchronizer btw reg. file and AREC Impedance unit
+########################################################################
+# connecting the output of data synchronizer to analog macro 
+set en_rec_sync_list_g1 {}
+set en_rec_sync_list_g2 {}
+set rec_vec_list {}
+for {set ch_idx 0} {${ch_idx} < 64} {incr ch_idx} {  
+    S "en_rec_ch${ch_idx}_synch"     "common_sync<en_rec_ch${ch_idx}>:data!"     
+    if {${ch_idx} < 32} {
+        lappend en_rec_sync_list_g1 en_rec_ch${ch_idx}_synch!
+    } else {
+        lappend en_rec_sync_list_g2 en_rec_ch${ch_idx}_synch!
+    }
+    lappend rec_vec_list en_rec_ch${ch_idx}_synch!
+}    
+#puts $rec_vec_list
+set rec_vec "{[join [lreverse $rec_vec_list] ", "]}"
+#puts $rec_vec
+S "rec_vec_sync"       -w  64 "w_icons_sync_rst"    -->    "rec_stim64ch_macro:EnPow"
+C "w_icons_sync_rst"  -as {assign  rec_vec_sync!=$rec_vec;} 
+
+
+# connecting the input to data synchronizer
+set en_rec_list {}
+for {set ch_idx 0} {${ch_idx} < 32} {incr ch_idx} { 
+    S "en_rec_ch_g1_${ch_idx}"     "w_icons_sync_rst"                            -->    "common_sync<en_rec_ch${ch_idx}>:data!"
+    lappend en_rec_list en_rec_ch_g1_${ch_idx}!
+}
+#S  "en_rec_g1_vec" -w 32        "w_icons_sync_rst"
+
+set en_rec "{[join [lreverse $en_rec_list] ", "]}"
+C "w_icons_sync_rst"  -as {assign  $en_rec=en_rec_ch_g1!;} 
+
+set en_rec_sync_g1 "{[join [lreverse $en_rec_sync_list_g1] ", "]}"
+S "en_rec_sync_g1"  -w 32         "w_icons_sync_rst"                               -->     "rec_ctrl"
+C "w_icons_sync_rst"  -as {assign  en_rec_sync_g1!=$en_rec_sync_g1;} 
+
+set en_rec_sync_g2 "{[join [lreverse $en_rec_sync_list_g2] ", "]}"
+S "en_rec_sync_g2"  -w 32         "w_icons_sync_rst"                               -->     "rec_ctrl"
+C "w_icons_sync_rst"  -as {assign  en_rec_sync_g2!=$en_rec_sync_g2;} 
+
+
+set en_rec_list {}
+for {set ch_idx 0} {${ch_idx} < 32} {incr ch_idx} { 
+    set  tmp [expr ${ch_idx}+32]
+    S "en_rec_ch_g2_${ch_idx}"     "w_icons_sync_rst"                          -->    "common_sync<en_rec_ch${tmp}>:data!"
+    lappend en_rec_list en_rec_ch_g2_${ch_idx}!
+}
+
+
+set en_rec "{[join [lreverse $en_rec_list] ", "]}"
+C "w_icons_sync_rst"  -as {assign  $en_rec=en_rec_ch_g2!;} 
+
+
+
+S "en_clk_adc1_sync"                 "w_icons_sync_rst"           -->  "common_clkgate<adc1>:EN"
+C "w_icons_sync_rst"  -as {assign  en_clk_adc1_sync! = |en_rec_sync_g1!;  }            
+
+
+S "en_clk_adc2_sync"                 "w_icons_sync_rst"           -->  "common_clkgate<adc2>:EN"
+C "w_icons_sync_rst"  -as {assign  en_clk_adc2_sync! = |en_rec_sync_g2!;  }            
+
+
+
+
+########################################################################
+# Analog Macro definition
+########################################################################
+
+
+C "rec_stim64ch_macro" -as {
+
+    //not supported in iverilog
+    //wire [17:0] test_adc_out [3:0];
+    //Packed array supported
+    reg              adc_res1;
+    reg              adc_res2;
+    reg              adc_res1_o;
+    reg              adc_res2_o;
+    reg [17:0] test_adc1_out     [31:0];
+    reg [17:0] test_adc2_out     [31:0];
+    reg [17:0] test_adc1_imp_out [31:0];
+    reg [17:0] test_adc2_imp_out [31:0];
+    reg [15:0]       i;
+    reg [5:0]        counter;
+    reg              cnt_en1, cnt_en2;
+    reg [127:0] test_cathode       [63:0] ;
+    reg         test_cathode_chk   [63:0] ;
+    reg [127:0] test_anode         [63:0] ;
+    reg         test_anode_chk     [63:0] ;
+    reg [127:0] test_gap           [63:0] ;
+    reg         test_gap_chk       [63:0] ;
+    reg [127:0] test_interval      [63:0] ;
+    reg         test_interval_chk  [63:0] ;
+    reg [127:0] test_num           [63:0] ;
+    reg         test_num_chk       [63:0] ;
+    reg         test_interval_en   [63:0] ;
+    reg [4:0]   ones_am            [63:0] ;
+    reg               adc1_smp_ctrl_1d, adc2_smp_ctrl_1d;
+    reg start_chk ;
+    // inital delay to avoid printing check messages due to un-initialized states..>
+    //...> of the port during the netlist simulation at the beginning  
+    initial begin
+        start_chk = 1'b0;
+        #500;
+        start_chk = 1'b1;
+    end
+
+    initial begin
+        counter         = 'b0;
+        cnt_en1         = 'b0;
+        cnt_en2         = 'b0;
+        for ( i=0 ; i< 32; i = i +1) begin
+            test_adc1_out[i]     = 18'h0720+ 2'b10*i;
+            test_adc2_out[i]     = 18'h0920+ 2'b10*i;
+            test_adc1_imp_out[i] = 18'h0320+ 2'b10*i;
+            test_adc2_imp_out[i] = 18'h0220+ 2'b10*i;
+        end
+        for ( i=0 ; i< 4; i = i +1) begin
+            test_cathode[i]  = 0;
+            test_anode[i]    = 0;
+            test_gap[i]      = 0;
+            test_interval[i] = 0;
+            test_num[i]      = 0;
+            ones_am[i]       = 0;
+        end
+        for ( i=0 ; i< 4; i = i +1) begin
+            test_cathode_chk[i]  = 0;
+            test_anode_chk[i]    = 0;
+            test_gap_chk[i]      = 0;
+            test_interval_chk[i] = 0;
+            test_num_chk[i]      = 0;
+            test_interval_en[i]  = 0;
+        end
+    end
+
+    always @(posedge clk_adc1_gated_i) begin
+        if (cnt_en1 == 1'b1) begin
+            //shifting all input data when only cnt_en is 1
+            for ( i=0 ; i< 32; i = i +1) begin
+                test_adc1_out[i]     <= test_adc1_out[i] << 1;
+                test_adc1_imp_out[i] <= test_adc1_imp_out[i] << 1;
+            end
+        end else begin
+            for ( i=0 ; i< 32; i = i +1) begin
+                test_adc1_out[i]     <= 18'h0720+ 2'b10*i;
+                test_adc1_imp_out[i] <= 18'h0320+ 2'b10*i;
+            end
+        end
+        adc_res1_o       <= adc_res1;
+        adc1_smp_ctrl_1d <= adc1_smp_ctrl_i;
+    end
+
+    always @(posedge clk_adc2_gated_i) begin
+        if (cnt_en2 == 1'b1) begin
+            //shifting all input data when only cnt_en is 1
+            for ( i=0 ; i< 32; i = i +1) begin
+                test_adc2_out[i]     <= test_adc2_out[i] << 1;
+                test_adc2_imp_out[i] <= test_adc2_imp_out[i] << 1;
+            end
+        end else begin
+            for ( i=0 ; i< 32; i = i +1) begin
+                test_adc2_out[i]     <= 18'h0920+ 2'b10*i;
+                test_adc2_imp_out[i] <= 18'h0220+ 2'b10*i;
+            end
+        end
+        adc_res2_o       <= adc_res2;
+        adc2_smp_ctrl_1d <= adc2_smp_ctrl_i;
+    end
+
+    always @(negedge adc1_smp_ctrl_i) begin
+        cnt_en1  = 1'b1;
+    end
+    always @(posedge adc1_smp_ctrl_i) begin
+        cnt_en1  = 1'b0;
+    end
+
+    always @(negedge adc2_smp_ctrl_i) begin
+        cnt_en2  = 1'b1;
+    end
+    always @(posedge adc2_smp_ctrl_i) begin
+        cnt_en2  = 1'b0;
+    end
+    always @(*) begin
+        case (mux_ctrl_adc1_i)
+            5'd00  :  adc_res1 = EnStim[0]  ? test_adc1_imp_out[0][17]  : test_adc1_out[0][17];
+            5'd01  :  adc_res1 = EnStim[1]  ? test_adc1_imp_out[1][17]  : test_adc1_out[1][17];
+            5'd02  :  adc_res1 = EnStim[2]  ? test_adc1_imp_out[2][17]  : test_adc1_out[2][17];
+            5'd03  :  adc_res1 = EnStim[3]  ? test_adc1_imp_out[3][17]  : test_adc1_out[3][17];
+            5'd04  :  adc_res1 = EnStim[4]  ? test_adc1_imp_out[4][17]  : test_adc1_out[4][17];
+            5'd05  :  adc_res1 = EnStim[5]  ? test_adc1_imp_out[5][17]  : test_adc1_out[5][17];
+            5'd06  :  adc_res1 = EnStim[6]  ? test_adc1_imp_out[6][17]  : test_adc1_out[6][17];
+            5'd07  :  adc_res1 = EnStim[7]  ? test_adc1_imp_out[7][17]  : test_adc1_out[7][17];
+            5'd08  :  adc_res1 = EnStim[8]  ? test_adc1_imp_out[8][17]  : test_adc1_out[8][17];
+            5'd09  :  adc_res1 = EnStim[9]  ? test_adc1_imp_out[9][17]  : test_adc1_out[9][17];
+            5'd10  :  adc_res1 = EnStim[10] ? test_adc1_imp_out[10][17] : test_adc1_out[10][17];
+            5'd11  :  adc_res1 = EnStim[11] ? test_adc1_imp_out[11][17] : test_adc1_out[11][17];
+            5'd12  :  adc_res1 = EnStim[12] ? test_adc1_imp_out[12][17] : test_adc1_out[12][17];
+            5'd13  :  adc_res1 = EnStim[13] ? test_adc1_imp_out[13][17] : test_adc1_out[13][17];
+            5'd14  :  adc_res1 = EnStim[14] ? test_adc1_imp_out[14][17] : test_adc1_out[14][17];
+            5'd15  :  adc_res1 = EnStim[15] ? test_adc1_imp_out[15][17] : test_adc1_out[15][17];
+            5'd16  :  adc_res1 = EnStim[16] ? test_adc1_imp_out[16][17] : test_adc1_out[16][17];
+            5'd17  :  adc_res1 = EnStim[17] ? test_adc1_imp_out[17][17] : test_adc1_out[17][17];
+            5'd18  :  adc_res1 = EnStim[18] ? test_adc1_imp_out[18][17] : test_adc1_out[18][17];
+            5'd19  :  adc_res1 = EnStim[19] ? test_adc1_imp_out[19][17] : test_adc1_out[19][17];
+            5'd20  :  adc_res1 = EnStim[20] ? test_adc1_imp_out[20][17] : test_adc1_out[20][17];
+            5'd21  :  adc_res1 = EnStim[21] ? test_adc1_imp_out[21][17] : test_adc1_out[21][17];
+            5'd22  :  adc_res1 = EnStim[22] ? test_adc1_imp_out[22][17] : test_adc1_out[22][17];
+            5'd23  :  adc_res1 = EnStim[23] ? test_adc1_imp_out[23][17] : test_adc1_out[23][17];
+            5'd24  :  adc_res1 = EnStim[24] ? test_adc1_imp_out[24][17] : test_adc1_out[24][17];
+            5'd25  :  adc_res1 = EnStim[25] ? test_adc1_imp_out[25][17] : test_adc1_out[25][17];
+            5'd26  :  adc_res1 = EnStim[26] ? test_adc1_imp_out[26][17] : test_adc1_out[26][17];
+            5'd27  :  adc_res1 = EnStim[27] ? test_adc1_imp_out[27][17] : test_adc1_out[27][17];
+            5'd28  :  adc_res1 = EnStim[28] ? test_adc1_imp_out[28][17] : test_adc1_out[28][17];
+            5'd29  :  adc_res1 = EnStim[29] ? test_adc1_imp_out[29][17] : test_adc1_out[29][17];
+            5'd30  :  adc_res1 = EnStim[30] ? test_adc1_imp_out[30][17] : test_adc1_out[30][17];
+            5'd31  :  adc_res1 = EnStim[31] ? test_adc1_imp_out[31][17] : test_adc1_out[31][17];
+     endcase
+    end       
+    always @(*) begin
+        case (mux_ctrl_adc2_i)
+            5'd00  :  adc_res2 = EnStim[32]  ? test_adc2_imp_out[0][17]  : test_adc2_out[0][17]; 
+            5'd01  :  adc_res2 = EnStim[33]  ? test_adc2_imp_out[1][17]  : test_adc2_out[1][17];
+            5'd02  :  adc_res2 = EnStim[34]  ? test_adc2_imp_out[2][17]  : test_adc2_out[2][17];
+            5'd03  :  adc_res2 = EnStim[35]  ? test_adc2_imp_out[3][17]  : test_adc2_out[3][17];
+            5'd04  :  adc_res2 = EnStim[36]  ? test_adc2_imp_out[4][17]  : test_adc2_out[4][17];
+            5'd05  :  adc_res2 = EnStim[37]  ? test_adc2_imp_out[5][17]  : test_adc2_out[5][17];
+            5'd06  :  adc_res2 = EnStim[38]  ? test_adc2_imp_out[6][17]  : test_adc2_out[6][17];
+            5'd07  :  adc_res2 = EnStim[39]  ? test_adc2_imp_out[7][17]  : test_adc2_out[7][17];
+            5'd08  :  adc_res2 = EnStim[40]  ? test_adc2_imp_out[8][17]  : test_adc2_out[8][17];
+            5'd09  :  adc_res2 = EnStim[41]  ? test_adc2_imp_out[9][17]  : test_adc2_out[9][17];
+            5'd10  :  adc_res2 = EnStim[42] ? test_adc2_imp_out[10][17] : test_adc2_out[10][17];
+            5'd11  :  adc_res2 = EnStim[43] ? test_adc2_imp_out[11][17] : test_adc2_out[11][17];
+            5'd12  :  adc_res2 = EnStim[44] ? test_adc2_imp_out[12][17] : test_adc2_out[12][17];
+            5'd13  :  adc_res2 = EnStim[45] ? test_adc2_imp_out[13][17] : test_adc2_out[13][17];
+            5'd14  :  adc_res2 = EnStim[46] ? test_adc2_imp_out[14][17] : test_adc2_out[14][17];
+            5'd15  :  adc_res2 = EnStim[47] ? test_adc2_imp_out[15][17] : test_adc2_out[15][17];
+            5'd16  :  adc_res2 = EnStim[48] ? test_adc2_imp_out[16][17] : test_adc2_out[16][17];
+            5'd17  :  adc_res2 = EnStim[49] ? test_adc2_imp_out[17][17] : test_adc2_out[17][17];
+            5'd18  :  adc_res2 = EnStim[50] ? test_adc2_imp_out[18][17] : test_adc2_out[18][17];
+            5'd19  :  adc_res2 = EnStim[51] ? test_adc2_imp_out[19][17] : test_adc2_out[19][17];
+            5'd20  :  adc_res2 = EnStim[52] ? test_adc2_imp_out[20][17] : test_adc2_out[20][17];
+            5'd21  :  adc_res2 = EnStim[53] ? test_adc2_imp_out[21][17] : test_adc2_out[21][17];
+            5'd22  :  adc_res2 = EnStim[54] ? test_adc2_imp_out[22][17] : test_adc2_out[22][17];
+            5'd23  :  adc_res2 = EnStim[55] ? test_adc2_imp_out[23][17] : test_adc2_out[23][17];
+            5'd24  :  adc_res2 = EnStim[56] ? test_adc2_imp_out[24][17] : test_adc2_out[24][17];
+            5'd25  :  adc_res2 = EnStim[57] ? test_adc2_imp_out[25][17] : test_adc2_out[25][17];
+            5'd26  :  adc_res2 = EnStim[58] ? test_adc2_imp_out[26][17] : test_adc2_out[26][17];
+            5'd27  :  adc_res2 = EnStim[59] ? test_adc2_imp_out[27][17] : test_adc2_out[27][17];
+            5'd28  :  adc_res2 = EnStim[60] ? test_adc2_imp_out[28][17] : test_adc2_out[28][17];
+            5'd29  :  adc_res2 = EnStim[61] ? test_adc2_imp_out[29][17] : test_adc2_out[29][17];
+            5'd30  :  adc_res2 = EnStim[62] ? test_adc2_imp_out[30][17] : test_adc2_out[30][17];
+            5'd31  :  adc_res2 = EnStim[63] ? test_adc2_imp_out[31][17] : test_adc2_out[31][17];
+        endcase
+    end
+    
+    
+    // test the discharge_i
+    always @(posedge clk_adc1_gated_i ) begin
+        if (|EnPow == 1'b1) begin
+            tb_check_discharge;
+        end 
+    end
+
+    always @(posedge clk_adc2_gated_i ) begin
+        if (|EnPow == 1'b1) begin
+            tb_check_discharge;
+        end 
+    end
+    
+    
+    always@(Gain) begin
+        if( (|Gain  === 1'b1) || (|Gain === 1'b0) ) begin
+                
+        end else begin
+            if (start_chk) begin
+                \$display("Gain is not valid ");
+            end
+        end
+    end
+
+    always@(EnN) begin
+        if( (|EnN === 1'b1) || (|EnN === 1'b0) ) begin
+            
+        end else begin
+            if (start_chk) begin
+                \$display("EnN is not valid ");
+            end
+        end
+    end
+
+
+    always@(EnP) begin
+        if( (|EnP === 1'b1) || (|EnP === 1'b0) ) begin
+            
+        end else begin
+            if (start_chk) begin
+                \$display("EnP is not valid ");
+            end
+        end
+    end
+
+    always@(EnStim) begin
+        if( (|EnStim  === 1'b1) || (|EnStim === 1'b0) ) begin
+            
+        end else begin
+            if (start_chk) begin
+                \$display("EnStim is not valid ");
+            end
+        end
+    end
+
+    always@(StimRange) begin
+        if( (|StimRange === 1'b1) || (|StimRange === 1'b0) ) begin
+            
+        end else begin
+            if (start_chk) begin
+                \$display("StimRange_i is not valid ");
+            end
+        end
+    end
+
+    always@(EnPow) begin
+        if( (|EnPow  === 1'b1) || (|EnPow  === 1'b0) ) begin
+            
+        end else begin
+            if (start_chk) begin
+                \$display("en_rec_ch_i  is not valid ");
+            end
+        end
+    end
+    
+    wire [4:0] ones_ch;
+    assign ones_ch = count_ones({tb_w_icons_top.stim_mask_g2,tb_w_icons_top.stim_mask_g1});
+
+}
+
+for {set ch_idx 0} {${ch_idx} < 4} {incr ch_idx} { 
+    set stim_dacn   Bn[expr $ch_idx + 1]
+    set stim_dacp   Bp[expr $ch_idx + 1]
+    C "rec_stim64ch_macro" -as {
+        always @($stim_dacp) begin
+            if( (|$stim_dacp  === 1'b1) || (|$stim_dacp === 1'b0) ) begin
+                
+            end else begin
+                if (start_chk) begin
+                    \$display("$stim_dacp is not valid: %h ",$stim_dacp);
+                end
+            end
+        end
+
+        always @($stim_dacn) begin
+            if( (|$stim_dacn  === 1'b1) || (|$stim_dacn === 1'b0) ) begin
+                
+            end else begin
+                if (start_chk) begin
+                    \$display("$stim_dacn is not valid ");
+                end
+            end
+        end
+    }
+}
+
+
+# this is only applicable if the default value for stimulation clock divider is used
+for {set ch_idx 0} {${ch_idx} < 4} {incr ch_idx} { 
+    set stim_dacn   Bn[expr $ch_idx + 1]
+    set stim_dacp   Bp[expr $ch_idx + 1]
+    C "rec_stim64ch_macro" -as {
+        //Channel${ch_idx}
+        //this is only applicable if the default value for stimulation clock divider is used
+        //Cathode width check
+        always @(posedge (tb_w_icons_top.CLK_REC_S)) begin
+            if (EnN[${ch_idx}] == 1'b1) begin
+                test_cathode_chk [${ch_idx}] <= 1'b1;
+                test_cathode[${ch_idx}]      <= test_cathode[${ch_idx}] + 1'b1;
+
+                if (!test_num_chk[${ch_idx}]) begin
+                    test_num[${ch_idx}]     <= test_num[${ch_idx}] + 1'b1;    
+                    test_num_chk[${ch_idx}] <= 1'b1;
+                end
+
+            end else if ( (EnN[${ch_idx}] == 1'b0) && (test_cathode_chk[${ch_idx}]) ) begin
+                test_cathode_chk [${ch_idx}] <= 1'b0;
+                if ((test_cathode[${ch_idx}]/33) == tb_w_icons_top.wc_s[${ch_idx}]) begin
+                    tb_stim_check;
+                    \$display("[Analog Macro Montoring] - Channel[%2d] -> Cathode Pulse period (Generated by stim ctrl) = %4d , WC       (User-defined) = %4d", ${ch_idx},test_cathode[${ch_idx}]/33,tb_w_icons_top.wc_s[${ch_idx}]);
+                end else begin
+                    \$display("[Err                   ] - Channel[%2d] -> Cathode Pulse period (Generated by stim ctrl) = %4d , WC       (User-defined) = %4d", ${ch_idx},test_cathode[${ch_idx}]/33,tb_w_icons_top.wc_s[${ch_idx}]);
+                    tb_stim_err;
+                end
+                test_cathode[${ch_idx}] <= 0;
+                test_num_chk[${ch_idx}] <= 1'b0;
+
+            end
+        end
+
+        //Anode width check
+        always @(posedge (tb_w_icons_top.CLK_REC_S)) begin
+            if (EnP[${ch_idx}] == 1'b1) begin
+                test_anode_chk [${ch_idx}] <= 1'b1;
+                test_anode[${ch_idx}]      <= test_anode[${ch_idx}] + 1'b1;
+
+            end else if ( (EnP[${ch_idx}] == 1'b0) && (test_anode_chk[${ch_idx}]) ) begin
+                test_anode_chk [${ch_idx}] <= 1'b0;
+                if ((test_anode[${ch_idx}]/33) == tb_w_icons_top.wc_s[${ch_idx}]) begin
+                    tb_stim_check;
+                    \$display("[Analog Macro Montoring] - Channel[%2d] ->  Anode  Pulse period (Generated by stim ctrl) = %4d , WA       (User-defined) = %4d", ${ch_idx},test_anode[${ch_idx}]/33,tb_w_icons_top.wc_s[${ch_idx}]);
+                end else begin
+                    \$display("[Err                   ] - Channel[%2d] ->  Anode  Pulse period (Generated by stim ctrl) = %4d , WA       (User-defined) = %4d", ${ch_idx},test_anode[${ch_idx}]/33,tb_w_icons_top.wc_s[${ch_idx}]);
+                    tb_stim_err;
+                end
+                test_anode[${ch_idx}] <= 0;
+            end
+
+
+        end
+        
+        //gap
+        always @(posedge (tb_w_icons_top.CLK_REC_S) ) begin
+            if (EnN[${ch_idx}] == 1'b1) begin
+                test_gap[${ch_idx}]      <= 0;
+                test_gap_chk [${ch_idx}] <= 1'b1;
+            end else if ( (EnN[${ch_idx}] == 1'b0) && (EnP[${ch_idx}] == 1'b0) && (test_gap_chk [${ch_idx}]) ) begin
+                test_gap[${ch_idx}] <= test_gap[${ch_idx}] + 1'b1;
+            end else if ((EnP[${ch_idx}] == 1'b1) && (test_gap_chk [${ch_idx}])) begin
+                
+                if ((test_gap[${ch_idx}]/33) == tb_w_icons_top.gap_s[${ch_idx}]) begin
+                    \$display("[Analog Macro Montoring] - Channel[%2d] ->  Gap period          (Generated by stim ctrl) = %4d , GAP      (User-defined) = %4d", ${ch_idx},test_gap[${ch_idx}]/33,tb_w_icons_top.gap_s[${ch_idx}]);
+                    tb_stim_check;
+                    
+                end else begin
+                    \$display("[Err                   ] - Channel[%2d] ->  Gap period          (Generated by stim ctrl) = %4d , GAP      (User-defined) = %4d", ${ch_idx},test_gap[${ch_idx}]/33,tb_w_icons_top.gap_s[${ch_idx}]);
+                    tb_stim_err;
+                end
+                test_gap[${ch_idx}]      <= 0;
+                test_gap_chk [${ch_idx}] <= 0;
+               
+            end
+        end
+
+        //interval
+        always @(posedge (tb_w_icons_top.CLK_REC_S) ) begin
+            if (test_interval_en[${ch_idx}] && (test_num[${ch_idx}] < tb_w_icons_top.num_s[${ch_idx}]) ) begin 
+                if (test_num[${ch_idx}] < tb_w_icons_top.interval_s[${ch_idx}]) begin
+                    if (EnP[${ch_idx}] == 1'b1) begin
+                        test_interval[${ch_idx}]      <= 0;
+                        test_interval_chk [${ch_idx}] <= 1'b1;
+                    end else if ( (EnP[${ch_idx}] == 1'b0) && (EnN[${ch_idx}] == 1'b0) && (test_interval_chk[${ch_idx}]) ) begin
+                        test_interval[${ch_idx}] <= test_interval[${ch_idx}] + 1'b1;
+                    end else if ((EnN[${ch_idx}] == 1'b1) && (test_interval_chk[${ch_idx}])) begin
+                        
+                        if ((test_interval[${ch_idx}]/33) == tb_w_icons_top.interval_s[${ch_idx}]) begin
+                            \$display("[Analog Macro Montoring] - Channel[%2d] ->  Interval period     (Generated by stim ctrl) = %4d , Interval (User-defined) = %4d", ${ch_idx},test_interval[${ch_idx}]/33,tb_w_icons_top.interval_s[${ch_idx}]);
+                            tb_stim_check;
+                            
+                        end else begin
+                            \$display("[Err                   ] - Channel[%2d] ->  Interval period     (Generated by stim ctrl) = %4d , Interval (User-defined) = %4d", ${ch_idx},test_interval[${ch_idx}]/33,tb_w_icons_top.interval_s[${ch_idx}]);
+                            tb_stim_err;
+                        end
+                        test_interval[${ch_idx}]      <= 0;
+                        test_interval_chk [${ch_idx}] <= 0;
+                       
+                    end
+                end
+            end
+        end
+
+        //num
+        always @(posedge (tb_w_icons_top.CLK_REC_S) ) begin
+            if ((EnN[${ch_idx}] == 1'b1) && (test_num[${ch_idx}] < tb_w_icons_top.num_s[${ch_idx}]) && (test_num_chk[${ch_idx}] == 1'b0)) begin
+                test_num[${ch_idx}]         <= test_num[${ch_idx}] + 1'b1;
+                test_num_chk[${ch_idx}]     <= 1'b1;
+                test_interval_en[${ch_idx}] <= 1'b1; 
+              
+            end else if ((EnP[${ch_idx}] == 1'b1) && (test_num[${ch_idx}] < tb_w_icons_top.num_s[${ch_idx}]) && (test_num_chk[${ch_idx}] == 1'b1)) begin
+                test_num_chk[${ch_idx}]     <= 1'b0;  
+            
+           
+            end else if ( ((EnN[${ch_idx}] == 1'b0) && (EnP[${ch_idx}] == 1'b0) && (test_num[${ch_idx}] == tb_w_icons_top.num_s[${ch_idx}])) ) begin
+                test_num[${ch_idx}]         <= 0; 
+                test_num_chk[${ch_idx}]     <= 1'b0;
+                test_interval_en[${ch_idx}] <= 1'b0;
+            end
+        end
+
+        //ia and ic
+        always @(posedge (tb_w_icons_top.CLK_REC_S) ) begin
+            if ((EnN[${ch_idx}] == 1'b1) || (EnP[${ch_idx}] == 1'b1)) begin
+                if ( (${stim_dacn} == tb_w_icons_top.ic_s[${ch_idx}]) && (${stim_dacp} == tb_w_icons_top.ic_s[${ch_idx}]) ) begin
+                    tb_stim_check;
+                end else begin 
+                    \$display("[Err                   ] - Channel[%2d] ->   Bn = %4d , Bp = %4d , User-defined Amplitude = %4d", ${ch_idx},${stim_dacn},${stim_dacp},tb_w_icons_top.ic_s[${ch_idx}]);
+                    tb_stim_err;
+                end            
+            end
+        end
+
+
+        //check the limiting current status
+       
+        always @(posedge (tb_w_icons_top.CLK_REC_S) ) begin
+            //ones_am[${ch_idx}] <= count_ones({tb_w_icons_top.stim_mask_g2,tb_w_icons_top.stim_mask_g1});
+            
+            if (FDA == 1) begin
+                // to avoid the intermediate unwanted results
+                #6000000;
+                if ( (ones_ch > 7) && (ones_ch < 12) && (FDA == 1) ) begin
+                    tb_stim_check;
+                end else if (FDA == 1) begin
+                    \$display("[Err -> Limiting Current for channel [%2d] ]",${ch_idx} );
+                    tb_stim_err;
+                end
+            end
+        end
+
+    }
+}
+
+#################################################################################
+#################################################################################
+###
+###    TESTBENCH
+###
+#################################################################################
+#################################################################################
+
+C tb_w_icons_top -verbatim {
+/* clock/reset */
+
+`include "tb_selfcheck.vh"
+
+
+reg                 clk_ref;
+reg                 clk_ref_spi;
+reg                 reset_n;
+
+reg                 spi_cs;                 
+reg  [7:0]          tx_data;
+reg                 tx_data_valid;
+reg                 stim_xen;
+
+assign CLK_REF_S    = clk_ref;
+assign RESET_N_S    = reset_n;
+assign STIM_XEN_S   = stim_xen;
+assign CLK_REF_SPI_S = clk_ref_spi; 
+
+parameter CLKPERIOD_REF     = 10; //10, for 100MHz
+parameter CLKPERIOD_REF_SPI = 62.5;
+
+
+initial begin: reset_gen
+    spi_cs  = 1'b1;
+    reset_n = 1'b0;
+    #(5.3*CLKPERIOD_REF);
+    reset_n = 1'b1;
+    stim_xen = 1'b0;
+end
+
+always begin: clk_gen
+    clk_ref = 1'b0;
+    #(CLKPERIOD_REF / 2.0);
+    clk_ref = 1'b1;
+    #(CLKPERIOD_REF / 2.0);
+end
+
+always begin: clk_gen_spi
+    clk_ref_spi = 1'b0;
+    #(CLKPERIOD_REF_SPI / 2.0);
+    clk_ref_spi = 1'b1;
+    #(CLKPERIOD_REF_SPI / 2.0);
+end
+
+
+//SPI Master Emulator connection
+initial begin
+    tx_data = 0;
+    tx_data_valid = 0;
+end
+
+assign tx_data_s       = tx_data;
+assign tx_data_valid_s = tx_data_valid;
+assign SPI_CS_S        = spi_cs;
+
+
+`include "spi_master_top_level_tasks.vh"
+`include "testcase.vh"
+}

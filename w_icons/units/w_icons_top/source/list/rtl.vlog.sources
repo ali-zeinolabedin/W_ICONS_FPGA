@@ -1,0 +1,27 @@
+// keep begin sources
+//top-level
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_core.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_top.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/common_reset_sync.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/common_sync.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/common_clkbuf.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/common_clkgate.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/common_mux.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/w_icons_pads.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v
+${PRJ_DIR}/units/w_icons_top/source/rtl/verilog/rec_ctrl.v
+//spi_wrap
+${PRJ_DIR}/units/spi_wrap/source/rtl/verilog/spi_wrap.v
+${PRJ_DIR}/units/spi_wrap/source/rtl/verilog/spi_slave_common.v
+${PRJ_DIR}/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v
+${PRJ_DIR}/units/spi_wrap/source/rtl/verilog/w_icons_rf.v
+//stim_ctrls_wrap
+${PRJ_DIR}/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v
+${PRJ_DIR}/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v
+
+${PRJ_DIR}/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v
+
+// keep end
+

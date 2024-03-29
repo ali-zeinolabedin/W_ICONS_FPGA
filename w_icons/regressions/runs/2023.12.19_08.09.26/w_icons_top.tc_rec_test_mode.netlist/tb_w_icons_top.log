@@ -1,0 +1,35 @@
+VCD info: dumping is suppressed.
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 01010164
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 0] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00720], Expected Channel Index   : [00720]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 1] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00722], Expected Channel Index   : [00722]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 2] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00724], Expected Channel Index   : [00724]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 3] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00726], Expected Channel Index   : [00726]
+---------------------------------------------------------------------------------------------
+ Passed (ADC1)    : Rec. Ch [ 4] Enable stat  : [ 1]   , Imp Enable               : [ 0]
+ Passed (ADC1)    : Read Channel data         : [00728], Expected Channel Index   : [00728]
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m

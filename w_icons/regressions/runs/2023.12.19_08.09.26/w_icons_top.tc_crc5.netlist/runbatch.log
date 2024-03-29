@@ -1,0 +1,32 @@
+VCD info: dumping is suppressed.
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 01010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 01010164
+Coincident match=> Idx: [  13]=> (data: 00000088) Truly calculated CRC5 [   1b], Wrongly calculated CRC5 [   1b]
+Coincident match=> Idx: [  14]=> (data: 00000089) Truly calculated CRC5 [   1e], Wrongly calculated CRC5 [   1e]
+Coincident match=> Idx: [  16]=> (add :      040) Truly calculated CRC5 [   01], Wrongly calculated CRC5 [   01]
+Coincident match=> Idx: [  43]=> (add :      0ac) Truly calculated CRC5 [   00], Wrongly calculated CRC5 [   00]
+Coincident match=> Idx: [  57]=> (add :      0e4) Truly calculated CRC5 [   0a], Wrongly calculated CRC5 [   0a]
+Coincident match=> Idx: [ 199]=> (add :      31c) Truly calculated CRC5 [   04], Wrongly calculated CRC5 [   04]
+Coincident match=> Idx: [ 213]=> (add :      354) Truly calculated CRC5 [   0e], Wrongly calculated CRC5 [   0e]
+Coincident match=> Idx: [  16]=> (add :      040) Truly calculated CRC5 [   01], Wrongly calculated CRC5 [   01]
+Coincident match=> Idx: [  43]=> (add :      0ac) Truly calculated CRC5 [   00], Wrongly calculated CRC5 [   00]
+Coincident match=> Idx: [  57]=> (add :      0e4) Truly calculated CRC5 [   0a], Wrongly calculated CRC5 [   0a]
+Coincident match=> Idx: [ 199]=> (add :      31c) Truly calculated CRC5 [   04], Wrongly calculated CRC5 [   04]
+Coincident match=> Idx: [ 213]=> (add :      354) Truly calculated CRC5 [   0e], Wrongly calculated CRC5 [   0e]
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m

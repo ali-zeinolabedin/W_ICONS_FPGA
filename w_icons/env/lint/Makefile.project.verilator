@@ -1,0 +1,90 @@
+#-------------------------------------
+#  Module : Makefile.project.verilator
+#  Author : Ali Zeinolabedin
+#  Company: Blackrock Neurotech
+#  Desc.  : This Makefile is only applicable for verilator
+#-------------------------------------
+
+
+# ------------  configuration parameters ---------------------------------------
+LINT_LOG        ?= $(WORK_DIR)/lint.log
+LINT_LOG_ERR    ?= $(WORK_DIR)/lint_err.log
+
+
+#===============================================================================
+# The following statements usually need not to be changed
+#===============================================================================
+
+# ------------  build and run tools  -------------------------------------------
+USER_MACRO      ?= 
+VERILATOR       ?= verilator $(USER_MACRO) --lint-only
+$(info $(USER_MACRO))
+
+# ------------  tool flags for lint  --------------------------------------------
+#-Wall        Enable all style warnings = -Wwarn-lint -Wwarn-style
+#-Wwarn-lint  Enable lint warning message
+#-Wwarn-style Enable style warning message
+VERILATOR_FLAGS_H  ?= -Wall 
+VERILATOR_FLAGS_L  ?= -Wno-fatal 
+
+# ------------  tool flags for verilator  ---------------------------------------
+# added for being used in Verilator, it excludes all TB related files
+VLOG_SRC_NTB               += $(filter-out sources/tb.vlog.sources ,  $(VLOG_SRC_FILES))
+VLOG_SOURCES_NTB           += $(foreach f,$(VLOG_SRC_NTB), $(shell echo $(shell cat $f | sed -e 'sX^\(\#\|//\).*XX')))
+VLOG_SOURCES_NTB_NPADLIB   += $(filter-out /home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/resources/tpd018bcdnv5.v, $(VLOG_SOURCES_NTB))
+VLOG_SOURCES_NTB_NPAD      += $(filter-out /home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_pads.v, $(VLOG_SOURCES_NTB_NPADLIB))
+VLOG_SOURCES_NTB_NPAD_NTOP += $(filter-out /home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v, $(VLOG_SOURCES_NTB_NPAD))
+VLOG_SOURCES_CORE          += $(filter-out /home/azeinolabedin/ASIC-W-ICONS/Cadence/w_icons/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v, $(VLOG_SOURCES_NTB_NPAD_NTOP))
+#$(info $(VLOG_SRC_FILES))
+#$(info $(VLOG_SRC_NTB))
+#$(info $(VLOG_SOURCES_NTB))
+$(info $(VLOG_SOURCES_CORE))
+
+# ------------  info output ----------------------------------------------------
+info-lint:
+ifneq (,$(strip $(VLOG_SOURCES_CORE) ))
+	$q$(call echo, "$${b}$(vlogcolor)VLOG-SOURCES$${c}")
+	$q$(foreach name,$(notdir $(VLOG_SOURCES_CORE)),echo "$(name)";)
+endif
+.PHONY: info-lint
+
+# ------------  rules ----------------------------------------------------------
+linth_batch: | $(WORK_DIR)
+	$q$(call echo, "$${b}$(vlogcolor)LINT-CHECK$${c} ")
+	$q$(call echo, "$${b}$(vlogcolor)REPORT go to:-> $(WORK_DIR)/$${c}")
+	$q$(VERILATOR) $(VERILATOR_FLAGS_H) $(VLOG_SOURCES_CORE) > $(LINT_LOG) 2>$(LINT_LOG_ERR)
+
+lintl_batch: | $(WORK_DIR)
+	$q$(call echo, "$${b}$(vlogcolor)LINT-CHECK$${c} ")
+	$q$(call echo, "$${b}$(vlogcolor)REPORT go to:-> $(WORK_DIR)/$${c}")
+	$q$(VERILATOR) $(VERILATOR_FLAGS_L) $(VLOG_SOURCES_CORE) > $(LINT_LOG) 2>$(LINT_LOG_ERR)
+
+linth: 
+	$q$(call echo, "$${b}$(vlogcolor)LINT-CHECK$${c} ")
+	$q$(VERILATOR) $(VERILATOR_FLAGS_H) $(VLOG_SOURCES_CORE) 
+	
+lintl: 
+	$q$(call echo, "$${b}$(vlogcolor)LINT-CHECK$${c} ")
+	$q$(VERILATOR) $(VERILATOR_FLAGS_L) $(VLOG_SOURCES_CORE) 
+
+# Note that file or line-specific configuration only applies to files read after the configuration file. ..>
+#..>It is therefore recommended to pass the configuration file to Verilator as the first file.
+lint:
+	$q$(call echo, "$${b}$(vlogcolor)LINT-CHECK$${c} ")
+	$q$(VERILATOR)  $(VLOG_SOURCES_CORE) ./lint_rules.vlt -f ./lint_rules_error.options 
+
+# $q$(VERILATOR) ./lint_rules.vlt -f ./lint_rules_error.options $(VLOG_SOURCES_NTB_NPAD) > $(LINT_LOG) 2>$(LINT_LOG_ERR)
+lint_batch: | $(WORK_DIR)
+	$q$(call echo, "$${b}$(vlogcolor)LINT-CHECK$${c} ")
+	$q$(call echo, "$${b}$(vlogcolor)REPORT go to:-> $(WORK_DIR)/$${c}")
+	$q$(VERILATOR) $(VLOG_SOURCES_CORE) > $(LINT_LOG) 2>$(LINT_LOG_ERR) ./lint_rules.vlt -f ./lint_rules_error.options
+
+
+
+#$(info $(MAKEFILE_LIST))
+#$(info $(DUMP_MOD_NAME))
+test:
+	$(info ""Ali"")
+	$(info $(DUMPMODE))
+
+.PHONY:  clean-vlog

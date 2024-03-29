@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1705094335" LaunchIncrCheckpoint="$PPRDIR/../../../../../../../ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/utils_1/imports/synth_1/w_icons_top.dcp">
+  <File Type="RDS-DCP" Name="w_icons_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="w_icons_top_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="w_icons_top.tcl"/>
+  <File Type="RDS-UTIL" Name="w_icons_top_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="w_icons_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="w_icons_top.vds"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkbuf.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/common_clkbuf.v"/>
+        <Attr Name="ImportTime" Val="1704736197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/common_clkdiv_by_n.v"/>
+        <Attr Name="ImportTime" Val="1704736197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkgate.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/common_clkgate.v"/>
+        <Attr Name="ImportTime" Val="1704736197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/common_mux.v"/>
+        <Attr Name="ImportTime" Val="1704736197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_reset_sync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/common_reset_sync.v"/>
+        <Attr Name="ImportTime" Val="1704736197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_sync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/common_sync.v"/>
+        <Attr Name="ImportTime" Val="1704736197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/rec_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/rec_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../spi_wrap/source/rtl/verilog/spi_custom_logic.v"/>
+        <Attr Name="ImportTime" Val="1704831988"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_slave_common.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../spi_wrap/source/rtl/verilog/spi_slave_common.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/spi_wrap/source/rtl/verilog/spi_wrap.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../spi_wrap/source/rtl/verilog/spi_wrap.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1704736198"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v"/>
+        <Attr Name="ImportTime" Val="1704831988"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_core.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/w_icons_core.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/w_icons_mgmt.v"/>
+        <Attr Name="ImportTime" Val="1704831988"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/spi_wrap/source/rtl/verilog/w_icons_rf.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../spi_wrap/source/rtl/verilog/w_icons_rf.v"/>
+        <Attr Name="ImportTime" Val="1704831988"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/w_icons_sync_rst.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/source/rtl/verilog/w_icons_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../source/rtl/verilog/w_icons_top.v"/>
+        <Attr Name="ImportTime" Val="1704832012"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/spi_master_emulator/source/rtl/verilog/spi_master_emulator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../spi_master_emulator/source/rtl/verilog/spi_master_emulator.v"/>
+        <Attr Name="ImportTime" Val="1704831987"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/units/w_icons_top/simulation/generic/tc_sanity/testcase.vh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../simulation/generic/tc_sanity/testcase.vh"/>
+        <Attr Name="ImportTime" Val="1704996957"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="w_icons_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/Arty-A7-100-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../constraints/Arty-A7-100-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1704839088"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/constraints/Arty-A7-100-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/w_icons_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

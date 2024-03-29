@@ -1,0 +1,36 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkbuf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module common_clkbuf
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module common_clkdiv_by_n
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_clkgate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module common_clkgate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module common_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module common_reset_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/common_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module common_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/w_icons_top/source/rtl/verilog/rec_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rec_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rec_stim64ch_macro
+ERROR: [VRFC 10-2989] 'Bp5' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:430]
+ERROR: [VRFC 10-2989] 'Bp5' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:431]
+ERROR: [VRFC 10-2989] 'Bn5' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:440]
+ERROR: [VRFC 10-2989] 'Bn5' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:441]
+ERROR: [VRFC 10-2989] 'Bp6' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:453]
+ERROR: [VRFC 10-2989] 'Bp6' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:454]
+ERROR: [VRFC 10-2989] 'Bn6' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:463]
+ERROR: [VRFC 10-2989] 'Bn6' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:464]
+ERROR: [VRFC 10-2989] 'Bp7' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:476]
+ERROR: [VRFC 10-2989] 'Bp7' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:477]
+ERROR: [VRFC 10-2989] 'Bn7' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:486]
+ERROR: [VRFC 10-2989] 'Bn7' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:487]
+ERROR: [VRFC 10-2989] 'Bp8' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:499]
+ERROR: [VRFC 10-2989] 'Bp8' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:500]
+ERROR: [VRFC 10-2989] 'Bn8' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:509]
+ERROR: [VRFC 10-2989] 'Bn8' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:510]
+ERROR: [VRFC 10-2989] 'Bp9' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:522]
+ERROR: [VRFC 10-2989] 'Bp9' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:523]
+ERROR: [VRFC 10-2989] 'Bn9' is not declared [/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sources_1/imports/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v:532]
+INFO: [#UNDEF] Sorry, too many errors..

@@ -1,0 +1,24 @@
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_doc/TSMCHOME/digital/Documentation/documents/tcb018bcdgp2a_110a/"  DOC_STDCELL_5.0V
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018gbwp7t_290a/tcb018gbwp7t_270a_doc/TSMCHOME/digital/Documentation/documents/tcb018gbwp7t_270a/" DOC_STDCELL_1.8V
+ln -s "/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tpd018bcdnv5_113c/tpd018bcdnv5_160c_doc/TSMCHOME/digital/Documentation/documents/tpd018bcdnv5_160c/"  DOC_IOCELL_1.8V
+ln -s "/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tps018bcdnv5_113a/tps018bcdnv5_160b_doc/TSMCHOME/digital/Documentation/documents/tps018bcdnv5_160b/"  DOC_IOCELL_5.0V
+
+
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_vlg/TSMCHOME/digital/Front_End/verilog/tcb018bcdgp2a_110a/tcb018bcdgp2a.v" 
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcb018bcdgp2a_110a/" LIB_STDCELL_5.0V_NLDM
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcb018bcdgp2a_110a/" LIB_STDCELL_5.0V_CCS
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_sef/TSMCHOME/digital/Back_End/lef/tcb018bcdgp2a_110a/lef/" LEF_STDCELL_5.0V
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018bcdgp2a_110c/tcb018bcdgp2a_110a_sef/TSMCHOME/digital/Back_End/lef/tcb018bcdgp2a_110a/techfiles/" TECHFILES_STDCELL_5.0v
+
+ln -s "/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tps018bcdnv5_113a/tps018bcdnv5_130a_vlg/TSMCHOME/digital/Front_End/verilog/tps018bcdnv5_130a/tps018bcdnv5.v"
+ln -s "/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tps018bcdnv5_113a/tps018bcdnv5_160b_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tps018bcdnv5_160b/" LIB_IOCELL_5.0V_NLDM
+
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018gbwp7t_290a/tcb018gbwp7t_270a_vlg/TSMCHOME/digital/Front_End/verilog/tcb018gbwp7t_270a/tcb018gbwp7t.v" 
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018gbwp7t_290a/tcb018gbwp7t_270a_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcb018gbwp7t_270a/" LIB_STDCELL_1.8V_NLDM
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018gbwp7t_290a/tcb018gbwp7t_270a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcb018gbwp7t_270a/" LIB_STDCELL_1.8V_CCS
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018gbwp7t_290a/tcb018gbwp7t_270a_sef/TSMCHOME/digital/Back_End/lef/tcb018gbwp7t_270a/lef/" LEF_STDCELL_1.8V
+ln -s "/DKITS/TSMC/PDK/180HVBCD/STDCELLS/tcb018gbwp7t_290a/tcb018gbwp7t_270a_sef/TSMCHOME/digital/Back_End/lef/tcb018gbwp7t_270a/techfiles/" TECHFILES_STDCELL_1.8v
+
+
+ln -s "/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tpd018bcdnv5_113c/tpd018bcdnv5_160b_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpd018bcdnv5_160b" LIB_IOCELL_1.8V_NLDM
+ln -s "/DKITS/TSMC/PDK/180HVBCD/IOCELLS/tpd018bcdnv5_113c/tpd018bcdnv5_110a_vlg/TSMCHOME/digital/Front_End/verilog/tpd018bcdnv5_110a/tpd018bcdnv5.v"

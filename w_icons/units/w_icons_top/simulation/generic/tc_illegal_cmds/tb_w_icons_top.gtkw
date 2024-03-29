@@ -1,0 +1,260 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Dec 11 21:14:14 2023
+[*]
+[dumpfile] "/tmp/smaz-brn-iverilog-tb_w_icons_top-W2lU/tb_w_icons_top.dump"
+[dumpfile_mtime] "Mon Dec 11 21:03:28 2023"
+[dumpfile_size] 690290
+[savefile] "/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/units/w_icons_top/simulation/generic/tc_illegal_cmds/tb_w_icons_top.gtkw"
+[timestart] 0
+[size] 1920 926
+[pos] 42147 105
+*-25.886204 70000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.
+[treeopen] tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.
+[sst_width] 380
+[signals_width] 270
+[sst_expanded] 1
+[sst_vpaned_height] 447
+@28
+tb_w_icons_top.i_spi_master_emulator.reset_n_i
+@200
+-
+-
+@28
+tb_w_icons_top.i_spi_master_emulator.clk_i
+tb_w_icons_top.spi_cs
+tb_w_icons_top.i_spi_master_emulator.spi_clk_o
+tb_w_icons_top.i_spi_master_emulator.spi_miso_i
+tb_w_icons_top.i_spi_master_emulator.spi_mosi_o
+tb_w_icons_top.i_spi_master_emulator.tx_data_valid_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd4b_en_o
+@200
+-
+-
+@28
+tb_w_icons_top.SPI_CS_S
+tb_w_icons_top.SPI_CLK_S
+tb_w_icons_top.SPI_MOSI_S
+tb_w_icons_top.tx_data_ready_s
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cs_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_mosi_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_cnt[5:0]
+@24
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_cnt[5:0]
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_rx_word[40:0]
+@28
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.rx_done_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_rx_word_o[35:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.crc5[4:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.crc5[4:0]
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.crc5_chk_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd4b_en_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd4b_i[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_ready_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_tx_word_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.state[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.nxt_state[3:0]
+@200
+-
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_cmd[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_cnt[5:0]
+@24
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_cnt[5:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_lock
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_tx_word_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_tx_word_1d[39:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.spi_miso_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_crc5[4:0]
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_clk_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_rx_word_i[35:0]
+@28
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.crc5_chk_i
+[color] 2
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.rx_done_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_cmd[3:0]
+>-17000
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.nxt_state[3:0]
+>0
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.state[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_wdata[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_slave_common.tx_done_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.tx_ready_o
+@200
+-
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_addr_i[9:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_enable_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_prot_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_prot_i[2:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_resetn_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_sel_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_strb_i[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_wdata_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.apb_write_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_id_i[31:0]
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.spi_clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_sel
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_enable
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_write
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_strb_o[3:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_sel_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_enable_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_write_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_address[9:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_addr_o[9:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_wdata_o[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_ready_i
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.apb_rdata_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_spi_custom_logic.next_apb_state[2:0]
+@200
+-
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_error_load_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_error_cmd_o[3:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.chip_error_crc5_o[4:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.stim_mask0_g1_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.amp_gain_g1_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.amp_gain_g2_o[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_spi_wrap.i_w_icons_rf.val_stim_mask0_p1[31:0]
+@200
+-
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.clk_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.rec_sync_en_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_common_clkdiv_by_n_discharge.enable_i
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_common_clkdiv_by_n_discharge.clk_div_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_w_icons_mgmt.i_common_clkdiv_by_n_discharge.clk_div_o
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.gdischarge_o
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.pw_discharge_i[19:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.discharge_cnt[19:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.stim_discharge[1:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.stim_discharge[1:0]
+@22
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.en_rec_sync_g1_i[31:0]
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.en_rec_sync_g2_i[31:0]
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_rec_ctrl.stim_mask_en
+@200
+-
+@28
+tb_w_icons_top.ADC_EN_S
+tb_w_icons_top.ADC1_OUT_S
+tb_w_icons_top.ADC2_OUT_S
+@200
+-
+@29
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en0_s
+@28
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en1_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en2_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en3_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en4_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en5_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en6_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en7_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en8_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en9_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en10_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en11_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en12_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en13_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en14_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en15_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en16_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en17_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en18_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en19_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en20_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en21_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en22_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en23_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en24_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en25_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en26_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en27_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en28_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en29_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en30_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en31_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en32_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en33_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en34_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en35_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en36_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en37_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en38_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en39_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en40_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en41_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en42_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en43_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en44_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en45_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en46_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en47_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en48_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en49_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en50_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en51_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en52_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en53_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en54_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en55_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en56_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en57_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en58_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en59_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en60_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en61_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en62_s
+tb_w_icons_top.i_w_icons_top.i_w_icons_core.i_stim_ctrls_wrap.stim_cntrl_en63_s
+[pattern_trace] 1
+[pattern_trace] 0

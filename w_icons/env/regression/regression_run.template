@@ -1,0 +1,139 @@
+ <!---------------------------------------->
+ <!--Module : regression_run.template    -->
+ <!--Author : Ali Zeinolabedin           -->
+ <!--Company: Blackrock Neurotech        -->
+ <!---------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            background-color: #e6f7ff; /* Light Blue */
+            width: 100%;
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            border: 10px solid #FFB6C1; /* Adjust the border size and color as needed */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 5px; /* Adjust the padding as needed */
+            text-align: center;
+        }
+
+        th {
+            text-align: center; /* Center the text in table headers */
+        }
+
+        .passed {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .failed {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .unknown {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .content {
+            padding: 10px; /* Adjust the padding inside the frame */
+        }
+    </style>
+    <title>List of Regression Runs</title>
+</head>
+<body>
+    <h1>List of RTL Regression Runs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Running time</th>
+                <th>Simulator</th>
+                <th>Release</th>
+                <th># of TCs</th>
+                <th>Coverage Report</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- RTL List items will be inserted here -->
+        </tbody>
+    </table>
+</body>
+<body>
+    <h1>List of Netlist Regression Runs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Running time</th>
+                <th>Simulator</th>
+                <th>Netlist</th>
+                <th>Release</th>
+                <th># of TCs</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- NETLIST List items will be inserted here -->
+        </tbody>
+    </table>
+</body>
+<body>
+    <h1>List of SDF Releases</h1>
+    <table>
+        <thead>
+           <tr>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Release</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- SDF List items will be inserted here -->
+        </tbody>
+    </table>
+</body>
+<body>
+    <h1>Collected results from Netlist simulation with SDF</h1>
+    <table>
+        <thead>
+           <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Elab report</th>
+                <th>SDF Stats</th>
+                <th>Simulation: # of Warnings</th>
+                <th>Simulation: # of errors</th>
+                <th>Netlist</th>
+                <th>Release</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Collected List items will be inserted here -->
+        </tbody>
+    </table>
+</body>
+</html>

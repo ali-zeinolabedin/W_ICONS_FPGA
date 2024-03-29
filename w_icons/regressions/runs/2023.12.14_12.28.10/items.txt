@@ -1,0 +1,11 @@
+w_icons_top.tc_sanity PASSED 12:28:11 12:28:11 0 0 0
+w_icons_top.tc_sanity_stim PASSED 12:28:11 12:28:14 3 0 3
+w_icons_top.tc_rec_all_chs PASSED 12:28:14 12:28:22 8 0 8
+w_icons_top.tc_rec_discharge PASSED 12:28:22 12:28:47 25 0 25
+w_icons_top.tc_rec_test_mode PASSED 12:28:47 12:28:56 9 0 9
+w_icons_top.tc_stim_mask_chk_err PASSED 12:28:56 12:30:47 111 1 51
+w_icons_top.tc_crc5 PASSED 12:30:47 12:34:59 252 4 12
+w_icons_top.tc_rec_impedance PASSED 12:34:59 12:44:24 565 9 25
+w_icons_top.tc_rf_toggle PASSED 12:44:24 12:47:06 162 2 42
+w_icons_top.tc_stim_random_chs PASSED 12:47:06 12:48:25 79 1 19
+w_icons_top.tc_stim_selected_chs PASSED 12:48:25 12:48:47 22 0 22

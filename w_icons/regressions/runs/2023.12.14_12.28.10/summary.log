@@ -1,0 +1,13 @@
+w_icons_top.tc_sanity             TBCHECK:  PASSED  |  Start:  12:28:11  |  End:  12:28:11  |  RUNNING  Time:  0    ->  0  min(s)  and  0   sec(s)
+w_icons_top.tc_sanity_stim        TBCHECK:  PASSED  |  Start:  12:28:11  |  End:  12:28:14  |  RUNNING  Time:  3    ->  0  min(s)  and  3   sec(s)
+w_icons_top.tc_rec_all_chs        TBCHECK:  PASSED  |  Start:  12:28:14  |  End:  12:28:22  |  RUNNING  Time:  8    ->  0  min(s)  and  8   sec(s)
+w_icons_top.tc_rec_discharge      TBCHECK:  PASSED  |  Start:  12:28:22  |  End:  12:28:47  |  RUNNING  Time:  25   ->  0  min(s)  and  25  sec(s)
+w_icons_top.tc_rec_test_mode      TBCHECK:  PASSED  |  Start:  12:28:47  |  End:  12:28:56  |  RUNNING  Time:  9    ->  0  min(s)  and  9   sec(s)
+w_icons_top.tc_stim_mask_chk_err  TBCHECK:  PASSED  |  Start:  12:28:56  |  End:  12:30:47  |  RUNNING  Time:  111  ->  1  min(s)  and  51  sec(s)
+w_icons_top.tc_crc5               TBCHECK:  PASSED  |  Start:  12:30:47  |  End:  12:34:59  |  RUNNING  Time:  252  ->  4  min(s)  and  12  sec(s)
+w_icons_top.tc_rec_impedance      TBCHECK:  PASSED  |  Start:  12:34:59  |  End:  12:44:24  |  RUNNING  Time:  565  ->  9  min(s)  and  25  sec(s)
+w_icons_top.tc_rf_toggle          TBCHECK:  PASSED  |  Start:  12:44:24  |  End:  12:47:06  |  RUNNING  Time:  162  ->  2  min(s)  and  42  sec(s)
+w_icons_top.tc_stim_random_chs    TBCHECK:  PASSED  |  Start:  12:47:06  |  End:  12:48:25  |  RUNNING  Time:  79   ->  1  min(s)  and  19  sec(s)
+w_icons_top.tc_stim_selected_chs  TBCHECK:  PASSED  |  Start:  12:48:25  |  End:  12:48:47  |  RUNNING  Time:  22   ->  0  min(s)  and  22  sec(s)
+---
+PASSED: 11 out of 11

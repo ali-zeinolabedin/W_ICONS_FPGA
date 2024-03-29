@@ -1,0 +1,120 @@
+#---------------------------------------------------------------------------
+#  Module : Makefile.project.covered
+#  Author : Ali Zeinolabedin
+#  Company: Blackrock Neurotech
+#  covered in the current version only accepts the vcd format not lxt or fst
+#---------------------------------------------------------------------------
+
+# ------------  configuration parameters ---------------------------------------
+COV_SC_LOG        ?= $(WORK_DIR_COV)/coverage_score.log
+COV_RP_LOG        ?= $(WORK_DIR_COV)/coverage_report.log
+COV_RP_MEG_LOG    ?= $(WORK_DIR_COV)/coverage_report_merge.log
+
+
+#===============================================================================
+# The following statements usually need not to be changed
+#===============================================================================
+
+# ------------  build and run tools  -------------------------------------------
+COVERAGE_SC    ?= covered score
+COVERAGE_RP    ?= covered report
+
+# to be completed on the regression levels
+COVERAGE_MG    ?= covered merge
+
+# ------------  tool flags for coverage  --------------------------------------------
+COVERED_SC_FLAGS  ?= 
+# -d : Level of report detail (s=summary, d=detailed, v=verbose).
+# -m [l][t][c][f][r][a][m]  Type(s) of metrics to report.  l=line, t=toggle, c=combinational logic, f=FSM state/arc, r=race condition, a=assertion, m=memory. Default is ltcf.
+COVERAGE_RP_FLAGS ?= -d s
+# ------------  tool flags for iverilog  ---------------------------------------
+# added for being used in Verilator, it excludes all TB related files
+VLOG_SRC_NTB        += $(filter-out sources/tb.vlog.sources ,  $(VLOG_SRC_FILES))
+VLOG_SOURCES_NTB    += $(foreach f,$(VLOG_SRC_NTB), $(shell echo $(shell cat $f | sed -e 'sX^\(\#\|//\).*XX')))
+
+#$(info $(VLOG_SOURCES_NTB))
+
+# ------------  info output ----------------------------------------------------
+info-cov:
+ifneq (,$(strip $(VLOG_SOURCES_NTB) ))
+	$q$(call echo, "$${b}$(vlogcolor)VLOG-SOURCES$${c}")
+	$q$(foreach name,$(notdir $(VLOG_SOURCES_NTB)),echo "$(name)";)
+endif
+
+.PHONY: info-cov
+
+# ------------  config ----------------------------------------------------
+config:
+ifneq (,$(strip $(VLOG_SOURCES_NTB) ))
+	$q$(call echo, "$${b}$(vlogcolor)VLOG-SOURCES$${c}")
+	#$q$(foreach name,$(notdir $(VLOG_SOURCES_NTB)),echo "$(name)";)
+endif
+
+.PHONY: config
+
+# ------------  rules ----------------------------------------------------------
+cov_sc_batch: | $(WORK_DIR_COV)
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-SCORE$${c} ")
+	$q$(COVERAGE_SC) $(addprefix -v , $(VLOG_SOURCES_NTB)) $(addprefix -$(DUMPER) , $(WORK_DIR)/$(SIM_NAME).dump) $(addprefix -t , $(DESIGN)) $(addprefix -i , $(SIM_NAME).i_w_icons_top.i_$(DESIGN)) \
+	$(addprefix -o , $(WORK_DIR_COV)/$(SIM_NAME).cdd) $(COVERED_SC_FLAGS) > $(COV_SC_LOG) 2>&1
+
+# -t is the design top-level, -i is testbench.i_{design top-level}
+# just collect the results for the core to avoid the not-supported behavioral model in w_icons_pads and analog macro
+cov_sc: | $(WORK_DIR_COV)
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-SCORE$${c} ")
+	$q$(COVERAGE_SC) $(addprefix -v , $(VLOG_SOURCES_NTB)) $(addprefix -$(DUMPER) , $(WORK_DIR)/$(SIM_NAME).dump) $(addprefix -t , $(DESIGN)) $(addprefix -i , $(SIM_NAME).i_w_icons_top.i_$(DESIGN)) \
+	$(addprefix -o , $(WORK_DIR_COV)/$(SIM_NAME).cdd) $(COVERED_SC_FLAGS)
+
+cov_rp: | $(WORK_DIR_COV)
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-REPORT$${c} ")
+	$q$(COVERAGE_RP)  $(addprefix -o , ./coverage.report) $(COVERAGE_RP_FLAGS) $(WORK_DIR_COV)/$(SIM_NAME).cdd > $(COV_RP_LOG) 2>&1
+	$q$(call echo, "$${b}$(vlogcolor)         REPORT:-> ./coverage.report$${c} ")
+
+cov_rp_batch: cov_sc_batch | $(WORK_DIR_COV)
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-REPORT$${c} ")
+	$q$(COVERAGE_RP)  $(addprefix -o , ./coverage.report) $(COVERAGE_RP_FLAGS) $(WORK_DIR_COV)/$(SIM_NAME).cdd > $(COV_RP_LOG) 2>&1
+	$q$(call echo, "$${b}$(vlogcolor)         REPORT:-> ./coverage.report$${c} ")
+
+# User should import the ccd file manually, currently it doesn't automatically load the report
+cov_rp_gui: cov_sc_batch | $(WORK_DIR_COV)
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-REPORT$${c} ")
+	$q$(call echo, "$${b}$(vlogcolor)import $(SIM_NAME).cdd from $(WORK_DIR_COV)/ $${c} ")
+	$(COVERAGE_RP)  -view $(WORK_DIR_COV)/$(SIM_NAME).cdd  
+
+cov_show: cov_rp
+	$q$(call echo, "$${b}$(vlogcolor)OPEN-REPORT$${c} ")
+	$q$(EDITIOR) ./coverage.report
+
+#should be run in regression level to merge all the ccd file
+cov_mg: 
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-MERGE$${c} ")
+	$q$(COVERAGE_MG) -o $(WORK_DIR_COV)/merged2.cdd .work.covered/tb_w_icons_top.cdd ../tc_rec_all_chs/.work.covered/tb_w_icons_top.cdd
+	$q$(COVERAGE_RP)  $(addprefix -o , ./coverage_merge.report2) $(COVERAGE_RP_FLAGS) $(WORK_DIR_COV)/merged.cdd > $(COV_RP_MEG_LOG) 2>&1
+	
+cov_mg1: 
+	$q$(call echo, "$${b}$(vlogcolor)COVERAGE-MERGE$${c} ")
+	$q$(COVERAGE_MG) -o $(WORK_DIR_COV)/merged1.cdd \
+	.work.covered/tb_w_icons_top.cdd \
+	../tc_rec_test_mode/.work.covered/tb_w_icons_top.cdd
+	$q$(COVERAGE_RP)  $(addprefix -o , ./coverage_merge.report1) $(COVERAGE_RP_FLAGS) $(WORK_DIR_COV)/merged1.cdd > $(COV_RP_MEG_LOG) 2>&1
+
+#	 ../tc_stim_ch_err/.work.covered/tb_w_icons_top.cdd  ../tc_stim_all_mask_chk_err/.work.covered/tb_w_icons_top.cdd ../tc_stim_random_chs/.work.covered/tb_w_icons_top.cdd ../tc_rec_test_mode/.work.covered/tb_w_icons_top.cdd
+# ../tc_stim_1ch/.work.covered/tb_w_icons_top.cdd ../tc_stim_1ch_long/.work.covered/tb_w_icons_top.cdd 	../tc_crc5/.work.covered/tb_w_icons_top.cdd
+#../tc_rec_all_chs/.work.covered/tb_w_icons_top.cdd \
+	../tc_rec_discharge/.work.covered/tb_w_icons_top.cdd \
+	../tc_stim_selected_chs/.work.covered/tb_w_icons_top.cdd \
+	../tc_stim_mask_chk_err/.work.covered/tb_w_icons_top.cdd \
+#	../tc_rec_impedance_1ch/.work.covered/tb_w_icons_top.cdd ../tc_rec_impedance_1ch/.work.covered/tb_w_icons_top.cdd
+#../tc_sanity_stim/.work.covered/tb_w_icons_top.cdd  
+#covered score	$(COVERAGE_SC)  -v w_icons_sync_rst.v -vcd $(WORK_DIR_COV)/tb_w_icons_top.dump -o $(WORK_DIR_COV)/$(SIM_NAME).cdd  -i tb_w_icons_top.i_w_icons_top -t $(DESIGN)
+#covered report -d d -o $(WORK_DIR_COV)/cov.report $(WORK_DIR_COV)/$(SIM_NAME).cdd
+#covered merge -o .work.iverilog/merged.ccd .work.iverilog/tb_w_icons_top.cdd ../tc_sanity/.work.iverilog/tb_w_icons_top.cdd
+#$(info $(addprefix -i , $(SIM_NAME)))
+
+test:
+	$(info ""Ali1"")
+	$(info $(DUMPMODE))
+
+.PHONY:  clean-vlog
+
+

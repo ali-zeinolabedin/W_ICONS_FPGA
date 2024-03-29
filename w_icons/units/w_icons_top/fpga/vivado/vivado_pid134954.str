@@ -1,0 +1,327 @@
+/*
+
+AMD Vivado v2023.2 (64-bit) [Major: 2023, Minor: 2]
+SW Build: 4029153 on Fri Oct 13 20:13:54 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+
+Process ID (PID): 134954
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Mar 28 09:24:26 MDT 2024
+Time zone: 	Mountain Standard Time (America/Denver)
+
+OS: Linux
+OS Version: 5.15.0-100-generic
+OS Architecture: amd64
+Available processors (cores): 5
+
+Display: 0
+Screen size: 1920x974
+Local screen bounds: x = 0, y = 0, width = 1920, height = 934
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	17.0.7 64-bit
+JavaFX version: 17.0.1
+Java home: 	/home/smaz-brn/tool_extended/Vivado/2023.2/tps/lnx64/jre17.0.7_7
+Java executable: 	/home/smaz-brn/tool_extended/Vivado/2023.2/tps/lnx64/jre17.0.7_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	smaz-brn
+User home directory: /home/smaz-brn
+User working directory: /home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/smaz-brn/tool_extended/Vivado
+HDI_APPROOT: /home/smaz-brn/tool_extended/Vivado/2023.2
+RDI_DATADIR: /home/smaz-brn/tool_extended/Vivado/2023.2/data
+RDI_BINDIR: /home/smaz-brn/tool_extended/Vivado/2023.2/bin
+
+Vivado preferences file: /home/smaz-brn/.Xilinx/Vivado/2023.2/vivado.xml
+Vivado preferences directory: /home/smaz-brn/.Xilinx/Vivado/2023.2/
+Vivado layouts directory: /home/smaz-brn/.Xilinx/Vivado/2023.2/data/layouts
+PlanAhead jar file: 	/home/smaz-brn/tool_extended/Vivado/2023.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/vivado.log
+Vivado journal file: 	/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-134954-smaz-brn
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /home/smaz-brn/tool_extended/Vivado/2023.2
+RDI_BASEROOT: /home/smaz-brn/tool_extended/Vivado
+RDI_BINROOT: /home/smaz-brn/tool_extended/Vivado/2023.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/smaz-brn/tool_extended/Vivado/2023.2/data
+RDI_INSTALLROOT: /home/smaz-brn/tool_extended
+RDI_INSTALLVER: 2023.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.7_7
+RDI_LIBDIR: /home/smaz-brn/tool_extended/Vivado/2023.2/lib/lnx64.o/Default:/home/smaz-brn/tool_extended/Vivado/2023.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/smaz-brn/tool_extended/Vivado/2023.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/smaz-brn/tool_extended/Vivado/2023.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado:smaz-brn_1711639449_134913
+RDI_SHARED_DATA: /home/smaz-brn/tool_extended/SharedData/2023.2/data
+RDI_TPS_ROOT: /home/smaz-brn/tool_extended/Vivado/2023.2/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /home/smaz-brn/tool_extended/Vivado/2023.2/ids_lite/ISE
+XILINX_DSP: /home/smaz-brn/tool_extended/Vivado/2023.2/ids_lite/ISE
+XILINX_HLS: /home/smaz-brn/tool_extended/Vitis_HLS/2023.2
+XILINX_PLANAHEAD: /home/smaz-brn/tool_extended/Vivado/2023.2
+XILINX_VIVADO: /home/smaz-brn/tool_extended/Vivado/2023.2
+XILINX_VIVADO_HLS: /home/smaz-brn/tool_extended/Vivado/2023.2
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,405 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // u (PAResourceEtoH.GettingStartedView_OPEN_PROJECT)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,421 MB. GUI used memory: 75 MB. Current time: 3/28/24, 9:24:26 AM MDT
+// Elapsed time: 10 seconds
+setFileChooser("/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.xpr");
+// [GUI Memory]: 86 MB (+87538kb) [00:00:20]
+// [Engine Memory]: 1,455 MB (+1374349kb) [00:00:20]
+// Opening Vivado Project: /home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.xpr. Version: Vivado v2023.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 93 MB (+3082kb) [00:00:22]
+// [Engine Memory]: 1,553 MB (+25894kb) [00:00:22]
+// [GUI Memory]: 144 MB (+48567kb) [00:00:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  2353 ms.
+// Tcl Message: open_project /home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1' since last save. INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as '/home/.Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store'; using path '/home/smaz-brn/.Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store' instead. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/smaz-brn/tool_extended/Vivado/2023.2/data/ip'. 
+// Project name: project_1; location: /home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bq (Open Project Progress)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+// [Engine Memory]: 1,640 MB (+10383kb) [00:00:29]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, w_icons_sync_rst.v]", 19, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, w_icons_top.v]", 20, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, w_icons_top.v]", 20, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,699 MB. GUI used memory: 79 MB. Current time: 3/28/24, 9:24:51 AM MDT
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Arty-A7-100-Master.xdc]", 26, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Arty-A7-100-Master.xdc]", 26, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,735 MB. GUI used memory: 79 MB. Current time: 3/28/24, 9:25:06 AM MDT
+// [Engine Memory]: 1,736 MB (+13993kb) [00:00:52]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22, true); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Tcl (Dont Echo) Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1373 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+dismissDialog("Open Hardware Manager"); // bq (Open Hardware Manager Progress)
+// [GUI Memory]: 155 MB (+3382kb) [00:00:56]
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ao (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2023.2   **** Build date : Oct 13 2023 at 20:26:23     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2023.2.0   ****** Build date   : Oct 09 2023-22:01:56     **** Build number : 2023.2.1696910516       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.    
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210319B57B47A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.runs/impl_1/w_icons_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bq (Auto Connect Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMoreButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null); // r (PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE)
+setFileChooser("/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.runs/impl_1/w_icons_top.bit");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP (dialog1)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.runs/impl_1/w_icons_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 12 seconds
+dismissDialog("Program Device"); // bq (Program Device Progress)
+// [Engine Memory]: 1,822 MB (+92kb) [00:01:20]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,834 MB. GUI used memory: 84 MB. Current time: 3/28/24, 9:25:36 AM MDT
+// [GUI Memory]: 162 MB (+180kb) [00:02:17]
+// Elapsed time: 215 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j (PAResourceTtoZ.TaskBanner_CLOSE)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Confirm Close"); // u (dialog3)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Arty-A7-100-Master.xdc", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "w_icons_top.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: xvlog --incr --relax -prj tb_w_icons_top_vlog.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.sim/sim_1/behav/xsim/xvlog.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.sim/sim_1/behav/xsim/xvlog.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.", 1); // b (PAResourceAtoD.CmdMsgDialog_MESSAGES)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog4)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,856 MB. GUI used memory: 85 MB. Current time: 3/28/24, 9:29:26 AM MDT
+// Elapsed time: 392 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Arty-A7-100-Master.xdc", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,859 MB. GUI used memory: 86 MB. Current time: 3/28/24, 9:59:27 AM MDT
+// Elapsed time: 2453 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j (PAResourceTtoZ.TaskBanner_CLOSE)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Confirm Close"); // u (dialog5)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bq (Close Hardware Manager Progress)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, w_icons_rf.v]", 18, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog, xil_defaultlib, w_icons_rf.v]", 18, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,893 MB. GUI used memory: 85 MB. Current time: 3/28/24, 10:17:02 AM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,894 MB. GUI used memory: 67 MB. Current time: 3/28/24, 10:47:02 AM MDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1238 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,894 MB. GUI used memory: 67 MB. Current time: 3/28/24, 11:17:02 AM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 67 MB. Current time: 3/28/24, 11:47:03 AM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 69 MB. Current time: 3/28/24, 12:17:03 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 67 MB. Current time: 3/28/24, 12:47:03 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 67 MB. Current time: 3/28/24, 1:17:04 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 59 MB. Current time: 3/28/24, 1:47:04 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 59 MB. Current time: 3/28/24, 2:17:05 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 58 MB. Current time: 3/28/24, 2:47:05 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 58 MB. Current time: 3/28/24, 3:17:05 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 58 MB. Current time: 3/28/24, 3:47:06 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 59 MB. Current time: 3/28/24, 4:17:06 PM MDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,907 MB. GUI used memory: 57 MB. Current time: 3/29/24, 8:13:26 AM MDT
+// WARNING: HEventQueue.dispatchEvent() is taking  3205 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,898 MB. GUI used memory: 59 MB. Current time: 3/29/24, 8:43:26 AM MDT
+// Elapsed time: 82562 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22, true); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// [Engine Memory]: 1,915 MB (+1725kb) [23:48:46]
+dismissDialog("Open Hardware Manager"); // bq (Open Hardware Manager Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,922 MB. GUI used memory: 69 MB. Current time: 3/29/24, 9:13:02 AM MDT
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ao (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2023.2   **** Build date : Oct 13 2023 at 20:26:23     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2023.2.0   ****** Build date   : Oct 09 2023-22:01:56     **** Build number : 2023.2.1696910516       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.    
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210319B57B47A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/smaz-brn/project/W_ICONS_FPGA/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.runs/impl_1/w_icons_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bq (Auto Connect Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA

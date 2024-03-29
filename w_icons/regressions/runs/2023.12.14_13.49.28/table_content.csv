@@ -1,0 +1,120 @@
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_sanity/regression.log">w_icons_top.tc_sanity</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:49:28</td>  		  
+	<td>13:49:29</td>  		  
+	<td><div class="duration-bar" style="width: 1px"></div></td>  		  
+	<td>0 min(s) and  1 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_sanity_stim/regression.log">w_icons_top.tc_sanity_stim</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:49:29</td>  		  
+	<td>13:49:32</td>  		  
+	<td><div class="duration-bar" style="width: 3px"></div></td>  		  
+	<td>0 min(s) and  3 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_rec_all_chs/regression.log">w_icons_top.tc_rec_all_chs</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:49:32</td>  		  
+	<td>13:49:39</td>  		  
+	<td><div class="duration-bar" style="width: 7px"></div></td>  		  
+	<td>0 min(s) and  7 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_rec_discharge/regression.log">w_icons_top.tc_rec_discharge</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:49:40</td>  		  
+	<td>13:50:04</td>  		  
+	<td><div class="duration-bar" style="width: 24px"></div></td>  		  
+	<td>0 min(s) and  24 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_rec_test_mode/regression.log">w_icons_top.tc_rec_test_mode</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:50:04</td>  		  
+	<td>13:50:12</td>  		  
+	<td><div class="duration-bar" style="width: 8px"></div></td>  		  
+	<td>0 min(s) and  8 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_stim_mask_chk_err/regression.log">w_icons_top.tc_stim_mask_chk_err</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:50:12</td>  		  
+	<td>13:51:57</td>  		  
+	<td><div class="duration-bar" style="width: 105px"></div></td>  		  
+	<td>1 min(s) and  45 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_crc5/regression.log">w_icons_top.tc_crc5</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:51:57</td>  		  
+	<td>13:55:58</td>  		  
+	<td><div class="duration-bar" style="width: 241px"></div></td>  		  
+	<td>4 min(s) and  1 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_rec_impedance/regression.log">w_icons_top.tc_rec_impedance</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>13:55:58</td>  		  
+	<td>14:05:06</td>  		  
+	<td><div class="duration-bar" style="width: 548px"></div></td>  		  
+	<td>9 min(s) and  8 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_rf_toggle/regression.log">w_icons_top.tc_rf_toggle</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>14:05:06</td>  		  
+	<td>14:07:50</td>  		  
+	<td><div class="duration-bar" style="width: 164px"></div></td>  		  
+	<td>2 min(s) and  44 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_stim_random_chs/regression.log">w_icons_top.tc_stim_random_chs</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>14:07:50</td>  		  
+	<td>14:09:31</td>  		  
+	<td><div class="duration-bar" style="width: 101px"></div></td>  		  
+	<td>1 min(s) and  41 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_stim_selected_chs/regression.log">w_icons_top.tc_stim_selected_chs</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>14:09:31</td>  		  
+	<td>14:09:58</td>  		  
+	<td><div class="duration-bar" style="width: 27px"></div></td>  		  
+	<td>0 min(s) and  27 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_stim_all_mask_chk_err/regression.log">w_icons_top.tc_stim_all_mask_chk_err</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>14:09:58</td>  		  
+	<td>14:17:54</td>  		  
+	<td><div class="duration-bar" style="width: 476px"></div></td>  		  
+	<td>7 min(s) and  56 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_rec_selected_chs/regression.log">w_icons_top.tc_rec_selected_chs</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>14:17:54</td>  		  
+	<td>14:47:40</td>  		  
+	<td><div class="duration-bar" style="width: 1786px"></div></td>  		  
+	<td>29 min(s) and  46 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_stim_1ch/regression.log">w_icons_top.tc_stim_1ch</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>14:47:40</td>  		  
+	<td>14:50:05</td>  		  
+	<td><div class="duration-bar" style="width: 145px"></div></td>  		  
+	<td>2 min(s) and  25 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/latest/w_icons_top.tc_stim_ch_err/regression.log">w_icons_top.tc_stim_ch_err</a></td>  		  
+	<td class="simfail">SIMFAIL</td>  		  
+	<td></td>  		  
+	<td></td>  		  
+	<td><div class="duration-bar" style="width: px"></div></td>  		  
+	<td> min(s) and   sec(s)</td>  		  
+</tr>

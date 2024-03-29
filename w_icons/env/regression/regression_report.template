@@ -1,0 +1,78 @@
+ <!---------------------------------------->
+ <!--Module : regression_report.template -->
+ <!--Author : Ali Zeinolabedin           -->
+ <!--Company: Blackrock Neurotech        -->
+ <!---------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            border: 10px solid #FFB6C1; /* Adjust the border size and color as needed */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .passed {
+            background-color: green;
+            color: white;
+        }
+
+        .failed {
+            background-color: red;
+            color: white;
+        }
+
+        .simfail {
+            background-color: red;
+            color: white;
+        }
+
+        .unknown {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .duration-bar {
+            display: inline-block;
+            height: 20px;
+            width: 10px;
+            margin-right: 150px; /* Adjust the margin as needed */
+            background-color: blue; /* Change the bar color */
+        }
+    </style>
+    <title>List to HTML</title>
+</head>
+<body>
+    <h1>List of TestCases:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Running Time</th>
+                <th>Duration</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <!-- List items will be inserted here -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_w_icons_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_w_icons_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="48.843750 us"></ZoomStartTime>
+      <ZoomEndTime time="56.463751 us"></ZoomEndTime>
+      <Cursor1Time time="51.843750 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="159"></NameColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/tb_w_icons_top/CLK_REF_SPI_S">
+      <obj_property name="ElementShortName">CLK_REF_SPI_S</obj_property>
+      <obj_property name="ObjectShortName">CLK_REF_SPI_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/spi_clk_tb_s">
+      <obj_property name="ElementShortName">spi_clk_tb_s</obj_property>
+      <obj_property name="ObjectShortName">spi_clk_tb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/spi_mosi_tb_s">
+      <obj_property name="ElementShortName">spi_mosi_tb_s</obj_property>
+      <obj_property name="ObjectShortName">spi_mosi_tb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/spi_miso_tb_s">
+      <obj_property name="ElementShortName">spi_miso_tb_s</obj_property>
+      <obj_property name="ObjectShortName">spi_miso_tb_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/resetn_tb_sync_s">
+      <obj_property name="ElementShortName">resetn_tb_sync_s</obj_property>
+      <obj_property name="ObjectShortName">resetn_tb_sync_s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/CLK_REF_S">
+      <obj_property name="ElementShortName">CLK_REF_S</obj_property>
+      <obj_property name="ObjectShortName">CLK_REF_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/RESET_N_S">
+      <obj_property name="ElementShortName">RESET_N_S</obj_property>
+      <obj_property name="ObjectShortName">RESET_N_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/STIM_XEN_S">
+      <obj_property name="ElementShortName">STIM_XEN_S</obj_property>
+      <obj_property name="ObjectShortName">STIM_XEN_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/ERR_CRC_S">
+      <obj_property name="ElementShortName">ERR_CRC_S</obj_property>
+      <obj_property name="ObjectShortName">ERR_CRC_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/ERR_STIM_S">
+      <obj_property name="ElementShortName">ERR_STIM_S</obj_property>
+      <obj_property name="ObjectShortName">ERR_STIM_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/SPI_CLK_S">
+      <obj_property name="ElementShortName">SPI_CLK_S</obj_property>
+      <obj_property name="ObjectShortName">SPI_CLK_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/SPI_MOSI_S">
+      <obj_property name="ElementShortName">SPI_MOSI_S</obj_property>
+      <obj_property name="ObjectShortName">SPI_MOSI_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/SPI_CS_S">
+      <obj_property name="ElementShortName">SPI_CS_S</obj_property>
+      <obj_property name="ObjectShortName">SPI_CS_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/SPI_MISO_S">
+      <obj_property name="ElementShortName">SPI_MISO_S</obj_property>
+      <obj_property name="ObjectShortName">SPI_MISO_S</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_w_icons_top/CLK_REC_S">
+      <obj_property name="ElementShortName">CLK_REC_S</obj_property>
+      <obj_property name="ObjectShortName">CLK_REC_S</obj_property>
+   </wvobject>
+</wave_config>

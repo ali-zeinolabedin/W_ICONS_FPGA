@@ -1,0 +1,2 @@
+w_icons_top.tc_sanity.netlist PASSED 08:08:05 08:08:12 7 0 7
+w_icons_top.tc_sanity_stim.netlist PASSED 08:08:13 08:08:26 13 0 13

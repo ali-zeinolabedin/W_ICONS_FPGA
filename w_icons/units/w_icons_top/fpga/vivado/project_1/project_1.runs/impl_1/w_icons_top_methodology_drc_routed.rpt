@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Fri Jan 12 14:43:49 2024
+| Host         : smaz-brn running 64-bit Linux Mint 21.2
+| Command      : report_methodology -file w_icons_top_methodology_drc_routed.rpt -pb w_icons_top_methodology_drc_routed.pb -rpx w_icons_top_methodology_drc_routed.rpx
+| Design       : w_icons_top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_w_icons_top
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 11
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 1          |
+| TIMING-14 | Critical Warning | LUT on the clock tree                          | 4          |
+| TIMING-18 | Warning          | Missing input or output delay                  | 4          |
+| LATCH-1   | Advisory         | Existing latches in the design                 | 1          |
++-----------+------------------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_spi_pin and CLK_REC_O are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_spi_pin] -to [get_clocks CLK_REC_O]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_spi_pin and CLK_REC_O are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_spi_pin] -to [get_clocks CLK_REC_O]
+Related violations: <none>
+
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n/data_sync0_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n_discharge/FSM_onehot_stim_discharge[2]_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_clkgate_adc1/clk_adc1_gated_s_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#4 Critical Warning
+LUT on the clock tree  
+The LUT i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_clkgate_adc2/clk_adc2_gated_s_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on RESET_N_I relative to the rising and/or falling clock edge(s) of clk_ref_pin, clk_spi_pin.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on SPI_CS_I relative to the rising and/or falling clock edge(s) of clk_spi_pin.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on SPI_MOSI_I relative to the rising and/or falling clock edge(s) of clk_spi_pin.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on SPI_MISO_O relative to the rising and/or falling clock edge(s) of clk_spi_pin.
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 2 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+

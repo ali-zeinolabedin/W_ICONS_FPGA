@@ -1,0 +1,13 @@
+-e VLOG-INCDIRS
+    -I/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/global_src/verilog
+-e VLOG-FLAGS
+    -Wno-timescale
+    -Wno-implicit-dimensions
+    -Wno-sensitivity-entire-array
+    -Wno-portbind
+    -g2005-sv
+-e VLOG tb_w_icons_top-simulate
+./testcase.vh:101: error: Array wc_s needs an array index here.
+./testcase.vh:101: error: Unable to elaborate condition expression.
+2 error(s) during elaboration.
+make[2]: *** [/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/env/simulation/Makefile.project.iverilog:64: .work.iverilog/tb_w_icons_top-simulate] Error 2

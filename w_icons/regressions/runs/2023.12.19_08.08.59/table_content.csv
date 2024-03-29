@@ -1,0 +1,16 @@
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.19_08.08.59/w_icons_top.tc_sanity.netlist/regression.log">w_icons_top.tc_sanity.netlist</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>08:08:59</td>  		  
+	<td>08:09:07</td>  		  
+	<td><div class="duration-bar" style="width: 8px"></div></td>  		  
+	<td>0 min(s) and  8 sec(s)</td>  		  
+</tr>
+<tr>   		  
+	<td><a href="/home/smaz-brn/project/ASIC-W-ICONS/Cadence/w_icons/regressions/runs/2023.12.19_08.08.59/w_icons_top.tc_sanity_stim.netlist/regression.log">w_icons_top.tc_sanity_stim.netlist</a></td>  		  
+	<td class="passed">PASSED</td>  		  
+	<td>08:09:07</td>  		  
+	<td>08:09:19</td>  		  
+	<td><div class="duration-bar" style="width: 12px"></div></td>  		  
+	<td>0 min(s) and  12 sec(s)</td>  		  
+</tr>

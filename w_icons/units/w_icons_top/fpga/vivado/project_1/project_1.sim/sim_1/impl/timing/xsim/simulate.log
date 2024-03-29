@@ -1,0 +1,54 @@
+Time resolution is 1 ps
+-----------> SPI Config: CMD(4'b0101)
+	data_pack  : 0x500000000
+	crc5       : 0b01011 (0x0b)
+	48-bit data: 0x500000000580
+.....................................
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 101016414
+	Chip ID: 1010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 1010164
+----------->Stimulator Status: CMD(4'b0111)
+	Stimulator status: 0000
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Stimulator status: 0000
+----------->Chip ID: CMD(4'b0110)
+	Chip ID: 101016414
+	Chip ID: 1010164
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+Chip ID: 1010164
+----------->WR_DATA: CMD(4'b0010)
+	data       : 0xaaaaaaaa
+	data_pack  : 0x2aaaaaaaa
+	crc5       : 0b11110 (0x1e)
+	48-bit data: 0x2aaaaaaaaf00
+.....................................
+-----------> WR_ADD: CMD(4'b0001)
+	address    : 0x070
+	data_pack  : 0x100000070
+	crc5       : 0b01010 (0x0a)
+	48-bit data: 0x100000070500
+.....................................
+-----------> RD_ADD: CMD(4'b0011)
+	address    : 0x070
+	data_pack  : 0x300000070
+	crc5       : 0b11110 (0x1e)
+	48-bit data: 0x300000070f00
+.....................................
+----------->RD_DATA: CMD(4'b0100)
+	Read data: aaaaaaaa
+[1;34m	Read CRC5: Passed!
+[0m.....................................
+
+[1;34m #####   ####   ##### ##### ##### #####  
+ ##  ## ##  ## ##    ##     ##    ##  ## 
+ #####  ######  ####  ####  ####  ##  ## 
+ ##     ##  ##     ##    ## ##    ##  ## 
+ ##     ##  ## ##### #####  ##### #####  
+
+TBCHECK: PASSED
+[0m$finish called at time : 58656250 ps : File "/home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/project_1/project_1.srcs/sim_1/imports/verilog/tb_selfcheck.vh" Line 81

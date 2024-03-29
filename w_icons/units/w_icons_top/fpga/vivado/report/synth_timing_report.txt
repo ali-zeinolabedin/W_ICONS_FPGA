@@ -1,0 +1,802 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Thu Jan 11 11:27:52 2024
+| Host         : smaz-brn running 64-bit Linux Mint 21.2
+| Command      : report_timing_summary -file ./report/synth_timing_report.txt
+| Design       : w_icons_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (2110)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (859)
+5. checking no_input_delay (4)
+6. checking no_output_delay (7)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (2110)
+---------------------------
+ There are 372 register/latch pins with no clock driven by root clock pin: i_common_clkdiv_by_n_top/clkdiv_n_reg/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[0]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[1]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[2]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[3]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[4]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[5]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[6]/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[10]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[11]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_stim_control_div_clk_stim_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n/clkdiv_n_reg/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n/clkdiv_p_reg/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n_discharge/clkdiv_n_reg/Q (HIGH)
+
+ There are 150 register/latch pins with no clock driven by root clock pin: i_w_icons_core/i_w_icons_mgmt/i_common_clkdiv_by_n_discharge/clkdiv_p_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (859)
+--------------------------------------------------
+ There are 859 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (7)
+-------------------------------
+ There are 7 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     27.864        0.000                      0                 3662        0.137        0.000                      0                 3662       15.500        0.000                       0                  1283  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----        ------------         ----------      --------------
+clk_ref_pin  {0.000 16.000}       32.000          31.250          
+clk_spi_pin  {0.000 50.000}       100.000         10.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_ref_pin        27.864        0.000                      0                   16        0.142        0.000                      0                   16       15.500        0.000                       0                    18  
+clk_spi_pin        46.835        0.000                      0                 2547        0.137        0.000                      0                 2547       49.500        0.000                       0                  1265  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  clk_ref_pin        clk_ref_pin             29.642        0.000                      0                   15        0.632        0.000                      0                   15  
+**async_default**  clk_spi_pin        clk_spi_pin             97.594        0.000                      0                 1084        0.634        0.000                      0                 1084  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_ref_pin
+  To Clock:  clk_ref_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       27.864ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.142ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       15.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             27.864ns  (required time - arrival time)
+  Source:                 i_common_clkdiv_by_n_top/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Destination:            i_common_clkdiv_by_n_top/reset_clk_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Path Group:             clk_ref_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            32.000ns  (clk_ref_pin rise@32.000ns - clk_ref_pin rise@0.000ns)
+  Data Path Delay:        3.773ns  (logic 2.356ns (62.444%)  route 1.417ns (37.556%))
+  Logic Levels:           5  (CARRY4=4 LUT4=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.704ns = ( 34.704 - 32.000 ) 
+    Source Clock Delay      (SCD):    2.965ns
+    Clock Pessimism Removal (CPR):    0.116ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_ref_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.803     2.285    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.381 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.584     2.965    i_common_clkdiv_by_n_top/CLK_REF_I_IBUF_BUFG
+                         FDCE                                         r  i_common_clkdiv_by_n_top/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.478     3.443 r  i_common_clkdiv_by_n_top/count_reg[2]/Q
+                         net (fo=1, unplaced)         0.664     4.107    i_common_clkdiv_by_n_top/count[2]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.828     4.935 r  i_common_clkdiv_by_n_top/next_count0_carry/CO[3]
+                         net (fo=1, unplaced)         0.000     4.935    i_common_clkdiv_by_n_top/next_count0_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.052 r  i_common_clkdiv_by_n_top/next_count0_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.052    i_common_clkdiv_by_n_top/next_count0_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.308 f  i_common_clkdiv_by_n_top/next_count0_carry__1/O[2]
+                         net (fo=3, unplaced)         0.753     6.061    i_common_clkdiv_by_n_top/next_count0_carry__1_n_5
+                         LUT4 (Prop_lut4_I0_O)        0.301     6.362 r  i_common_clkdiv_by_n_top/reset_clk0_carry_i_1__0/O
+                         net (fo=1, unplaced)         0.000     6.362    i_common_clkdiv_by_n_top/reset_clk0_carry_i_1__0_n_0
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     6.738 r  i_common_clkdiv_by_n_top/reset_clk0_carry/CO[3]
+                         net (fo=1, unplaced)         0.000     6.738    i_common_clkdiv_by_n_top/reset_clk0
+                         FDCE                                         r  i_common_clkdiv_by_n_top/reset_clk_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_ref_pin rise edge)
+                                                     32.000    32.000 r  
+    E3                                                0.000    32.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000    32.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    33.411 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.763    34.174    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    34.265 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.439    34.704    i_common_clkdiv_by_n_top/CLK_REF_I_IBUF_BUFG
+                         FDCE                                         r  i_common_clkdiv_by_n_top/reset_clk_reg/C
+                         clock pessimism              0.116    34.820    
+                         clock uncertainty           -0.035    34.784    
+                         FDCE (Setup_fdce_C_D)       -0.183    34.601    i_common_clkdiv_by_n_top/reset_clk_reg
+  -------------------------------------------------------------------
+                         required time                         34.601    
+                         arrival time                          -6.738    
+  -------------------------------------------------------------------
+                         slack                                 27.864    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.142ns  (arrival time - required time)
+  Source:                 i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Destination:            i_common_clkdiv_by_n_top/clkdiv_n_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Path Group:             clk_ref_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_ref_pin rise@0.000ns - clk_ref_pin rise@0.000ns)
+  Data Path Delay:        0.386ns  (logic 0.245ns (63.437%)  route 0.141ns (36.563%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.082ns
+    Source Clock Delay      (SCD):    0.728ns
+    Clock Pessimism Removal (CPR):    0.209ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_ref_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.338     0.588    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.614 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.114     0.728    i_common_clkdiv_by_n_top/CLK_REF_I_IBUF_BUFG
+                         FDCE                                         r  i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.147     0.875 r  i_common_clkdiv_by_n_top/clkdiv_n_reg/Q
+                         net (fo=4, unplaced)         0.141     1.016    i_common_clkdiv_by_n_top/CLK_REC_O_OBUF
+                         LUT3 (Prop_lut3_I2_O)        0.098     1.114 r  i_common_clkdiv_by_n_top/clkdiv_n_i_1/O
+                         net (fo=1, unplaced)         0.000     1.114    i_common_clkdiv_by_n_top/clkdiv_n_i_1_n_0
+                         FDCE                                         r  i_common_clkdiv_by_n_top/clkdiv_n_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_ref_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.356     0.794    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.823 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.259     1.082    i_common_clkdiv_by_n_top/CLK_REF_I_IBUF_BUFG
+                         FDCE                                         r  i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+                         clock pessimism             -0.209     0.873    
+                         FDCE (Hold_fdce_C_D)         0.099     0.972    i_common_clkdiv_by_n_top/clkdiv_n_reg
+  -------------------------------------------------------------------
+                         required time                         -0.972    
+                         arrival time                           1.114    
+  -------------------------------------------------------------------
+                         slack                                  0.142    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_ref_pin
+Waveform(ns):       { 0.000 16.000 }
+Period(ns):         32.000
+Sources:            { CLK_REF_I }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     BUFG/I   n/a            2.155         32.000      29.845               CLK_REF_I_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         16.000      15.500               i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         16.000      15.500               i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_spi_pin
+  To Clock:  clk_spi_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       46.835ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.137ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       49.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             46.835ns  (required time - arrival time)
+  Source:                 i_w_icons_core/i_spi_wrap/i_spi_slave_common/tx_done_o_reg/C
+                            (falling edge-triggered cell FDCE clocked by clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o_reg[10]/R
+                            (rising edge-triggered cell FDRE clocked by clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_spi_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            50.000ns  (clk_spi_pin rise@100.000ns - clk_spi_pin fall@50.000ns)
+  Data Path Delay:        2.428ns  (logic 0.776ns (31.960%)  route 1.652ns (68.040%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.697ns = ( 102.697 - 100.000 ) 
+    Source Clock Delay      (SCD):    2.958ns = ( 52.958 - 50.000 ) 
+    Clock Pessimism Removal (CPR):    0.116ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_spi_pin fall edge)
+                                                     50.000    50.000 f  
+    G13                                               0.000    50.000 f  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000    50.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         1.475    51.475 f  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.803    52.278    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096    52.374 f  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.584    52.958    i_w_icons_core/i_spi_wrap/i_spi_slave_common/SPI_CLK_I_IBUF_BUFG
+                         FDCE                                         r  i_w_icons_core/i_spi_wrap/i_spi_slave_common/tx_done_o_reg/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.481    53.439 r  i_w_icons_core/i_spi_wrap/i_spi_slave_common/tx_done_o_reg/Q
+                         net (fo=3, unplaced)         0.983    54.422    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/tx_done_s
+                         LUT6 (Prop_lut6_I0_O)        0.295    54.717 r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o[31]_i_1/O
+                         net (fo=21, unplaced)        0.669    55.386    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o[31]_i_1_n_0
+                         FDRE                                         r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o_reg[10]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_spi_pin rise edge)
+                                                    100.000   100.000 r  
+    G13                                               0.000   100.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000   100.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         1.404   101.404 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.763   102.167    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091   102.258 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.439   102.697    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/SPI_CLK_I_IBUF_BUFG
+                         FDRE                                         r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o_reg[10]/C
+                         clock pessimism              0.116   102.813    
+                         clock uncertainty           -0.035   102.777    
+                         FDRE (Setup_fdre_C_R)       -0.557   102.220    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/spi_tx_word_o_reg[10]
+  -------------------------------------------------------------------
+                         required time                        102.220    
+                         arrival time                         -55.386    
+  -------------------------------------------------------------------
+                         slack                                 46.835    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.137ns  (arrival time - required time)
+  Source:                 i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk_spi_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_spi_pin rise@0.000ns - clk_spi_pin rise@0.000ns)
+  Data Path Delay:        0.381ns  (logic 0.245ns (64.350%)  route 0.136ns (35.650%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.075ns
+    Source Clock Delay      (SCD):    0.721ns
+    Clock Pessimism Removal (CPR):    0.209ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_spi_pin rise edge)
+                                                      0.000     0.000 r  
+    G13                                               0.000     0.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000     0.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         0.243     0.243 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.338     0.581    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.607 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.114     0.721    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/SPI_CLK_I_IBUF_BUFG
+                         FDCE                                         r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.147     0.868 r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg/Q
+                         net (fo=2, unplaced)         0.136     1.004    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_s
+                         LUT5 (Prop_lut5_I4_O)        0.098     1.102 r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_i_1/O
+                         net (fo=1, unplaced)         0.000     1.102    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_i_1_n_0
+                         FDCE                                         r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_spi_pin rise edge)
+                                                      0.000     0.000 r  
+    G13                                               0.000     0.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000     0.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         0.431     0.431 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.356     0.787    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.816 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.259     1.075    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/SPI_CLK_I_IBUF_BUFG
+                         FDCE                                         r  i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg/C
+                         clock pessimism             -0.209     0.866    
+                         FDCE (Hold_fdce_C_D)         0.099     0.965    i_w_icons_core/i_spi_wrap/i_spi_custom_logic/error_o_reg
+  -------------------------------------------------------------------
+                         required time                         -0.965    
+                         arrival time                           1.102    
+  -------------------------------------------------------------------
+                         slack                                  0.137    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_spi_pin
+Waveform(ns):       { 0.000 50.000 }
+Period(ns):         100.000
+Sources:            { SPI_CLK_I }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     BUFG/I   n/a            2.155         100.000     97.845               SPI_CLK_I_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    FDPE/C   n/a            0.500         50.000      49.500               i_w_icons_core/i_spi_wrap/i_spi_custom_logic/FSM_onehot_apb_state_reg[0]/C
+High Pulse Width  Slow    FDPE/C   n/a            0.500         50.000      49.500               i_w_icons_core/i_spi_wrap/i_spi_custom_logic/FSM_onehot_apb_state_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk_ref_pin
+  To Clock:  clk_ref_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       29.642ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.632ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             29.642ns  (required time - arrival time)
+  Source:                 i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Destination:            i_common_clkdiv_by_n_top/clkdiv_n_reg/CLR
+                            (recovery check against rising-edge clock clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            32.000ns  (clk_ref_pin rise@32.000ns - clk_ref_pin rise@0.000ns)
+  Data Path Delay:        1.826ns  (logic 0.773ns (42.333%)  route 1.053ns (57.667%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.704ns = ( 34.704 - 32.000 ) 
+    Source Clock Delay      (SCD):    2.965ns
+    Clock Pessimism Removal (CPR):    0.116ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_ref_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.803     2.285    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.381 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.584     2.965    i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/CLK_REF_I
+                         FDCE                                         r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.478     3.443 r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg/Q
+                         net (fo=1, unplaced)         0.311     3.754    i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1
+                         LUT1 (Prop_lut1_I0_O)        0.295     4.049 f  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/count[11]_i_2/O
+                         net (fo=387, unplaced)       0.742     4.791    i_common_clkdiv_by_n_top/clkdiv_n_reg_0
+                         FDCE                                         f  i_common_clkdiv_by_n_top/clkdiv_n_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_ref_pin rise edge)
+                                                     32.000    32.000 r  
+    E3                                                0.000    32.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000    32.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    33.411 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.763    34.174    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    34.265 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.439    34.704    i_common_clkdiv_by_n_top/CLK_REF_I_IBUF_BUFG
+                         FDCE                                         r  i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+                         clock pessimism              0.116    34.820    
+                         clock uncertainty           -0.035    34.784    
+                         FDCE (Recov_fdce_C_CLR)     -0.352    34.432    i_common_clkdiv_by_n_top/clkdiv_n_reg
+  -------------------------------------------------------------------
+                         required time                         34.432    
+                         arrival time                          -4.791    
+  -------------------------------------------------------------------
+                         slack                                 29.642    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.632ns  (arrival time - required time)
+  Source:                 i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Destination:            i_common_clkdiv_by_n_top/clkdiv_n_reg/CLR
+                            (removal check against rising-edge clock clk_ref_pin  {rise@0.000ns fall@16.000ns period=32.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_ref_pin rise@0.000ns - clk_ref_pin rise@0.000ns)
+  Data Path Delay:        0.689ns  (logic 0.245ns (35.566%)  route 0.444ns (64.434%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.082ns
+    Source Clock Delay      (SCD):    0.728ns
+    Clock Pessimism Removal (CPR):    0.209ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_ref_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.338     0.588    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.614 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.114     0.728    i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/CLK_REF_I
+                         FDCE                                         r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.147     0.875 r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1_reg/Q
+                         net (fo=1, unplaced)         0.131     1.006    i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/data_sync1
+                         LUT1 (Prop_lut1_I0_O)        0.098     1.104 f  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync/count[11]_i_2/O
+                         net (fo=387, unplaced)       0.313     1.417    i_common_clkdiv_by_n_top/clkdiv_n_reg_0
+                         FDCE                                         f  i_common_clkdiv_by_n_top/clkdiv_n_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_ref_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLK_REF_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK_REF_I
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLK_REF_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.356     0.794    CLK_REF_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.823 r  CLK_REF_I_IBUF_BUFG_inst/O
+                         net (fo=17, unplaced)        0.259     1.082    i_common_clkdiv_by_n_top/CLK_REF_I_IBUF_BUFG
+                         FDCE                                         r  i_common_clkdiv_by_n_top/clkdiv_n_reg/C
+                         clock pessimism             -0.209     0.873    
+                         FDCE (Remov_fdce_C_CLR)     -0.088     0.785    i_common_clkdiv_by_n_top/clkdiv_n_reg
+  -------------------------------------------------------------------
+                         required time                         -0.785    
+                         arrival time                           1.417    
+  -------------------------------------------------------------------
+                         slack                                  0.632    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk_spi_pin
+  To Clock:  clk_spi_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       97.594ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.634ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             97.594ns  (required time - arrival time)
+  Source:                 i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/data_sync1_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[1]/PRE
+                            (recovery check against rising-edge clock clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk_spi_pin rise@100.000ns - clk_spi_pin rise@0.000ns)
+  Data Path Delay:        1.832ns  (logic 0.773ns (42.194%)  route 1.059ns (57.806%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.697ns = ( 102.697 - 100.000 ) 
+    Source Clock Delay      (SCD):    2.958ns
+    Clock Pessimism Removal (CPR):    0.116ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_spi_pin rise edge)
+                                                      0.000     0.000 r  
+    G13                                               0.000     0.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000     0.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         1.475     1.475 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.803     2.278    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.374 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.584     2.958    i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/SPI_CLK_I_IBUF_BUFG
+                         FDCE                                         r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/data_sync1_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.478     3.436 r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/data_sync1_reg/Q
+                         net (fo=1, unplaced)         0.311     3.747    i_w_icons_core/i_spi_wrap/data_sync1
+                         LUT1 (Prop_lut1_I0_O)        0.295     4.042 f  i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2/O
+                         net (fo=1084, unplaced)      0.748     4.790    i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_chip_error_status1_chip_error_load_reg[31]_0
+                         FDPE                                         f  i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[1]/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_spi_pin rise edge)
+                                                    100.000   100.000 r  
+    G13                                               0.000   100.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000   100.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         1.404   101.404 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.763   102.167    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091   102.258 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.439   102.697    i_w_icons_core/i_spi_wrap/i_w_icons_rf/SPI_CLK_I_IBUF_BUFG
+                         FDPE                                         r  i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[1]/C
+                         clock pessimism              0.116   102.813    
+                         clock uncertainty           -0.035   102.777    
+                         FDPE (Recov_fdpe_C_PRE)     -0.394   102.383    i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_rec_discharge_control_div_clk_discharge_reg[1]
+  -------------------------------------------------------------------
+                         required time                        102.383    
+                         arrival time                          -4.790    
+  -------------------------------------------------------------------
+                         slack                                 97.594    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.634ns  (arrival time - required time)
+  Source:                 i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/data_sync1_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_adc_amp1_amp_gain_g1_reg[0]/CLR
+                            (removal check against rising-edge clock clk_spi_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_spi_pin rise@0.000ns - clk_spi_pin rise@0.000ns)
+  Data Path Delay:        0.691ns  (logic 0.245ns (35.436%)  route 0.446ns (64.564%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.075ns
+    Source Clock Delay      (SCD):    0.721ns
+    Clock Pessimism Removal (CPR):    0.209ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_spi_pin rise edge)
+                                                      0.000     0.000 r  
+    G13                                               0.000     0.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000     0.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         0.243     0.243 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.338     0.581    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.607 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.114     0.721    i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/SPI_CLK_I_IBUF_BUFG
+                         FDCE                                         r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/data_sync1_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.147     0.868 r  i_w_icons_core/i_w_icons_mgmt/i_w_icons_sync_rst/i_common_reset_sync_spi/data_sync1_reg/Q
+                         net (fo=1, unplaced)         0.131     0.999    i_w_icons_core/i_spi_wrap/data_sync1
+                         LUT1 (Prop_lut1_I0_O)        0.098     1.097 f  i_w_icons_core/i_spi_wrap/reg_stim_ch0_pulse_p1_stim0_pulse_wa_mux[13]_i_2/O
+                         net (fo=1084, unplaced)      0.315     1.413    i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_chip_error_status1_chip_error_load_reg[31]_0
+                         FDCE                                         f  i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_adc_amp1_amp_gain_g1_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_spi_pin rise edge)
+                                                      0.000     0.000 r  
+    G13                                               0.000     0.000 r  SPI_CLK_I (IN)
+                         net (fo=0)                   0.000     0.000    SPI_CLK_I
+    G13                  IBUF (Prop_ibuf_I_O)         0.431     0.431 r  SPI_CLK_I_IBUF_inst/O
+                         net (fo=1, unplaced)         0.356     0.787    SPI_CLK_I_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.816 r  SPI_CLK_I_IBUF_BUFG_inst/O
+                         net (fo=1264, unplaced)      0.259     1.075    i_w_icons_core/i_spi_wrap/i_w_icons_rf/SPI_CLK_I_IBUF_BUFG
+                         FDCE                                         r  i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_adc_amp1_amp_gain_g1_reg[0]/C
+                         clock pessimism             -0.209     0.866    
+                         FDCE (Remov_fdce_C_CLR)     -0.088     0.778    i_w_icons_core/i_spi_wrap/i_w_icons_rf/reg_adc_amp1_amp_gain_g1_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.778    
+                         arrival time                           1.413    
+  -------------------------------------------------------------------
+                         slack                                  0.634    
+
+
+
+
+

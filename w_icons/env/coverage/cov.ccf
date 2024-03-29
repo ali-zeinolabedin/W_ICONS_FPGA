@@ -1,0 +1,19 @@
+select_coverage -block -expression -toggle -module  w_icons_pads...
+select_coverage -block -expression -toggle -module w_icons_core...  
+set_expr_scoring -max_expr_terms 128
+set_assign_scoring
+set_branch_scoring
+set_statement_scoring
+select_fsm
+set_fsm_reset_scoring
+#set_optimize -vlog_prune_on
+set_libcell_scoring -enable_vy
+set_toggle_scoring -sv_mda
+set_fsm_arc_scoring
+set_expr_coverable_operators -bitwise -relational -reduction -logical_not
+set_expr_coverable_statements -all
+set_bug_fix -fsm_input_old_decomp
+set_backward_compat -COVFDM_during_elab
+set_code_fine_grained_merging
+set_covergroup -bin_name_merge
+set_covergroup -new_instance_reporting

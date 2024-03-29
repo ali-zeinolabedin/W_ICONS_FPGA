@@ -1,0 +1,17 @@
+w_icons_top.tc_sanity                 TBCHECK:  PASSED   |  Start:  13:49:28  |  End:  13:49:29  |  RUNNING  Time:  1     ->  0   min(s)  and  1   sec(s)
+w_icons_top.tc_sanity_stim            TBCHECK:  PASSED   |  Start:  13:49:29  |  End:  13:49:32  |  RUNNING  Time:  3     ->  0   min(s)  and  3   sec(s)
+w_icons_top.tc_rec_all_chs            TBCHECK:  PASSED   |  Start:  13:49:32  |  End:  13:49:39  |  RUNNING  Time:  7     ->  0   min(s)  and  7   sec(s)
+w_icons_top.tc_rec_discharge          TBCHECK:  PASSED   |  Start:  13:49:40  |  End:  13:50:04  |  RUNNING  Time:  24    ->  0   min(s)  and  24  sec(s)
+w_icons_top.tc_rec_test_mode          TBCHECK:  PASSED   |  Start:  13:50:04  |  End:  13:50:12  |  RUNNING  Time:  8     ->  0   min(s)  and  8   sec(s)
+w_icons_top.tc_stim_mask_chk_err      TBCHECK:  PASSED   |  Start:  13:50:12  |  End:  13:51:57  |  RUNNING  Time:  105   ->  1   min(s)  and  45  sec(s)
+w_icons_top.tc_crc5                   TBCHECK:  PASSED   |  Start:  13:51:57  |  End:  13:55:58  |  RUNNING  Time:  241   ->  4   min(s)  and  1   sec(s)
+w_icons_top.tc_rec_impedance          TBCHECK:  PASSED   |  Start:  13:55:58  |  End:  14:05:06  |  RUNNING  Time:  548   ->  9   min(s)  and  8   sec(s)
+w_icons_top.tc_rf_toggle              TBCHECK:  PASSED   |  Start:  14:05:06  |  End:  14:07:50  |  RUNNING  Time:  164   ->  2   min(s)  and  44  sec(s)
+w_icons_top.tc_stim_random_chs        TBCHECK:  PASSED   |  Start:  14:07:50  |  End:  14:09:31  |  RUNNING  Time:  101   ->  1   min(s)  and  41  sec(s)
+w_icons_top.tc_stim_selected_chs      TBCHECK:  PASSED   |  Start:  14:09:31  |  End:  14:09:58  |  RUNNING  Time:  27    ->  0   min(s)  and  27  sec(s)
+w_icons_top.tc_stim_all_mask_chk_err  TBCHECK:  PASSED   |  Start:  14:09:58  |  End:  14:17:54  |  RUNNING  Time:  476   ->  7   min(s)  and  56  sec(s)
+w_icons_top.tc_rec_selected_chs       TBCHECK:  PASSED   |  Start:  14:17:54  |  End:  14:47:40  |  RUNNING  Time:  1786  ->  29  min(s)  and  46  sec(s)
+w_icons_top.tc_stim_1ch               TBCHECK:  PASSED   |  Start:  14:47:40  |  End:  14:50:05  |  RUNNING  Time:  145   ->  2   min(s)  and  25  sec(s)
+w_icons_top.tc_stim_ch_err            TBCHECK:  SIMFAIL                                                                                            
+---
+PASSED: 14 out of 15

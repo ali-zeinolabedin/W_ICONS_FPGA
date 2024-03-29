@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jan 11 11:26:22 2024
+# Process ID: 13044
+# Current directory: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado
+# Command line: vivado -mode tcl -source tcls/project.tcl tcls/project.tcl -tempDir ./.work.fpga -log ./.work.fpga/w_icons_top.vivado.log
+# Log file: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/./.work.fpga/w_icons_top.vivado.log
+# Journal file: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/vivado.jou
+# Running On: smaz-brn, OS: Linux, CPU Frequency: 2803.202 MHz, CPU Physical cores: 5, Host memory: 22133 MB
+#-----------------------------------------------------------
+source tcls/project.tcl
+# create_project w_icons_top_fpga ./.work.fpga/
+# set_property part xc7a100tcsg324-1 [current_project]
+# set_property target_language verilog [current_project]
+# set_property top w_icons_top [get_property srcset [current_run]]
+# source tcls/files.tcl
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_sync_rst.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_mgmt.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_core.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_core.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_top.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_sync.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_sync.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_reset_sync.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_reset_sync.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkbuf.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkbuf.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_pads.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/w_icons_pads.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_mux.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_mux.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkdiv_by_n.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkgate.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/common_clkgate.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_wrap.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_wrap.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_custom_logic.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/w_icons_rf.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/w_icons_rf.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_slave_common.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/spi_wrap/source/rtl/verilog/spi_slave_common.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrl.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/rec_ctrl.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/source/rtl/verilog/rec_ctrl.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/stim_ctrls_wrap/source/rtl/verilog/stim_ctrls_wrap.v]
+## add_files -norecurse /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/rec_stim64ch_macro/source/behavioral/verilog/rec_stim64ch_macro.v]
+## add_files -norecurse ./constraints/Arty-A7-100-Master.xdc;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files ./constraints/Arty-A7-100-Master.xdc]
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 11:26:32 2024...

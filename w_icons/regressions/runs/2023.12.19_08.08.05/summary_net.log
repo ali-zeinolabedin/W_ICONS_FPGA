@@ -1,0 +1,4 @@
+w_icons_top.tc_sanity.netlist       TBCHECK:  PASSED  |  Start:  08:08:05  |  End:  08:08:12  |  RUNNING  Time:  7   ->  0  min(s)  and  7   sec(s)
+w_icons_top.tc_sanity_stim.netlist  TBCHECK:  PASSED  |  Start:  08:08:13  |  End:  08:08:26  |  RUNNING  Time:  13  ->  0  min(s)  and  13  sec(s)
+---
+PASSED: 2 out of 2

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jan 11 11:29:52 2024
+# Process ID: 15285
+# Current directory: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/impl_1
+# Command line: vivado -log w_icons_top.vdi -applog -tempDir ./.work.fpga -product Vivado -messageDb vivado.pb -mode batch -source w_icons_top.tcl -notrace
+# Log file: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/impl_1/w_icons_top.vdi
+# Journal file: /home/smaz-brn/project/ASIC-W-ICONS-FPGA/Cadence/w_icons/units/w_icons_top/fpga/vivado/.work.fpga/w_icons_top_fpga.runs/impl_1/vivado.jou
+# Running On: smaz-brn, OS: Linux, CPU Frequency: 2803.202 MHz, CPU Physical cores: 5, Host memory: 22133 MB
+#-----------------------------------------------------------
+source w_icons_top.tcl -notrace

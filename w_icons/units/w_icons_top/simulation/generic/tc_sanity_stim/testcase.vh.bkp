@@ -1,0 +1,259 @@
+reg [31:0]  data;
+reg [9:0]   address;
+initial begin
+    #1200;
+    spi_config(`ver);
+    #10
+    
+        
+    #100
+    chip_id(data,`ver);
+    $display("Chip ID: %4h",data);
+    #100
+
+
+
+    #100
+    stim_status(data,`ver);
+    $display("Stimulator status: %4h",data);
+    #100
+
+    // Enable STIM clock divider, set the divison to 2
+    write_data(10'h14,32'h00001020,`ver);
+    
+    // Set the mask0-ch0 to 1
+    write_data(10'h18,32'h00000001,`ver);
+    
+    
+    // Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030008,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00050006,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa
+    write_data(10'h68,32'h40030007,`ver);
+    #100
+     
+
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+   
+
+
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+    // Enable mask0 but disable it in the middle of operation
+    write_data(10'h14,32'h00003020,`ver);
+    #5000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #50000
+     
+    
+    // Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030018,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00020016,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   // num = 1
+    write_data(10'h68,32'h40010007,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+
+    // Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030002,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00020002,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   // num = 1
+    write_data(10'h68,32'h40010002,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+    // Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030001,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00020002,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   // num = 1
+    write_data(10'h68,32'h40010002,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030001,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00010001,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   // num = 1
+    write_data(10'h68,32'h40010001,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030000,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00050004,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060003,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030001,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00000004,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060003,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030000,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00000004,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060003,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030002,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00020003,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060000,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030002,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00000003,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060000,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030000,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00010003,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060000,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h00003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h00001020,`ver);
+    #100
+
+
+   
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030003,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00010000,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060002,`ver);
+    #100
+    // Enable mask0 and monophasic
+    write_data(10'h14,32'h20003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h20001020,`ver);
+    #100
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030003,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00000000,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060002,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h20003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h20001020,`ver);
+    #100
+
+
+    // All 1: Stim Ch0: Ic -- Ia -- interval
+    write_data(10'h60,32'h03030000,`ver);
+    // Stim Ch0: gap -- Wc
+    write_data(10'h64,32'h00020000,`ver);
+    // Stim Ch0: range -- pol -- Num -- Wa   
+    write_data(10'h68,32'h40060002,`ver);
+    #100
+    // Enable mask0
+    write_data(10'h14,32'h20003020,`ver);
+    #100000
+    // Disable mask0
+    write_data(10'h14,32'h2001020,`ver);
+    #100
+
+    */
+
+
+
+    //$display ("ERROR: timeout");
+    //tb_check_failed;
+    tb_final_check;
+end
