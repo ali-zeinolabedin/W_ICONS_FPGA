@@ -1,5 +1,6 @@
 # FPGA Prototype
 
+
 It prototypes the W_ICONs chip with the following changes and limitations:
     - Register file size is greatly reduced to integrate only 4 stimulation channels' parameters.
     - Analog macro is replaced with a synthesized analog macro to:
@@ -26,7 +27,7 @@ It prototypes the W_ICONs chip with the following changes and limitations:
 - Bit file is [here]/Cadence/w_icons/units/w_icons_top/fpga/vivado/export).
 - Pin details:
 
-![FPGA_Board](../../../../Cadence/w_icons/fig/FPGA_PT.png)
+![FPGA_Board](FPGA_PT.png)
 
 ## FPGA Prototype test
    
@@ -36,29 +37,29 @@ It prototypes the W_ICONs chip with the following changes and limitations:
 ## Real measurement using FPGA prototype
   
 ### Reading Chip ID
-![chip_id](../../../../Cadence/w_icons/fig/Chip_ID_RD.png)
+![chip_id](Chip_ID_RD.png)
   
 ### Write Data/Address
 Write 0x12345678 to address 0xc and read it back
 
 #### Write data (0x12345678)
-![write_data](../../../../Cadence/w_icons/fig/write-data_12345678.png)
+![write_data](write-data_12345678.png)
 
 #### Write address (0xc):
-![write_add](../../../../Cadence/w_icons/fig/write_add_0xc.png)
+![write_add](write_add_0xc.png)
 
 ### Read Data
 #### Read address (0xc):
-![read_address](../../../../Cadence/w_icons/fig/read_address_0xc.png)
+![read_address](read_address_0xc.png)
 
 #### Read Data (0x12345678):
-![read_data](../../../../Cadence/w_icons/fig/read_data-12345678.png)
+![read_data](read_data-12345678.png)
  
 ### ADC Recording:
 - Enable Ch0, Ch1, and Ch32
 - Enable Recording
 
-![read_data](../../../../Cadence/w_icons/fig/read_Ch0_Ch1_Ch33.png)
+![read_data](read_Ch0_Ch1_Ch33.png)
 
 ### Recording during the simulation
-![read_data](../../../../Cadence/w_icons/fig/read_ch0_ch1_stimulation.png)
+![read_data](read_ch0_ch1_stimulation.png)

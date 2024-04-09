@@ -1,4 +1,4 @@
-PWD /home/smaz-brn/project/ASIC-W-ICONS/docs/.venv/docs/build/latex
+PWD /home/smaz-brn/project/W_ICONS_FPGA/w_icons/doc/fpga_doc/docs/build/latex
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -1087,6 +1087,11 @@ INPUT fpgaprototypeofw_iconschip.out
 INPUT ./fpgaprototypeofw_iconschip.out
 INPUT ./fpgaprototypeofw_iconschip.out
 OUTPUT fpgaprototypeofw_iconschip.out
+INPUT ../../source/logo.png
+INPUT ../../source/logo.png
+INPUT ../../source/logo.png
+INPUT ../../source/logo.png
+INPUT ../../source/logo.png
 INPUT /usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 INPUT /usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 INPUT /usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
