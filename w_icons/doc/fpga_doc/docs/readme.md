@@ -1,4 +1,8 @@
-- run `make` to get the list of all options available for make
-- `make html` creates the html docs
-- `make latexpdf` create the pdf report
-- all the source files are stored in folder `source`
+- This is the flow of creating a PDF document from the GitHub page.
+  - run `make` to get the list of all options available for make
+  - `make html` creates the html docs
+  - `make latexpdf` create the pdf report
+  - all the source files are stored in folder `source`
+    - Update the conf.py accordingly
+    - Update the index.rst accordingly
+    - Create the `.md` file according to the template
