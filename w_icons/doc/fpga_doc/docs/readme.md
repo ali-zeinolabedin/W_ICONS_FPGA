@@ -1,3 +1,4 @@
 - run `make` to get the list of all options available for make
 - `make html` creates the html docs
 - `make latexpdf` create the pdf report
+- all the source files are stored in folder `source`
